@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Usuário</title>
+    <style>
+      html {
+        min-height: 100vh;
+        font-size: 22px;
+      }
+      body {
+        min-height: 100%;
+        margin: 60px;
+      }
+      input {
+        display: inline-block;
+        margin-bottom: 20px;
+        width: 450px;
+        font-size: 0.8em;
+        padding: 8px;
+      }
+      label {
+        display: inline-block;
+        width: 80px;
+      }
+      input[type="submit"] {
+        width: 250px;
+        font-size: 1.2em;
+        padding: 16px;
+        border: 2px solid;
+        border-radius: 12px;
+        background-color: hsl(180, 60%, 75%);
+        transition: all 0.2s ease-out;
+        &:hover {
+          background-color: hsl(180, 60%, 55%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formulário de Cadastro</h1>
+    <form>
+      <label for="name">Nome: </label>
+      <input
+        type="text"
+        id="name"
+        name="userName"
+        pattern="[a-zA-Z0-9-]*"
+        placeholder="Entre com um nome de usuário."
+        value=""
+        title="Cadastre seu nome de usuário."
+        required />
+      <br />
+      <label for="e-mail">E-mail: </label>
+      <input
+        type="email"
+        id="e-mail"
+        name="email"
+        value=""
+        pattern="[a-z0-9-]*@[a-z0-9-]*.[a-z]*"
+        placeholder="Entre com um e-mail..."
+        title="Cadastre seu e-mail."
+        required />
+      <br />
+      <label for="pw">Senha: </label>
+      <input
+        type="password"
+        id="pw"
+        name="email"
+        value=""
+        minlength="6"
+        maxlength="15"
+        pattern="[a-zA-Z0-9-\\\!\@\#\$\%\&\*\(\)\;\:\?\/\^\~\+\.]"
+        placeholder="Digite uma senha:"
+        title="Cadastre uma senha com no mínimo 6 caracteres e no máximo 15 caracteres."
+        required />
+      <br />
+      <input type="submit" value="Cadastrar" formtarget="_self" />
+    </form>
+  </body>
+</html>
