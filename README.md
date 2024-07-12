@@ -6,6 +6,7 @@ Fazer um repositório no GitHub com várias _branches_ diferentes, cada responde
 
 ## Módulos concluídos
 
-| **Módulo** |  **Branch**   | **Data Conclusão** |
-| :--------: | :-----------: | :----------------: |
-|    GIT     | exercício_git |   03 / 07 / 2024   |
+| **Módulo** |   **Branch**   | **Data Conclusão** |
+| :--------: | :------------: | :----------------: |
+|    GIT     | exercício_git  |   03 / 07 / 2024   |
+|    HTML    | exercício_html |   10 / 07 / 2024   |
