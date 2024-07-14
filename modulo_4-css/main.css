@@ -22,13 +22,28 @@ body {
   background-image: linear-gradient(30deg, hsl(0, 0%, 100%), hsl(0, 0%, 88%), hsl(0, 0%, 97%));
 }
 
+/* Header Stylization */
 header {
+  width: 100%;
+  height: 22rem;
+
+  position: relative;
+  background-image: linear-gradient(to right, hsl(190, 8%, 86%), hsl(0, 0%, 95%));
+}
+
+.header-container {
   max-width: 140rem;
   width: 100%;
-
+  height: 18rem;
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  transform: translateX(-50%);
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  position: fixed;
 }
 
 .logo {
@@ -42,6 +57,8 @@ header {
   width: 15rem;
   height: 15rem;
   position: relative;
+  border-radius: 20%;
+  box-shadow: 2px 2px 30px hsl(80, 61%, 70%), -2px -2px 20px hsl(80, 61%, 80%);
 }
 
 .shape {
@@ -50,7 +67,7 @@ header {
 
   position: absolute;
 
-  border: 0.2rem solid hsl(0, 57%, 95%);
+  border: 0.2rem solid hsl(0, 0%, 100%);
   border-radius: 0.2rem;
   &.n1 {
     background-color: hsl(0, 0%, 60%);
@@ -106,12 +123,56 @@ header {
 }
 
 .name {
+  width: 50rem;
+  height: 18rem;
   position: relative;
-  left: 20px;
+  left: 3rem;
   font-family: "Spectral SC";
   font-size: 2.8rem;
+  .part-1 {
+    height: 9.1rem;
+    background: linear-gradient(
+      to right,
+      hsl(65, 61%, 30%, 0.6),
+      hsl(65, 61%, 40%, 0.5),
+      hsl(65, 61%, 80%, 0.2)
+    );
+    background-size: 100% 0.1em, 100% 0em;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    &::first-letter {
+      font-size: 7.4rem;
+    }
+  }
+  .part-2 {
+    height: 9.1rem;
+    background: linear-gradient(
+      to right,
+      hsl(65, 61%, 30%, 0.6),
+      hsl(65, 61%, 40%, 0.5),
+      hsl(65, 61%, 80%, 0.2)
+    );
+    background-size: 100% 0.1em, 100% 0em;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 50%;
+    transform: translateX(38%);
+    bottom: 1.2rem;
+    &::first-letter {
+      font-size: 7.4rem;
+    }
+  }
 }
 
 nav {
   flex-grow: 2;
+}
+
+/* Main body Stylization */
+
+main {
+  position: relative;
+  top: 24rem;
 }
