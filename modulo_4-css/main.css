@@ -1,3 +1,4 @@
+/* Resets and basic stylization of elements */
 * {
   margin: 0;
   padding: 0;
@@ -18,8 +19,32 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-  background-image: linear-gradient(30deg, hsl(0, 0%, 100%), hsl(0, 0%, 88%), hsl(0, 0%, 97%));
+h2 {
+  font-family: "Spectral SC";
+  font-size: 4rem;
+}
+
+h3,
+h4,
+h5 {
+  font-family: "Archivo Black";
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+time {
+  font-size: 1.6rem;
+}
+p {
+  font-size: 2rem;
 }
 
 /* Header Stylization */
@@ -27,8 +52,9 @@ header {
   width: 100%;
   height: 22rem;
 
-  position: relative;
+  position: fixed;
   background-image: linear-gradient(to right, hsl(190, 8%, 86%), hsl(0, 0%, 95%));
+  z-index: 2;
 }
 
 .header-container {
@@ -167,12 +193,171 @@ header {
 }
 
 nav {
-  flex-grow: 2;
+  flex-grow: 3;
+
+  ul {
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+
+    font-size: 2.4rem;
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-weight: 700;
+
+      background: linear-gradient(to right, hsl(50, 80%, 59%), hsl(50, 80%, 59%)),
+        linear-gradient(to right, hsl(300, 30%, 80%), hsl(300, 30%, 40%), hsl(300, 30%, 80%));
+      background-size: 100% 0.1em, 0 0.1em;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        background-size: 0 0.15em, 100% 0.15em;
+        text-shadow: 1px 1px 20px hsl(300, 50%, 70%);
+        font-size: 2.6rem;
+      }
+    }
+  }
 }
 
 /* Main body Stylization */
 
 main {
+  width: 100%;
   position: relative;
-  top: 24rem;
+  top: 28rem;
+}
+
+section {
+  position: relative;
+  h2 {
+    background: linear-gradient(to right, hsl(200, 100%, 63%), hsl(200, 100%, 63%)),
+      linear-gradient(to right, hsl(237, 67%, 58%), hsl(237, 70%, 22%), hsl(237, 67%, 58%));
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 85%, 0 85%;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover > .container > h2 {
+    color: hsl(222, 62%, 8%);
+    background-size: 0 0.15em, 100% 0.15em;
+    text-shadow: 2px 1px 20px hsl(222, 60%, 70%, 0.4), -2px -1px 20px hsl(222, 60%, 66%, 0.4);
+    font-size: 4.4rem;
+  }
+}
+
+.bg-technology-section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.08;
+  background-image: url("https://wallpapercave.com/wp/wp1997564.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+
+.container {
+  max-width: 164rem;
+  margin: 0 auto;
+  /* padding: 2rem; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-news {
+  width: 100%;
+  margin-top: 2rem;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 70rem;
+
+  .main-news {
+    margin-right: 2.4rem;
+    height: 100%;
+    overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding-right: 1rem;
+    .image-news {
+      width: 100%;
+    }
+
+    h3 {
+      border-bottom: 3px solid rgb(0, 0, 120);
+      padding-bottom: 1rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .other-news {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    background: hsl(0, 0%, 0%, 0);
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 85%, 0 85%;
+    background-repeat: no-repeat;
+
+    & > .news {
+      & > h3 {
+        margin-bottom: 0.4rem;
+        transition: all 0.2s ease-out;
+
+        &:hover {
+          color: hsl(240, 95%, 30%);
+        }
+      }
+    }
+  }
+}
+
+.info-writer {
+  margin-top: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  padding: 1rem 0.8rem 0.8rem 1.2rem;
+  border-bottom: 0.8px dotted black;
+  border-right: 0.5px dotted black;
+  background-color: hsl(0, 0%, 98%, 0.6);
+}
+
+.container-photo {
+  width: 8rem;
+  height: 8rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+
+.text {
+  text-align: justify;
+  margin-top: 2.2rem;
+  &::first-letter {
+    margin-left: 5rem;
+  }
 }
