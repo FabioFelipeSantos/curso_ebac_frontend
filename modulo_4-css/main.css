@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0 auto;
 
   display: flex;
@@ -23,7 +23,7 @@ body {
 
 h2 {
   font-family: "Spectral SC";
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 h3,
@@ -50,26 +50,19 @@ p {
 /* Header Stylization */
 header {
   width: 100%;
-  height: 22rem;
-
-  position: fixed;
+  height: 21rem;
   background-image: linear-gradient(to right, hsl(190, 8%, 86%), hsl(0, 0%, 95%));
-  z-index: 2;
+  padding-top: 2rem;
 }
 
 .header-container {
   max-width: 140rem;
   width: 100%;
-  height: 18rem;
-  position: absolute;
-  left: 50%;
-  top: 2rem;
-  transform: translateX(-50%);
+  height: 17rem;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
-
-  position: fixed;
 }
 
 .logo {
@@ -154,7 +147,7 @@ header {
   position: relative;
   left: 3rem;
   font-family: "Spectral SC";
-  font-size: 2.8rem;
+  font-size: 2rem;
   .part-1 {
     height: 9.1rem;
     background: linear-gradient(
@@ -168,7 +161,7 @@ header {
     background-repeat: no-repeat;
     position: absolute;
     &::first-letter {
-      font-size: 7.4rem;
+      font-size: 6.4rem;
     }
   }
   .part-2 {
@@ -230,11 +223,15 @@ nav {
 
 main {
   width: 100%;
-  position: relative;
-  top: 28rem;
+  margin-top: 10rem;
 }
 
-section {
+.main-news > h3 {
+  font-size: 3.2rem;
+}
+
+.technology {
+  padding-top: 2rem;
   position: relative;
   h2 {
     background: linear-gradient(to right, hsl(200, 100%, 63%), hsl(200, 100%, 63%)),
@@ -245,7 +242,7 @@ section {
     transition: all 0.3s ease-in-out;
   }
   &:hover > .container > h2 {
-    color: hsl(222, 62%, 8%);
+    color: hsl(223, 96%, 32%);
     background-size: 0 0.15em, 100% 0.15em;
     text-shadow: 2px 1px 20px hsl(222, 60%, 70%, 0.4), -2px -1px 20px hsl(222, 60%, 66%, 0.4);
     font-size: 4.4rem;
@@ -258,7 +255,7 @@ section {
   height: 100%;
   left: 0;
   top: 0;
-  opacity: 0.08;
+  opacity: 0.2;
   background-image: url("https://wallpapercave.com/wp/wp1997564.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -269,7 +266,6 @@ section {
 .container {
   max-width: 164rem;
   margin: 0 auto;
-  /* padding: 2rem; */
 
   display: flex;
   flex-direction: column;
@@ -325,6 +321,8 @@ section {
 
         &:hover {
           color: hsl(240, 95%, 30%);
+          text-decoration: underline;
+          font-size: 3rem;
         }
       }
     }
@@ -359,5 +357,139 @@ section {
   margin-top: 2.2rem;
   &::first-letter {
     margin-left: 5rem;
+  }
+}
+
+/* Exact Sciences Section */
+
+.exact-sciences {
+  margin-top: 10rem;
+  padding-top: 2rem;
+  position: relative;
+  h2 {
+    background: linear-gradient(to right, hsl(140, 79%, 49%), hsl(140, 79%, 49%)),
+      linear-gradient(to right, hsl(109, 69%, 36%), hsl(109, 74%, 17%), hsl(109, 69%, 36%));
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 85%, 0 85%;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover > .container > h2 {
+    color: hsl(110, 93%, 17%);
+    background-size: 0 0.15em, 100% 0.15em;
+    text-shadow: 2px 1px 20px hsla(98, 99%, 72%, 0.4), -2px -1px 20px hsl(98, 99%, 72%, 0.4);
+    font-size: 4.4rem;
+  }
+}
+
+.bg-exact-sciences-section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.15;
+  background-image: url("https://www.oasisacademywintringham.org/uploaded/Wintringham/News_and_Events/News_Images/2022-2023/Science.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+
+.exact-sciences .container .grid-news .other-news .news h3:hover {
+  color: hsl(110, 100%, 9%);
+}
+
+/* Medicine Section */
+
+.medicine {
+  margin-top: 10rem;
+  padding-top: 2rem;
+  position: relative;
+  h2 {
+    background: linear-gradient(to right, hsl(269, 72%, 51%), hsl(269, 72%, 51%)),
+      linear-gradient(to right, hsl(283, 100%, 35%), hsl(283, 100%, 20%), hsl(283, 100%, 35%));
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 85%, 0 85%;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover > .container > h2 {
+    color: hsl(274, 97%, 27%);
+    background-size: 0 0.15em, 100% 0.15em;
+    text-shadow: 2px 1px 20px hsla(283, 100%, 35%, 0.4), -2px -1px 20px hsl(283, 100%, 35%, 0.4);
+    font-size: 4.4rem;
+  }
+}
+
+.bg-medicine-section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.2;
+  background-image: url("https://i.pinimg.com/originals/8b/88/c8/8b88c8c0aaea4924c73db383851c0f67.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+
+.medicine .container .grid-news .other-news .news h3:hover {
+  color: hsl(280, 100%, 21%);
+}
+
+/* Scientific Researches Section */
+
+.scientific-researches {
+  margin-top: 10rem;
+  padding-top: 2rem;
+  position: relative;
+  h2 {
+    background: linear-gradient(to right, hsl(345, 99%, 35%), hsl(345, 99%, 35%)),
+      linear-gradient(to right, hsl(345, 90%, 27%), hsl(345, 92%, 14%), hsl(345, 90%, 27%));
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 85%, 0 85%;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover > .container > h2 {
+    color: hsl(345, 88%, 24%);
+    background-size: 0 0.15em, 100% 0.15em;
+    text-shadow: 2px 1px 20px hsla(345, 90%, 27%, 0.4), -2px -1px 20px hsl(345, 90%, 27%, 0.4);
+    font-size: 4.4rem;
+  }
+}
+
+.bg-scientific-researches-section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.15;
+  background-image: url("https://theeducationhub.org.nz/wp-content/uploads/2020/01/Research-image.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+
+.scientific-researches .container .grid-news .other-news .news h3:hover {
+  color: hsl(345, 95%, 23%);
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  margin: 10rem 0 0;
+  padding: 4rem;
+  background-image: linear-gradient(to right, hsl(190, 8%, 86%), hsl(0, 0%, 95%));
+  & > p {
+    text-align: center;
+    font-size: 2.2rem;
+    width: 45%;
+    margin: 0 auto;
   }
 }
