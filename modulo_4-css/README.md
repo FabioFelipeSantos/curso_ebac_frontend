@@ -5,7 +5,6 @@ Criação da branch `exercício_css`, para resolução da prática do módulo 4 
 ## Etapas
 
 - [x] Criar a branch `exercício_css`;
-- [ ] Criar uma seção de
-- [ ] Criar uma seção de
+- [x] Criar uma webpage de um jornal fictício que abranja o uso das técnicas `flexbox` e `position`, além de outras estilizações importantes do CSS.
 
 ### **_Fábio Felipe dos Santos_**
