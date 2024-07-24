@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+
+  font-family: Roboto, sans-serif;
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Bungee, cursive;
+  color: hsl(224, 60%, 24%);
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.8rem;
+}
+
+h3 {
+  font-size: 1.872rem;
+}
+
+p {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  height: 7.5rem;
+  background-color: hsl(224, 60%, 24%);
+
+  display: flex;
+  align-items: center;
+
+  h1 {
+    color: white;
+  }
+
+  a {
+    color: white;
+    font-size: 1.8rem;
+    font-family: Bungee, cursive;
+    text-decoration: none;
+  }
+}
+
+.container {
+  max-width: 128rem;
+  width: 128rem;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > nav > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+section {
+  max-width: 128rem;
+  width: 128rem;
+  margin: 2.4rem auto;
+}
+
+.about {
+  display: flex;
+  align-items: flex-start;
+  gap: 3.2rem;
+}
+
+.img-container {
+  min-width: 64rem;
+  width: 64rem;
+
+  & > img {
+    width: 100%;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+
+  & > ul {
+    display: flex;
+    gap: 1.6rem;
+    & > li {
+      height: 2.4rem;
+      & > img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+
+  h3 {
+    margin-bottom: 1.8rem;
+  }
+}
+
+.form {
+  > form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    input {
+      height: 3.6rem;
+      width: 32rem;
+      padding: 0.8rem;
+      font-size: 1.33rem;
+    }
+
+    input[type="submit"] {
+      font-family: Bungee, cursive;
+      font-size: 1.33rem;
+      color: white;
+      background-color: hsl(224, 60%, 24%);
+      border: none;
+      border-radius: 0.4rem;
+    }
+
+    textarea {
+      padding: 0.8rem;
+      font-family: Roboto, sans-serif;
+      font-size: 1.33rem;
+    }
+  }
+}
+
+.socials ul {
+  display: flex;
+  gap: 1.6rem;
+
+  & > li {
+    height: 2.4rem;
+    & > img {
+      height: 100%;
+    }
+  }
+}
+
+footer {
+  background-color: hsl(224, 60%, 24%);
+  padding: 1.6rem;
+  margin: 3.6rem 0 16rem;
+  color: white;
+
+  .container-footer {
+    height: fit-content;
+    max-width: 128rem;
+    width: 100%;
+    margin: 0 auto;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
