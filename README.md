@@ -11,3 +11,4 @@ Fazer um repositório no GitHub com várias _branches_ diferentes, cada responde
 |    GIT     | exercício_git  |   03 / 07 / 2024   |
 |    HTML    | exercício_html |   10 / 07 / 2024   |
 |    CSS     | exercício_css  |   17 / 07 / 2024   |
+| Projeto 1  |   sem branch   |   24 / 07 / 2024   |
