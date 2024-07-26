@@ -130,8 +130,8 @@ header {
     button {
       grid-area: 4 / 1 / 5 / 2;
       width: 36%;
-      background-color: hsl(146, 50%, 18%);
-      color: hsl(150, 100%, 98%);
+      background-color: hsl(146, 50%, 25%);
+      color: hsl(150, 100%, 94%);
       font-size: 3.6rem;
       justify-self: center;
       align-self: center;
@@ -141,8 +141,8 @@ header {
       transition: all 0.3s ease-out;
       &:hover {
         cursor: pointer;
-        color: hsl(80, 100%, 97%);
-        background-color: hsl(146, 50%, 22%);
+        color: hsl(80, 100%, 98%);
+        background-color: hsl(146, 50%, 16%);
         border: 0.2rem solid hsl(180, 100%, 25%);
       }
     }
