@@ -1,23 +1,10 @@
-import { getSidesLength } from "./js/getSidesLength";
+import { drawRectangle } from "./drawShapes.js";
+import { setHeightOfCarreiraSection } from "./getSidesLength.js";
 
-const { w, h } = getSidesLength();
-
-console.log(w, h)
+setHeightOfCarreiraSection();
+drawRectangle("hsl(150, 100%, 98%)", 6)
 
 /*
-const carreiraSection = document.getElementById("carreira");
-
-carreiraSection.style.height = `${h + 32 * 2}px`;
-
-canvas.setAttribute("width", `${w}px`);
-canvas.setAttribute("height", `${h}px`);
-
-const externalRectangle = canvas.getContext("2d");
-
-externalRectangle.lineWidth = 4;
-externalRectangle.strokeStyle = "mintcream";
-externalRectangle.strokeRect(0, 0, w, h);
-
 const numSquares = 40;
 const squaresSide = [];
 const angles = [];
