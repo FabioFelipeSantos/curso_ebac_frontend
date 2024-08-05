@@ -1,74 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Azeret+Mono:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
-      rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic"
-      rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Spectral+SC:200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic"
-      rel="stylesheet" />
-    <title>Fábio Santos - Home</title>
-  </head>
-  <body>
-    <header id="header">
-      <div class="container">
-        <nav>
-          <ul>
-            <li><a href="#carreira">Carreira</a></li>
-            <li><a href="">Cursos</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Contato</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <section class="sobre">
-        <div class="container">
-          <h1>Fábio Santos</h1>
-          <p>
-            <span>Matemático</span>. <span>Professor</span>. <span>Pesquisador</span>.
-            <span>Desenvolvedor</span>. <span>Programador</span>. <span>Eterno Estudante</span>...
-          </p>
-          <button>Aprenda Algo</button>
-          <div class="img-container">
-            <img src="./assets/photo.jpg" alt="" />
-          </div>
-        </div>
-      </section>
-      <section id="carreira">
-        <div class="container">
-          <div class="curriculo">
-            <h3>Formações</h3>
-            <div class="degrees">
-              <h2>Matemática</h2>
-              <div>
-                <time datetime="2008">2007-2008</time>
-                <p>Licenciatura</p>
-                <em>Ênfase na construção do conhecimento em prol da formação do professor de Matemática.</em>
-              </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Azeret+Mono:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Spectral+SC:200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Labrada:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+            rel="stylesheet" />
+        <title>Fábio Santos - Home</title>
+    </head>
+    <body>
+        <header id="header">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#carreira">Carreira</a></li>
+                        <li><a href="#courses-yt">Cursos</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="">Contato</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="degrees">
-              <h2>Engenharia Mecânica</h2>
-              <div>
-                <time datetime="2008">2017-2019</time>
-                <p>Licenciatura</p>
-              </div>
-            </div>
-            <div class="degrees"></div>
-            <div class="degrees"></div>
-          </div>
-          <canvas id="spiral"></canvas>
-        </div>
-      </section>
-    </main>
-
-    <script type="module" src="./scripts/main.js"></script>
-  </body>
+        </header>
+        <main>
+            <section class="sobre">
+                <div class="container">
+                    <h1>Fábio Santos</h1>
+                    <p class="who-am-I">
+                        <span>Matemático</span>. <span>Professor</span>. <span>Pesquisador</span>.
+                        <span>Desenvolvedor</span>. <span>Programador</span>. <span>Eterno Estudante</span>...
+                    </p>
+                    <p class="more-about-me">
+                        Formado em matemática, atuo como professor desde 2008. O que me guia é a busca por
+                        ensinar o indivíduo pensante a querer e buscar ser
+                        <b style="text-decoration: underline">MAIS</b> inteligente a cada dia, e não regras
+                        sem sentido para solucionar equações sem significado. Espero alcançar mentes
+                        brilhantes que tenham vontade de mudar seu universo por meio do aprendizado de exatas.
+                        Em 2022 comecei alguns cursos no Youtube no meu canal
+                        <a href="https://youtube.com/@derivadadekonoha" target="_blank">Derivada de Konoha</a
+                        >. No canal, meu foco é ensinar coisas que não tive a oportunidade de ensinar como
+                        matemático. Em 2024 tomei a decisão de construir mais uma habilidade de programação, a
+                        de Web Developer, focado em Backend. O intuito é mudar de carreira e também construir
+                        minha própria plataforma de ensino.
+                    </p>
+                    <button>Aprenda Algo</button>
+                    <div class="img-container">
+                        <img src="./assets/photo.jpg" alt="" />
+                    </div>
+                </div>
+            </section>
+            <section id="carreira">
+                <div class="container">
+                    <canvas id="spiral"></canvas>
+                    <div class="curriculo">
+                        <h3>Formações</h3>
+                        <div class="degrees">
+                            <h2>Matemática</h2>
+                            <div class="info-degree">
+                                <time datetime="2008">2007 - 2008</time>
+                                <p>Licenciatura</p>
+                                <em
+                                    >Ênfase na construção do conhecimento em prol da formação do professor de
+                                    Matemática.</em
+                                >
+                            </div>
+                        </div>
+                        <div class="degrees">
+                            <h2>Engenharia Mecânica</h2>
+                            <div class="info-degree">
+                                <time datetime="2019">2017 - 2019</time>
+                                <p>Mestrado em Engenharia</p>
+                                <em
+                                    >Pesquisa em Otimização Computacional voltada à Análise Estrutural.
+                                    Desenvolvimento de um otimizador estocástico baseado no algoritmo
+                                    <span>"Efficient Global Optimization"</span>.</em
+                                >
+                                <h4>Dissertação:</h4>
+                                <a href="https://repositorio.ufsc.br/handle/123456789/214513" target="_blank"
+                                    >Contribuições à Eficiência da Otimização Global Estocástica Adaptativa</a
+                                >
+                            </div>
+                        </div>
+                        <div class="degrees">
+                            <h2>Desenvolvedor FullStack Python</h2>
+                            <div class="info-degree">
+                                <time datetime="2024">2024 (em progresso)</time>
+                                <p>Formação Técnica</p>
+                                <a href="https://ebaconline.com.br/full-stack-python" target="_blank">
+                                    Curso Online pela escola EBAC
+                                </a>
+                                <em>
+                                    Voltado à formação do desenvolvedor Frontend e do desenvolvedor Backend,
+                                    nesta última focando a utilização do Python como linguagem de programação.
+                                </em>
+                            </div>
+                        </div>
+                        <div class="degrees">
+                            <h2>Desenvolvedor FullStack Javascript</h2>
+                            <div class="info-degree">
+                                <time datetime="2024">2024 (em progresso)</time>
+                                <p>Formação Técnica</p>
+                                <a href="https://www.onebitcode.com/#detalhes-js">
+                                    Curso Online pela escola OneBitCode
+                                </a>
+                                <em>
+                                    Voltado à formação do desenvolvedor Frontend e do desenvolvedor Backend,
+                                    nesta última focando a utilização do Javascript com Node.js como linguagem
+                                    de programação.
+                                </em>
+                            </div>
+                        </div>
+                        <h3>Experiência Profissional</h3>
+                        <!-- 6 -->
+                        <div class="experience">
+                            <h2>Professor</h2>
+                            <p>2010 - 2011: Universidade Federal de Viçosa - UFV</p>
+                            <p>2012 - 2015: Faculdade Patos de Minas</p>
+                            <p>2015 - 2016: Universidade Federal de Goiás - UFG</p>
+                            <p>2016 - Atual: Instituto Federal de Goiás - IFG</p>
+                            <em>
+                                Nas universidades atuei como professor das disciplinas bases dos cursos de
+                                graduação em Engenharia, ministrando disciplinas como: Álgebra Linear,
+                                Cálculos, Equações Diferenciais, Estatística e Probabilidade, Geometria
+                                Linear, Matemática Aplicada e Variáveis Complexas. As funções desenvolvidas
+                                compreendem, entre outras: preparação de material de, elaboração de
+                                atividades, elaboração de avaliações, monitorias e orientação de projetos de
+                                pesquisa.
+                            </em>
+                        </div>
+                        <div class="experience">
+                            <h2>Pesquisador</h2>
+                            <p>2017 - Atual</p>
+                            <em>
+                                Desde antes do meu mestrado, porém com maior intensidade durante e após ele,
+                                eu faço pesquisas na área da otimização matemática e computacional, tendo
+                                trabalhado com Algoritmos Heurísticos para otimização de funções não convexas.
+                                A principal aplicação da pesquisa foi com foco em Otimização Estrutural e
+                                Análise Computacional de Estruturas, utilizando o Método dos Elementos Finitos
+                                como procedimento de aproximação. Trabalhei também desenvolvendo aplicações
+                                para análise de problemas Estocásticos em Dinâmica Estrutural. Outro ponto de
+                                pesquisa foi em Redução Modal para Elementos Finitos.
+                            </em>
+                        </div>
+                        <h3>Programas Implementados</h3>
+                        <!-- 9 -->
+                        <div class="programs">
+                            <a href="https://github.com/FabioFelipeSantos"
+                                >Análise de Estruturas pelo método da Rigidez</a
+                            >
+                            <span> - Matlab</span>
+                            <em>
+                                Programa que utiliza o Método da Rigidez para análise de estruturas em 2d como
+                                Treliças, Vigas e Pórticos
+                            </em>
+                        </div>
+                        <div class="programs">
+                            <a href="https://github.com/FabioFelipeSantos"
+                                >Análise Linear de Estruturas pelo Método dos Elementos Finitos</a
+                            >
+                            <span> - Matlab</span>
+                            <em
+                                >Programa utilizando o Método dos Elementos Finitos para análise linear de
+                                estruturas como barras, vigas e placas em 2d.</em
+                            >
+                        </div>
+                        <div class="programs">
+                            <a href="https://github.com/FabioFelipeSantos"
+                                >Otimização Global utilizando o <i>Efficient Global Optimization - EGO</i></a
+                            >
+                            <span> - Matlab</span>
+                            <em
+                                >Implementação do algoritmo <b>Efficient Global Optimization - EGO</b> para
+                                otimização de funções multimodais (não-convexas). Utiliza o
+                                <b>Kriging Determinístico</b> como radial basis function para criação dos
+                                metamodelos de substituição das funções objetivo.</em
+                            >
+                        </div>
+                        <div class="programs">
+                            <a href="https://github.com/FabioFelipeSantos"
+                                >Otimização Estocástica utilizando
+                                <i>sEGO - Stochastic Efficient Global Optimization</i></a
+                            >
+                            <span> - Matlab</span>
+                            <em
+                                >Implementação do algoritmo <b>Efficient Global Optimization - EGO</b> para
+                                otimização de funções multimodais (não-convexas). Utiliza o
+                                <b>Kriging Estocástico</b> como radial basis function para criação dos
+                                metamodelos de substituição das funções objetivo que são sujeitas a erros ou
+                                aleatoriedades em suas propriedades.</em
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="courses-yt">
+                <div class="container">
+                    <div class="card">
+                        <h3></h3>
+                        <a href="">
+                            <div><img src="" alt="" /></div>
+                        </a>
+                        <p></p>
+                    </div>
+                    <div class="card">
+                        <h3></h3>
+                        <a href="">
+                            <div><img src="" alt="" /></div>
+                        </a>
+                        <p></p>
+                    </div>
+                    <div class="card">
+                        <h3></h3>
+                        <a href="">
+                            <div><img src="" alt="" /></div>
+                        </a>
+                        <p></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script type="module" src="./scripts/main.js"></script>
+    </body>
 </html>
