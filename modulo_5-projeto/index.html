@@ -26,7 +26,7 @@
                         <li><a href="#carreira">Carreira</a></li>
                         <li><a href="#courses-yt">Cursos</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="">Contato</a></li>
+                        <li><a href="#contact">Contato</a></li>
                     </ul>
                 </nav>
             </div>
@@ -157,7 +157,7 @@
                             <a href="https://github.com/FabioFelipeSantos"
                                 >Análise de Estruturas pelo método da Rigidez</a
                             >
-                            <span> - Matlab</span>
+                            <p>Matlab</p>
                             <em>
                                 Programa que utiliza o Método da Rigidez para análise de estruturas em 2d como
                                 Treliças, Vigas e Pórticos
@@ -167,7 +167,7 @@
                             <a href="https://github.com/FabioFelipeSantos"
                                 >Análise Linear de Estruturas pelo Método dos Elementos Finitos</a
                             >
-                            <span> - Matlab</span>
+                            <p>Matlab</p>
                             <em
                                 >Programa utilizando o Método dos Elementos Finitos para análise linear de
                                 estruturas como barras, vigas e placas em 2d.</em
@@ -177,7 +177,7 @@
                             <a href="https://github.com/FabioFelipeSantos"
                                 >Otimização Global utilizando o <i>Efficient Global Optimization - EGO</i></a
                             >
-                            <span> - Matlab</span>
+                            <p>Matlab</p>
                             <em
                                 >Implementação do algoritmo <b>Efficient Global Optimization - EGO</b> para
                                 otimização de funções multimodais (não-convexas). Utiliza o
@@ -190,7 +190,7 @@
                                 >Otimização Estocástica utilizando
                                 <i>sEGO - Stochastic Efficient Global Optimization</i></a
                             >
-                            <span> - Matlab</span>
+                            <p>Matlab</p>
                             <em
                                 >Implementação do algoritmo <b>Efficient Global Optimization - EGO</b> para
                                 otimização de funções multimodais (não-convexas). Utiliza o
@@ -204,30 +204,100 @@
             </section>
             <section id="courses-yt">
                 <div class="container">
-                    <div class="card">
-                        <h3></h3>
-                        <a href="">
-                            <div><img src="" alt="" /></div>
-                        </a>
-                        <p></p>
-                    </div>
-                    <div class="card">
-                        <h3></h3>
-                        <a href="">
-                            <div><img src="" alt="" /></div>
-                        </a>
-                        <p></p>
-                    </div>
-                    <div class="card">
-                        <h3></h3>
-                        <a href="">
-                            <div><img src="" alt="" /></div>
-                        </a>
-                        <p></p>
+                    <a
+                        class="card"
+                        href="https://youtube.com/playlist?list=PL_roFY5N9FBzFI9tuFyLq8F8LoUHyCM9E&si=7rBURcGlbyRxA4aB"
+                        target="_blank">
+                        <div class="course-grid">
+                            <div class="course-title-img">
+                                <h3>Um Curso Introdutório ao Método dos Elementos Finitos</h3>
+                                <div class="course-img">
+                                    <img src="./assets/fem.jpg" alt="" />
+                                </div>
+                            </div>
+                            <p>
+                                Neste curso vou desde o básico do Método dos Elementos Finitos até aplicações
+                                avançadas do método. O intuito é levar o aluno desde os fundamentos mais
+                                importantes até a implementação computacional. Você encontrará:
+                            </p>
+                            <ul>
+                                <li>Análise de Barras, Treliças, Vigas, etc.</li>
+                                <li>Estado plano de tensão e deformação</li>
+                                <li>Método das Energias</li>
+                                <li>Análise Dinâmica de Estruturas</li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a
+                        class="card"
+                        href="https://youtube.com/playlist?list=PL_roFY5N9FBwYY07NK0xboRaya9UtwUAQ&si=nLHAyVNaE9lBpRRa"
+                        target="_blank">
+                        <div class="course-grid">
+                            <div class="course-title-img">
+                                <h3>Curso Introdução à Otimização e Algoritmo Genéticos</h3>
+                                <div class="course-img">
+                                    <img src="./assets/AG.jpg" alt="" />
+                                </div>
+                            </div>
+                            <p>
+                                Apresento os pontos introdutórios de problemas de otimização, todos os
+                                conceitos por trás dos algoritmos evolutivos, sua ligação com os conceitos
+                                genéticos e os fundamentos dos Algoritmos Genéticos. Abordagem dinâmica,
+                                apresentando os conceitos básicos por trás de suas definições e as formas de
+                                aplicação em um problema com representação binária. É construído do zero um
+                                programa computacional capaz de resolver problemas de otimização por meio do
+                                AG.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section id="contact">
+                <canvas id="geometry"></canvas>
+                <div class="container">
+                    <h2>Contato</h2>
+                    <div class="forms-info">
+                        <p>
+                            Caso queira entrar em contato, deixar sugestões ou fazer alguma parceria, não
+                            deixe de entrar em contato. Basta preencher o formulário seguinte e assim que
+                            possível tentarei lhe responder.
+                        </p>
+                        <form id="form" action="">
+                            <label for="name">Deixe seu nome:</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                value=""
+                                placeholder="Digite seu nome..."
+                                required />
+                            <label for="email">Digite seu e-mail:</label>
+                            <input id="email" type="email" placeholder="Digite seu e-mail..." required />
+                            <label for="option">Escolha um motivo para contato:</label>
+                            <select id="option" name="" form="#form" required>
+                                <option value="">--Escolha uma opção--</option>
+                                <option value="doubts">Dúvidas</option>
+                                <option value="suggestions">Sugestões</option>
+                                <option value="business">Negócios</option>
+                                <option value="courses-texts">Materiais e Cursos</option>
+                            </select>
+                            <label for="message">Digite sua mensagem abaixo:</label>
+                            <textarea name="" id="message" rows="9" required></textarea>
+                            <input class="submit-button" type="submit" value="Enviar Mensagem" />
+                        </form>
                     </div>
                 </div>
             </section>
         </main>
+        <footer>
+            <div class="container">
+                <h4>Design e desenvolvimento por Fábio Santos</h4>
+                <div class="infos">
+                    <p>&COPY; Todos os direitos ao criador.</p>
+                    <time id="footer-time" datetime=""></time>
+                </div>
+            </div>
+        </footer>
         <script type="module" src="./scripts/main.js"></script>
     </body>
 </html>
