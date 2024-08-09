@@ -8,13 +8,27 @@
     </head>
     <body>
         <main>
-            <form action="">
-                <label for="">Digite um número real (campo A):</label>
-                <input type="text" />
-                <label for=""></label>
-                <input type="text" />
-                <button disabled="disabled"></button>
+            <p>Para conferir e enviar seus números, preencha os campos abaixo:</p>
+            <form id="form">
+                <label for="number-A">Digite um número real (campo A):</label>
+                <input
+                    title="Entre com um número com até 5 casas decimais."
+                    id="number-A"
+                    type="number"
+                    step="0.00001"
+                    required
+                    placeholder="Entre com o número A..." />
+                <label for="number-B">Digite um número real (campo B):</label>
+                <input
+                    title="Entre com um número com até 5 casas decimais."
+                    id="number-B"
+                    type="number"
+                    step="0.00001"
+                    required
+                    placeholder="Entre com o número B..." />
+                <button id="submit-btn" type="submit">Analise os valores!</button>
             </form>
+            <p id="form-validity"></p>
         </main>
         <script src="./main.js"></script>
     </body>
