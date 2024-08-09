@@ -1,2 +1,5 @@
+# Ignore the .gitignore file
+/.gitignore
+
 # Ignore the practice folders
 modulo_7-DOM/pratica
