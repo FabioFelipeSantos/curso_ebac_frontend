@@ -14,9 +14,12 @@ window.addEventListener("animationend", () => {
 })
 
 numberA.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") return;
+
     message.innerHTML = "";
     message.style.display = "none";
     main.classList.remove("invalid");
+
     if (e.target.validity.badInput) {
         console.log("Inválido")
         e.target.style.borderColor = "red";
@@ -37,9 +40,12 @@ numberA.addEventListener("keyup", (e) => {
 })
 
 numberB.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") return;
+
     message.innerHTML = "";
     message.style.display = "none";
     main.classList.remove("invalid");
+
     if (e.target.validity.badInput) {
         console.log("Inválido")
         e.target.style.borderColor = "red";
@@ -59,27 +65,31 @@ numberB.addEventListener("keyup", (e) => {
     }
 })
 
-numberA.addEventListener("focusin", () => message.style.display = "none")
-numberB.addEventListener("focusin", () => message.style.display = "none")
+numberA.addEventListener("focus", () => message.style.display = "none")
+numberB.addEventListener("focus", () => message.style.display = "none")
 
 button.addEventListener("click", e => handleButtonClick(e));
+
+document.addEventListener("keyup", (e) => {
+    if (e.key === "Enter" && numberA.valueAsNumber && numberB.valueAsNumber) {
+        button.click();
+    }
+})
 
 function formValidate() {
     return numberB.valueAsNumber > numberA.valueAsNumber;
 }
 
 function handleButtonClick(e) {
-    console.log(numberA.value, numberB.value)
-    console.log(formValidate())
     e.preventDefault();
     if (formValidate()) {
         message.classList.add("valid");
         message.style.display = "block";
-        message.innerHTML = "O formulário é válido e foi enviado com sucesso!";
+        message.innerHTML = `O formulário é válido e foi enviado com sucesso! O valor A: ${numberA.value} é menor que B: ${numberB.value}`;
         main.classList.add("main-valid");
+        main.classList.remove("invalid");
         numberA.value = "";
         numberB.value = "";
-        main.classList.remove("invalid");
         button.disabled = true;
     } else {
         message.classList.remove("valid");
