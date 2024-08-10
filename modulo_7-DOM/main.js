@@ -59,7 +59,18 @@ numberB.addEventListener("keyup", (e) => {
     }
 })
 
-button.addEventListener("click", (e) => {
+numberA.addEventListener("focusin", () => message.style.display = "none")
+numberB.addEventListener("focusin", () => message.style.display = "none")
+
+button.addEventListener("click", e => handleButtonClick(e));
+
+function formValidate() {
+    return numberB.valueAsNumber > numberA.valueAsNumber;
+}
+
+function handleButtonClick(e) {
+    console.log(numberA.value, numberB.value)
+    console.log(formValidate())
     e.preventDefault();
     if (formValidate()) {
         message.classList.add("valid");
@@ -73,12 +84,8 @@ button.addEventListener("click", (e) => {
     } else {
         message.classList.remove("valid");
         message.style.display = "block";
-        message.innerHTML = "O formulário é invalido! O valor em A deve ser maior que o valor em B.";
+        message.innerHTML = "O formulário é invalido! O valor em A deve ser menor que o valor em B.";
         button.disabled = true;
         main.classList.add("invalid");
     }
-});
-
-function formValidate() {
-    return numberB.value > numberA.value;
 }
