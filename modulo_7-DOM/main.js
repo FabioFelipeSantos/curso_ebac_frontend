@@ -11,8 +11,8 @@ window.addEventListener("load", () => {
 
 window.addEventListener("animationend", () => {
     main.classList.remove("main-open");
-    main.classList.remove("main-gradient");
 })
+
 numberA.addEventListener("keyup", (e) => {
     message.innerHTML = "";
     message.style.display = "none";
