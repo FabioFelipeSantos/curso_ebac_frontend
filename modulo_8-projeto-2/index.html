@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+            rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+            rel="stylesheet" />
+        <title>Anota para mim! Agenda</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="form-container">
+                <header>
+                    <span class="material-symbols-outlined size-20"> contacts </span>
+                    <h1>Anota para mim!</h1>
+                </header>
+                <form id="form-dados">
+                    <div class="info-container">
+                        <div class="icon-name">
+                            <span class="material-symbols-outlined"> person_edit </span>
+                        </div>
+                        <input id="nome" type="text" required placeholder="Nome do Contato" />
+                    </div>
+                    <div class="numbers-container">
+                        <p>Clique no mais para adicionar um número de telefone.</p>
+                        <div class="btn-and-tel-numbers">
+                            <div id="btn-add-tel">
+                                <span class="material-symbols-outlined" title="Adicione um número">
+                                    add
+                                </span>
+                            </div>
+                            <div id="all-tel-numbers"></div>
+                        </div>
+                    </div>
+                    <div class="info-container">
+                        <div class="icon-name">
+                            <span class="material-symbols-outlined"> mail </span>
+                        </div>
+                        <input class="mail" type="email" placeholder="Digite um e-mail" />
+                    </div>
+                    <button id="sbm-btn" type="submit">Adicionar Contato</button>
+                </form>
+                <p id="error-message"></p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Telefone(s)</th>
+                        <th>E-mail</th>
+                    </tr>
+                </thead>
+                <tbody id="corpo-tabela-contatos"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total de Contatos</td>
+                        <td id="num-total-contatos"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>
+
+<!-- Um detalhe sobre a estilização da tabela: o atributo "cellspacing" foi removido (depreciado), logo, por recomendação do MDN não deverá ser mais utilizado. Em seu lugar, deve-se usar a propriedade border-spacing no elemento <table> (https://developer.mozilla.org/en-US/docs/Web/CSS/border-spacing). Além de ser uma alternativa mais poderosa, adiciona mais robustez à estilização da tabela a outros tipos de telas. -->

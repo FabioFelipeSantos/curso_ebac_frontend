@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+
+    font-size: 62.5%;
+}
+
+body {
+    height: 100%;
+    padding: 9.6rem;
+
+    display: flex;
+    align-items: center;
+
+    background-image: linear-gradient(45deg, hsl(290, 100%, 1%), hsl(290, 100%, 4%));
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: hsl(60, 20%, 92%);
+
+    font-family: "Spectral";
+    font-size: 1.6rem;
+}
+
+input {
+    padding: 1.2rem;
+    font-family: "Spectral";
+    font-size: 1.25em;
+}
+
+.container {
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+}
+
+.form-container {
+    margin-right: 8.4rem;
+    width: 46%;
+
+    header {
+        margin-bottom: 2.4rem;
+        padding: 0 0 1.2rem 1.2rem;
+        border-bottom: 2px double hsl(60, 20%, 92%);
+        border-left: 2px double hsl(60, 20%, 92%);
+        border-radius: 0.6rem;
+
+        display: flex;
+        align-items: center;
+
+        & .size-20 {
+            margin-right: 2rem;
+            font-size: 6.2rem;
+            font-variation-settings: "wght" 200;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-family: "Archivo Black";
+        }
+    }
+}
+
+#error-message {
+    margin-top: 2.6rem;
+    display: none;
+    text-align: center;
+    font-size: 1.4em;
+    text-shadow: 0px 0px 5px hsl(270, 100%, 30%);
+    color: hsl(0, 100%, 75%);
+}
+
+#form-dados {
+    display: flex;
+    flex-direction: column;
+
+    .info-container {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+
+        .icon-name {
+            width: 5rem;
+            height: 5rem;
+            margin: 0 2rem 0 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & > span {
+                font-size: 5rem;
+            }
+        }
+
+        & input {
+            outline-width: 0;
+            border: 0.25rem solid hsl(40, 100%, 50%);
+            width: 100%;
+        }
+    }
+
+    .numbers-container {
+        margin: 4.4rem 0;
+
+        display: flex;
+        flex-direction: column;
+
+        p {
+            font-size: 1.425em;
+        }
+
+        .btn-and-tel-numbers {
+            margin-top: 1.6rem;
+
+            display: flex;
+
+            #btn-add-tel {
+                width: 5rem;
+                height: 5rem;
+                margin: 0 2rem 0 2rem;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid white;
+                border-radius: 1rem;
+                transition: all 0.2s ease-out;
+
+                & > span {
+                    font-size: 4rem;
+                }
+
+                &:hover {
+                    background-color: hsl(280, 20%, 45%, 0.4);
+                }
+
+                &.clickedAnim {
+                    animation: addNumberAnim 0.2s ease 2 alternate backwards;
+                }
+            }
+
+            #all-tel-numbers {
+                width: 100%;
+
+                .tel-number {
+                    width: 100%;
+                    margin-bottom: 0.6rem;
+                    padding: 0.6rem;
+                    margin-right: 2rem;
+                    outline-width: 0;
+                    border: 0.2rem solid hsl(140, 100%, 50%);
+                }
+            }
+        }
+    }
+
+    & input.mail {
+        border: 0.25rem solid hsl(250, 100%, 50%);
+    }
+
+    & #sbm-btn {
+        margin-top: 3.8rem;
+        margin-left: 12%;
+        padding: 1rem 2.4rem;
+
+        place-self: center center;
+
+        border: none;
+        border-radius: 2.4rem;
+        background-color: hsl(265, 100%, 20%);
+        font-family: "Spectral", serif;
+        font-size: 1.85em;
+        font-weight: 600;
+        color: hsl(60, 20%, 92%);
+
+        transition: all 0.2s ease-out;
+
+        &:hover {
+            background-color: hsl(265, 100%, 30%);
+            cursor: pointer;
+        }
+        &.clicked {
+            background-color: hsl(285, 100%, 30%);
+            animation: sendButtonAnim 0.2s ease 2 alternate backwards;
+        }
+    }
+}
+
+table {
+    padding: 2rem;
+    width: 50%;
+    font-family: "Crimson Text";
+    font-size: 1.2em;
+    border-spacing: 0;
+
+    place-self: start center;
+
+    th {
+        padding: 0 2rem 1rem;
+
+        font-weight: 300;
+        text-align: center;
+        border-bottom: 2px solid hsl(60, 20%, 92%);
+    }
+
+    tbody {
+        tr {
+            height: 5rem;
+        }
+    }
+
+    td {
+        border-bottom: 1px solid hsl(60, 20%, 92%, 0.5);
+        text-align: center;
+    }
+
+    tfoot td {
+        border-bottom: 2px solid hsl(60, 20%, 92%);
+        height: 4rem;
+    }
+}
+
+tbody tr:nth-child(even) {
+    background-color: hsl(60, 20%, 10%, 0.25);
+}
+
+/* Keyframes */
+@keyframes addNumberAnim {
+    from {
+        transform: rotate(0);
+        scale: 1;
+    }
+    50% {
+        transform: rotate(25deg);
+        scale: 1.08;
+    }
+    to {
+        transform: rotate(-25deg);
+        scale: 1.16;
+    }
+}
+
+@keyframes sendButtonAnim {
+    from {
+        transform: translateX(0rem);
+        scale: 1;
+    }
+    50% {
+        transform: translateX(2rem);
+        scale: 1.2;
+    }
+    to {
+        transform: translateX(-4rem);
+        scale: 1.2;
+    }
+}
