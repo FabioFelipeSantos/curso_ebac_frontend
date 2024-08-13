@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+
+    font-family: "Anek Devanagari", sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    height: 100%;
+    background-color: hsl(0, 0%, 10%);
+    color: hsl(120, 100%, 96%);
+    font-size: 2rem;
+}
