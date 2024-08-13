@@ -12,41 +12,47 @@
         <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Spectral:200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic"
+            rel="stylesheet" />
         <title>Faça Acontecer</title>
     </head>
     <body>
         <div class="container">
             <header>
-                <div>
+                <div class="image-container">
                     <img
                         src="https://cdn.pixabay.com/photo/2016/03/31/19/50/checklist-1295319_1280.png"
                         alt="Lista de tarefas e lápis amarelos" />
                 </div>
-                <h1>Faça Acontecer</h1>
-                <p>
-                    Sua nova forma de se programar. Simples e prática. Faça ser simples, faça menos, faça mais
-                    vezes, FAÇA ACONTECER agora...
-                </p>
+                <div class="name-container">
+                    <h1>Faça Acontecer</h1>
+                    <p>
+                        Sua nova forma de se programar. Simples e prática. Faça ser simples, faça menos, faça
+                        mais vezes, <span>FAÇA ACONTECER</span> agora...
+                    </p>
+                </div>
             </header>
-            <div id="form-container">
-                <form id="form">
-                    <div id="color-select">
-                        <label for="color">Selecione uma cor</label>
-                        <input id="color" type="color" value="#300038" />
+            <form id="form">
+                <div id="color-select">
+                    <label for="color">Selecione uma cor</label>
+                    <input id="color" type="color" value="#300038" />
+                </div>
+                <div id="date-select">
+                    <label for="date">Selecione uma data</label>
+                    <input id="date" type="date" />
+                </div>
+                <div id="task-name">
+                    <label for="task">Defina a tarefa a ser realizada</label>
+                    <input id="task" type="text" minlength="1" required />
+                </div>
+                <button type="submit">
+                    <div>
+                        <span class="material-symbols-outlined add-task-icon"> add_task</span>
+                        <span class="button-text">Nova Tarefa</span>
                     </div>
-                    <div id="date-select">
-                        <label for="date">Selecione uma data</label>
-                        <input id="date" type="date" />
-                    </div>
-                    <div id="task-name">
-                        <label for="task">Defina a tarefa a ser realizada</label>
-                        <input id="task" type="text" minlength="1" required />
-                    </div>
-                    <button type="submit">
-                        <div><span></span><span>Nova Tarefa</span></div>
-                    </button>
-                </form>
-            </div>
+                </button>
+            </form>
             <div id="todo-list">
                 <ul>
                     <li>
