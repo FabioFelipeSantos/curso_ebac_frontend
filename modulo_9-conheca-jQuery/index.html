@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,29 +44,41 @@
                 </div>
                 <div id="task-name">
                     <label for="task">Defina a tarefa a ser realizada</label>
-                    <input id="task" type="text" minlength="1" required />
+                    <input id="task" class="" type="text" minlength="1" required />
+                    <p id="task-error-message">Entre com uma tarefa!</p>
                 </div>
-                <button type="submit">
-                    <div>
-                        <span class="material-symbols-outlined add-task-icon"> add_task</span>
-                        <span class="button-text">Nova Tarefa</span>
-                    </div>
-                </button>
+                <div id="button-container">
+                    <button type="submit">
+                        <div>
+                            <span class="material-symbols-outlined add-task-icon"> add_task</span>
+                            <span class="button-text">Nova Tarefa</span>
+                        </div>
+                    </button>
+                </div>
             </form>
             <div id="todo-list">
-                <ul>
-                    <li>
-                        <input id="task-done" type="checkbox" />
-                        <date>20/05/24</date>
-                        <span>Tarefa 1</span>
+                <p id="tasks-done-count">Concluídas:</p>
+                <ul id="tasks-list">
+                    <!-- <li>
+                        <input type="checkbox" id="task-1" class="task-done" />
+                        <time datetime="2024-08-14">14 / 08 / 2024</time>
+                        <span>Tarefa</span>
                     </li>
+                    <li>
+                        <input type="checkbox" id="task-2" class="task-done" />
+                        <span class="no-date">Lorem ipsum dolor sit amet consectetur adipisicing</span>
+                    </li> -->
                 </ul>
             </div>
             <footer>
                 <p>
-                    &copy; Todos os direitos reservados a
-                    <a href="https://github.com/FabioFelipeSantos">Fábio Santos</a>. Desenvolvimentos e
-                    Designs.
+                    &copy; <time datetime="">2024</time> Todos os direitos reservados a
+                    <a href="https://github.com/FabioFelipeSantos" target="_blank">Fábio Santos</a>.
+                    Desenvolvimento e Design.
+                </p>
+                <p>
+                    Contato:
+                    <a href="mailto:fabiotrabmat@gmail.com" target="_blank">fabiotrabmat@gmail.com</a>
                 </p>
             </footer>
         </div>
