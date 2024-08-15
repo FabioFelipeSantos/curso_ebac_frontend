@@ -13,3 +13,4 @@ Fazer um repositório no GitHub com várias _branches_ diferentes, cada responde
 |            CSS            |   exercício_css   |   17 / 07 / 2024   |
 |         Projeto 1         |    sem branch     |   07 / 08 / 2024   |
 | JS integrando HTML com JS | exercicio_html_js |   10 / 08 / 2024   |
+|    Conhecendo o jQuery    | exercício_jquery  |   15 / 08 / 2024   |
