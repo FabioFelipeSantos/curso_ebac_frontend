@@ -27,10 +27,8 @@
                 </div>
                 <div class="name-container">
                     <h1>Faça Acontecer</h1>
-                    <p>
-                        Sua nova forma de se programar. Simples e prática. Faça ser simples, faça menos, faça
-                        mais vezes, <span>FAÇA ACONTECER</span> agora...
-                    </p>
+                    <p>Sua nova forma de se programar. Simples e prática.</p>
+                    <p>Faça ser simples, faça menos, faça mais vezes, <span>FAÇA ACONTECER</span> agora...</p>
                 </div>
             </header>
             <form id="form">
@@ -57,7 +55,7 @@
                 </div>
             </form>
             <div id="todo-list">
-                <p id="tasks-done-count">Concluídas:</p>
+                <p id="tasks-done-count"></p>
                 <ul id="tasks-list">
                     <!-- <li>
                         <input type="checkbox" id="task-1" class="task-done" />
@@ -71,16 +69,121 @@
                 </ul>
             </div>
             <footer>
-                <p>
-                    &copy; <time datetime="">2024</time> Todos os direitos reservados a
-                    <a href="https://github.com/FabioFelipeSantos" target="_blank">Fábio Santos</a>.
-                    Desenvolvimento e Design.
-                </p>
-                <p>
-                    Contato:
-                    <a href="mailto:fabiotrabmat@gmail.com" target="_blank">fabiotrabmat@gmail.com</a>
-                </p>
+                <div id="footer-rights">
+                    <p>
+                        &copy; <time datetime="">2024</time> Todos os direitos reservados a
+                        <a href="https://github.com/FabioFelipeSantos" target="_blank">Fábio Santos</a>.
+                        Desenvolvimento e Design.
+                    </p>
+                    <p>
+                        Contato:
+                        <a href="mailto:fabiotrabmat@gmail.com" target="_blank">fabiotrabmat@gmail.com</a>
+                    </p>
+                </div>
+                <div id="footer-more-about-project">
+                    <p>
+                        Clique aqui para ver o porquê deste projeto, tecnologias utilizadas, desafios e outras
+                        informações.
+                    </p>
+                    <button type="button">Saiba mais!</button>
+                </div>
             </footer>
+        </div>
+        <div id="know-more">
+            <button class="back-option">
+                <span class="material-symbols-outlined left-arrow"> line_start_arrow_notch </span>
+                <span>Voltar</span>
+            </button>
+            <section>
+                <h2>Módulo de Aprendizado</h2>
+                <p>
+                    Este projeto se destina à avaliação dos conhecimentos adquiridos no módulo de aprendizado
+                    Conhecendo o jQuery.
+                </p>
+                <p>
+                    Por mais que o jQuery não seja uma tecnologia empregada no desenvolvimento web nos dias de
+                    hoje, eu consigo justificar a importância de ter aprendido a tecnologia.
+                </p>
+                <p>
+                    O jQuery trouxe, à época, uma forma de facilitar algumas manipulações do DOM e os
+                    elementos que formam a página. Alguns novos métodos facilitam a obtenção dos elementos na
+                    árvore de elementos, além de conseguirmos aplicar de maneira menos verbosa novas
+                    estilizações e adição de ouvintes para eventos.
+                </p>
+                <p>
+                    Portanto, de maneira geral, imagino que esta ferramenta teve um uso importante enquanto
+                    novos frameworks, como o React, ainda não haviam sido implementados.
+                </p>
+                <h2>O Projeto</h2>
+                <p>
+                    Se trata da criação de uma aplicação de Tarefas. Deveria-se criar um formulário em que o
+                    usuário entrasse com o nome de uma tarefa e um botão de envio. Ao clicar no botão, a
+                    tarefa deveria ser adiciona à uma lista ordenada ou não.
+                </p>
+                <h3>Funcionalidades exigidas e implementadas:</h3>
+                <ol>
+                    <li>Entrada do nome da tarefa;</li>
+                    <li>Botão para cadastro da tarefa;</li>
+                    <li>
+                        Ao cadastrar, adicionar um item com a tarefa em um elemento de lista, ordenada ou não;
+                    </li>
+                    <li>
+                        Ao clicar nos itens da lista uma linha deveria ser adiciona em cima do texto da
+                        tarefa;
+                    </li>
+                </ol>
+                <h3>Funcionalidades adicionais implementadas:</h3>
+                <ol>
+                    <li>
+                        Opção de escolher uma cor para a tarefa. Esta cor estilizará o card da tarefa na
+                        lista. (Opcional);
+                    </li>
+                    <li>Opção de escolher uma data para realizar a tarefa até esta data. (Opcional);</li>
+                    <li>Estilização da mensagem de erro ao tentar enviar uma tarefa sem descrição;</li>
+                    <li>Cômputo e apresentação do total de tarefas cadastradas e finalizadas;</li>
+                    <li>Scroll fixo para a página e para o campo da lista de tarefas;</li>
+                    <li>Opção de clicar em um checkbox para marcar a tarefa como concluída;</li>
+                    <li>Possibilidade de clique em qualquer lugar do card para finalizar a tarefa</li>
+                </ol>
+                <h2>Tecnologias utilizadas</h2>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Vanilla JS (ES6)</li>
+                    <li>jQuery v3.7.1</li>
+                    <li>VS Code</li>
+                </ul>
+                <h2>Desafios encontrados:</h2>
+                <ul>
+                    <li>Eliminação da borda do input do seletor de cor. Resolvido com uso de CSS.</li>
+                    <li>
+                        Definição da data inicial do seletor de datas com a data do dia atual. Resolvido no JS
+                        com o jQuery.
+                    </li>
+                    <li>Cômputo das quantidades de tarefas cadastradas. Implementação em JS.</li>
+                    <li>Evitar que uma tarefa fosse descadastrada mais de uma vez. Implementação no JS.</li>
+                    <li>
+                        Criação desse modal que consta das informações do projeto. Resolvido com CSS e
+                        dinâmica no JS.
+                    </li>
+                </ul>
+                <h2>Conclusão</h2>
+                <p>
+                    Por mais que o jQuery não seja utilizado, eu consegui rever e aprender novas
+                    possibilidades de uso do JS, habilidades que certamente farão importância crucial no meu
+                    desenvolvimento e caminho como programador e pessoa criativa, não um mero copiador de
+                    código.
+                </p>
+                <p>
+                    Ter implementado mais funcionalidades no projeto fez com que eu melhorasse minha
+                    habilidade criativa e cognitiva, de modo a fazer valer todo o tempo extra gasto nas
+                    atividades.
+                </p>
+            </section>
+            <button class="back-option">
+                <span class="material-symbols-outlined"> line_start_arrow_notch </span>
+                <span>Voltar</span>
+            </button>
         </div>
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script src="./main.js"></script>

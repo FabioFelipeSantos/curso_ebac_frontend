@@ -16,6 +16,12 @@ body {
     background-color: hsl(0, 0%, 10%);
     color: hsl(120, 100%, 96%);
     font-size: 2.2rem;
+
+    position: relative;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 /* Container */
@@ -34,13 +40,36 @@ body {
 
 /* Header Stylization */
 header {
+    padding: 4rem 0;
     height: 32rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
+    position: relative;
+
+    &::before {
+        width: 100%;
+        height: 0.45rem;
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        background-image: linear-gradient(
+            to right,
+            hsl(120, 80%, 70%, 0),
+            hsl(120, 80%, 70%, 0.1) 20%,
+            hsl(120, 80%, 70%, 0.4) 35%,
+            hsl(120, 80%, 70%, 1) 50%,
+            hsl(120, 80%, 70%, 0.4) 65%,
+            hsl(120, 80%, 70%, 0.1) 80%,
+            hsl(120, 80%, 70%, 0)
+        );
+    }
+
     .image-container {
-        width: 12%;
+        width: 6.5%;
 
         img {
             filter: opacity(0.8) grayscale(0.3) saturate(1);
@@ -49,31 +78,34 @@ header {
     }
 
     .name-container {
-        width: 60%;
+        margin-left: 6rem;
+        width: 75%;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
         h1 {
+            margin-bottom: 1.2rem;
             width: fit-content;
 
             font-family: "Sedan", serif;
             letter-spacing: 0.4rem;
-            font-size: 2.8em;
+            font-size: 2.15em;
+            text-decoration: underline;
         }
 
         p {
-            width: 100%;
-            margin-top: 1rem;
+            width: 90%;
+            margin-top: 0.3rem;
 
-            text-indent: 12rem;
+            text-indent: 6rem;
             text-align: justify;
             word-spacing: 0.2rem;
-            font-size: 1.2em;
-            color: hsl(120, 4%, 50%);
+            font-size: 1.125em;
+            color: hsl(120, 20%, 70%);
 
             span {
-                font-size: 1.2em;
+                font-size: 1.1em;
                 animation: titleColorAnim 3s infinite alternate;
             }
         }
@@ -158,6 +190,7 @@ header {
         }
 
         #task-error-message {
+            display: none;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -221,7 +254,8 @@ header {
     margin-top: 3.5rem;
     padding: 3rem 7rem;
     width: 65%;
-    height: 62%;
+    height: 100%;
+    min-height: 60rem;
 
     align-self: center;
 
@@ -231,7 +265,6 @@ header {
     background-image: linear-gradient(-25deg, hsl(0, 12%, 8%), hsl(110, 15%, 6%));
 
     overflow-y: scroll;
-
     &::-webkit-scrollbar {
         color: inherit;
         width: 0.8rem;
@@ -339,42 +372,169 @@ header {
 
 /* Footer */
 footer {
+    width: 100%;
     align-self: center;
 
     margin: 8rem 0 6rem;
 
     display: flex;
-    flex-direction: column;
     align-items: center;
 
-    time {
-        margin-left: 0.8rem;
-        &::after {
-            margin: 0 1rem;
-            content: "—";
+    #footer-rights {
+        margin-right: 8rem;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.9em;
+
+        time {
+            margin-left: 0.8rem;
+            &::after {
+                margin: 0 1rem;
+                content: "—";
+            }
+        }
+
+        a {
+            font-size: 1.1em;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            &:visited {
+                color: hsl(80, 80%, 60%);
+            }
+            &:link {
+                color: hsl(150, 100%, 40%);
+            }
+            &:hover {
+                cursor: pointer;
+                color: hsl(20, 70%, 60%);
+                font-size: 1.18em;
+                margin: 0 0.8rem;
+                transition: all 0.5s ease;
+            }
+            &:active {
+                color: hsl(0, 70%, 60%);
+                font-size: 1.2em;
+            }
         }
     }
 
-    a {
-        font-size: 1.1em;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        &:visited {
-            color: hsl(80, 80%, 60%);
+    #footer-more-about-project {
+        width: 42%;
+        display: flex;
+        align-items: center;
+        p {
+            margin-right: 3.2rem;
+            width: 75%;
+            font-size: 0.85em;
+            text-align: justify;
+            text-indent: 3.4rem;
         }
-        &:link {
-            color: hsl(150, 100%, 40%);
+
+        button {
+            width: 35%;
+            padding: 1.6rem 2rem;
+            border: none;
+            border-radius: 9999999rem;
+            background-color: hsl(145, 80%, 15%);
+            color: hsl(120, 100%, 96%);
+            font-size: 0.825em;
+            font-weight: 700;
+            &:hover {
+                cursor: pointer;
+                background-color: hsl(145, 40%, 12%);
+                color: hsl(120, 90%, 75%);
+            }
         }
+    }
+}
+
+/* Know More Aside */
+#know-more {
+    display: none;
+    width: 36%;
+    height: 100%;
+    padding: 4rem 3rem 4rem 4rem;
+
+    background-image: linear-gradient(
+        105deg,
+        hsl(80, 90%, 2%),
+        hsl(70, 50%, 3%) 15%,
+        hsl(110, 35%, 4%) 50%,
+        hsl(160, 20%, 4%) 85%,
+        hsl(160, 5%, 4%)
+    );
+    font-size: 0.8525em;
+
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -1vw;
+
+    overflow-y: scroll;
+
+    section {
+        width: 100%;
+        margin: 6rem 0;
+        h2 {
+            font-family: "Sedan", serif;
+            font-size: 1.625em;
+            margin-bottom: 1.4rem;
+
+            &:not(:first-child) {
+                margin-top: 4rem;
+            }
+        }
+
+        h3 {
+            margin-top: 2rem;
+            margin-left: 2rem;
+            font-family: "Anek Devanagari", sans-serif;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin: 1rem 2rem;
+            text-align: justify;
+            text-indent: 2rem;
+        }
+
+        ol,
+        ul {
+            margin-left: 4.4rem;
+
+            list-style-position: inside;
+
+            li {
+                margin: 0.6rem 0;
+            }
+        }
+    }
+
+    .back-option {
+        padding: 0.8rem 2.6rem;
+
+        display: flex;
+        align-items: center;
+
+        border: none;
+        border-radius: 99999rem;
+        background-color: hsl(115, 40%, 20%);
+        font-size: 1.2em;
+        color: hsl(120, 100%, 98%);
+
+        .left-arrow {
+            margin-right: 1rem;
+            font-size: 1.3em;
+        }
+
         &:hover {
-            cursor: pointer;
-            color: hsl(20, 70%, 60%);
-            font-size: 1.18em;
-            margin: 0 0.8rem;
-            transition: all 0.5s ease;
+            background-color: hsl(115, 30%, 12%);
+            color: hsl(120, 50%, 84%);
         }
-        &:active {
-            color: hsl(0, 70%, 60%);
-            font-size: 1.2em;
-        }
+    }
+    &::-webkit-scrollbar {
+        display: none;
     }
 }

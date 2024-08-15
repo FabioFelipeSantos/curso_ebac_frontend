@@ -3,10 +3,14 @@ const dateSelect = $("#date");
 const task = $("#task");
 const newTaskBtn = $("#form button");
 const taskListElement = $("#tasks-list");
+const completedTasksInfo = $("#tasks-done-count");
 const allTasks = [];
 const completedTasks = [];
+let todayDate = new Date();
 
-dateSelect.on("change", () => console.log(dateSelect, dateSelect.val()))
+updatingShowedNumberOfTasks();
+correctingDateForInput()
+$(dateSelect).val(todayDate);
 
 $(document).ready(() => {
     newTaskBtn.on("click", (e) => {
@@ -20,19 +24,77 @@ $(document).ready(() => {
         if (verifyTask()) {
             $("#task-error-message").hide(400);
 
+            const taskEntered = getTaskData();
+
             taskListElement.append(
-                createListElementWithTask(getTaskData())
+                createListElementWithTask(taskEntered)
             );
 
-            allTasks.push();
+            const list = $(`#task-${taskEntered.id}`);
+            list.css("backgroundColor", `${taskEntered.color}55`)
 
+            updatingShowedNumberOfTasks();
+
+            $(`#task-${taskEntered.id}`).on(
+                "click",
+                handleListClick)
         } else {
             $("#task-error-message").show(400);
         }
+
+        cleanInputsValues();
+    });
+
+    $("footer button").on("click", () => {
+        $("#know-more").css("display", "block");
+
+        $("#know-more").animate({
+            opacity: 1,
+            right: 0
+        }, 500)
+    })
+
+    $(".back-option").on("click", () => {
+        $("#know-more").animate({
+            opacity: 0,
+            right: "-200px"
+        }, 400, () => {
+            $("#know-more").css("display", "none");
+        })
     })
 })
 
+function cleanInputsValues() {
+    $(dateSelect).val(todayDate);
+    $(task).val("");
+}
+
+function handleListClick(e) {
+    $(e.currentTarget.children).each((id, element) => {
+        if (id > 0) {
+            $(element).css({
+                "text-decoration": "line-through",
+                "text-decoration-thickness": "4px"
+            });
+        }
+    });
+
+    const currentId = +$(e.currentTarget).attr("id").slice(5);
+
+    if (completedTasks.every(task => task.id !== currentId)) {
+        completedTasks.push(allTasks.filter(task => task.id === currentId)[0]);
+        updatingShowedNumberOfTasks()
+    }
+}
+
+function updatingShowedNumberOfTasks() {
+    completedTasksInfo.text(
+        `Concluídas: ${completedTasks.length} / ${allTasks.length}`
+    )
+}
+
 function createListElementWithTask(task) {
+    allTasks.push(task);
     if (task.date) {
         return `
         <li id="task-${task.id}">
@@ -76,6 +138,16 @@ function settingBRDateFormat() {
     }
 
     return null;
+}
+
+function correctingDateForInput() {
+    let dayAsNumber = todayDate.getUTCDate();
+    let month = todayDate.getUTCMonth() + 1;
+    const year = todayDate.getUTCFullYear();
+
+    dayAsNumber = [dayAsNumber < 10 ? "0" : "", dayAsNumber].join("");
+    month = [month < 10 ? "0" : "", month].join("");
+    todayDate = [year, month, dayAsNumber].join("-");
 }
 
 function verifyTask() {
