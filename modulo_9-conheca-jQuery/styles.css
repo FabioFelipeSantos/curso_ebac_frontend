@@ -453,7 +453,7 @@ footer {
 /* Know More Aside */
 #know-more {
     display: none;
-    width: 36%;
+    width: 40%;
     height: 100%;
     padding: 4rem 3rem 4rem 4rem;
 
@@ -521,12 +521,12 @@ footer {
         border: none;
         border-radius: 99999rem;
         background-color: hsl(115, 40%, 20%);
-        font-size: 1.2em;
+        font-size: 1.1em;
         color: hsl(120, 100%, 98%);
 
         .left-arrow {
             margin-right: 1rem;
-            font-size: 1.3em;
+            font-size: 1.15em;
         }
 
         &:hover {

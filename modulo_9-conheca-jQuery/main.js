@@ -5,12 +5,14 @@ const newTaskBtn = $("#form button");
 const taskListElement = $("#tasks-list");
 const completedTasksInfo = $("#tasks-done-count");
 const allTasks = [];
-const completedTasks = [];
+let completedTasks = [];
 let todayDate = new Date();
 
 updatingShowedNumberOfTasks();
 correctingDateForInput()
 $(dateSelect).val(todayDate);
+
+$(task).val(randomTaskForLoadingPage());
 
 $(document).ready(() => {
     newTaskBtn.on("click", (e) => {
@@ -37,7 +39,8 @@ $(document).ready(() => {
 
             $(`#task-${taskEntered.id}`).on(
                 "click",
-                handleListClick)
+                handleListClick
+            );
         } else {
             $("#task-error-message").show(400);
         }
@@ -70,21 +73,39 @@ function cleanInputsValues() {
 }
 
 function handleListClick(e) {
-    $(e.currentTarget.children).each((id, element) => {
-        if (id > 0) {
-            $(element).css({
-                "text-decoration": "line-through",
-                "text-decoration-thickness": "4px"
-            });
-        }
-    });
-
     const currentId = +$(e.currentTarget).attr("id").slice(5);
 
-    if (completedTasks.every(task => task.id !== currentId)) {
-        completedTasks.push(allTasks.filter(task => task.id === currentId)[0]);
-        updatingShowedNumberOfTasks()
+    if ($(`#task-${currentId} .task-done`).prop("checked")) {
+        $(e.currentTarget.children).each((id, element) => {
+            if (id === 0) {
+                $(element).removeAttr("checked");
+            } else {
+                $(element).css({
+                    "text-decoration": "none",
+                });
+            }
+        });
+
+        completedTasks = completedTasks.filter(task => task.id !== currentId)
+    } else {
+        $(`#task-${currentId} .task-done`).attr("checked", "true");
+
+        $(e.currentTarget.children).each((id, element) => {
+            if (id === 0) {
+                $(element).attr("checked", "true");
+            } else {
+                $(element).css({
+                    "text-decoration": "line-through 4px",
+                });
+            }
+        });
+
+        if (completedTasks.every(task => task.id !== currentId)) {
+            completedTasks.push(allTasks.filter(task => task.id === currentId)[0]);
+        }
     }
+
+    updatingShowedNumberOfTasks()
 }
 
 function updatingShowedNumberOfTasks() {
@@ -155,4 +176,31 @@ function verifyTask() {
         return true
     }
     return false
+}
+
+function randomTaskForLoadingPage() {
+    const fictitiousTasks = [
+        "Comprar uma nave espacial",
+        "Levar meu dinossauro para passear",
+        "Descobrir uma nova galáxia",
+        "Voltar no tempo e evitar a primeira guerra mundial",
+        "Descobrir uma nova raça alienígena",
+        "Fazer uma rádio",
+        "Ajudar o Harry Potter a subir em um Grifo",
+        "Correr no lugar do Pheidippides e contar para o povo de Atenas sobre a vitória",
+        "Provar que o número pi não é irracional",
+        "Não cair na ilha de Lost",
+        "Me policiar para não ver Grays Anatomy em um único dia",
+        "Assistir ao último episódio da Caverna do Dragão",
+        "Lavar e polir minha nuvem voadora",
+        "Descobrir enfim se a terra é plana, toroidal, oca ou realmente uma geodésia",
+        "Escorregar o monte Everest em um papelão",
+        "Apostar corrida contra a luz e ganhar",
+        "Enfim descobrir e ficar sabendo se só sei que nada sei",
+        "Vencer um paradoxo infinito",
+        "Contar até ao infinito para mostrar que ele é finito",
+        "Mostrar com quantos paus se faz uma canoa",
+    ]
+
+    return fictitiousTasks[Math.floor(Math.random() * fictitiousTasks.length)]
 }
