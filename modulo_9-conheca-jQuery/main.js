@@ -12,7 +12,7 @@ updatingShowedNumberOfTasks();
 correctingDateForInput()
 $(dateSelect).val(todayDate);
 
-$(task).val(randomTaskForLoadingPage());
+$(task).attr("placeholder", randomTaskForLoadingPage());
 
 $(document).ready(() => {
     newTaskBtn.on("click", (e) => {
@@ -37,15 +37,16 @@ $(document).ready(() => {
 
             updatingShowedNumberOfTasks();
 
-            $(`#task-${taskEntered.id}`).on(
+            $(`#task-${taskEntered.id} .task-done`).on(
                 "click",
                 handleListClick
             );
+
+            cleanInputsValues();
+            $(task).attr("placeholder", randomTaskForLoadingPage());
         } else {
             $("#task-error-message").show(400);
         }
-
-        cleanInputsValues();
     });
 
     $("footer button").on("click", () => {
@@ -73,10 +74,15 @@ function cleanInputsValues() {
 }
 
 function handleListClick(e) {
-    const currentId = +$(e.currentTarget).attr("id").slice(5);
+    const inputClick = $(e.target);
+    const parent = $(inputClick).parent();
+    const currentId = +$(parent).attr("id").slice(5);
+    const childrenOfParent = $(parent).children();
+    const isComplete = Boolean(completedTasks.find(task => task.id === currentId));
 
-    if ($(`#task-${currentId} .task-done`).prop("checked")) {
-        $(e.currentTarget.children).each((id, element) => {
+    if (isComplete) {
+        $(childrenOfParent).each((id, element) => {
+            console.log(id, element)
             if (id === 0) {
                 $(element).removeAttr("checked");
             } else {
@@ -88,11 +94,9 @@ function handleListClick(e) {
 
         completedTasks = completedTasks.filter(task => task.id !== currentId)
     } else {
-        $(`#task-${currentId} .task-done`).attr("checked", "true");
-
-        $(e.currentTarget.children).each((id, element) => {
+        $(childrenOfParent).each((id, element) => {
             if (id === 0) {
-                $(element).attr("checked", "true");
+                $(element).attr("checked", true);
             } else {
                 $(element).css({
                     "text-decoration": "line-through 4px",
@@ -100,9 +104,8 @@ function handleListClick(e) {
             }
         });
 
-        if (completedTasks.every(task => task.id !== currentId)) {
-            completedTasks.push(allTasks.filter(task => task.id === currentId)[0]);
-        }
+        const currentTask = allTasks.filter(task => task.id === currentId);
+        completedTasks.push(currentTask[0]);
     }
 
     updatingShowedNumberOfTasks()

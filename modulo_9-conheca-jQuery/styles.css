@@ -6,13 +6,12 @@
 
 html {
     height: 100vh;
-
     font-family: "Spectral", serif;
     font-size: 62.5%;
 }
 
 body {
-    height: 100%;
+    min-height: 100%;
     background-color: hsl(0, 0%, 10%);
     color: hsl(120, 100%, 96%);
     font-size: 2.2rem;
@@ -28,20 +27,21 @@ body {
 .container {
     max-width: 144rem;
     width: 100%;
-    height: 100%;
+
+    min-height: 100vh;
 
     margin: 0 auto 20rem;
 
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 
     position: relative;
 }
 
 /* Header Stylization */
 header {
-    padding: 4rem 0;
-    height: 32rem;
+    padding: 5rem 0 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -251,11 +251,11 @@ header {
 
 /* Task List */
 #todo-list {
-    margin-top: 3.5rem;
-    padding: 3rem 7rem;
+    padding: 3rem 6rem;
     width: 65%;
-    height: 100%;
-    min-height: 60rem;
+
+    min-height: 25vh;
+    height: 50vh;
 
     align-self: center;
 
