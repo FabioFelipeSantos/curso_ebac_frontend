@@ -1,0 +1,143 @@
+/* Global Stylization */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	min-height: 100vh;
+	font-size: 62.5%;
+	font-family: "Bitter", serif;
+}
+
+body {
+	min-height: 100%;
+	font-size: 1em;
+}
+
+h1 {
+	font-family: "Macondo";
+	text-transform: uppercase;
+}
+
+p {
+	font-size: 1.6em;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+.container {
+	max-width: 87.5%;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Header Stylization */
+header {
+	padding: 2rem 1rem;
+	background-color: hsl(220, 90%, 50%);
+	color: white;
+}
+
+header > .container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+header > .container > h1 {
+	width: 45%;
+	font-size: clamp(2.8em, 6vw + 0.2rem, 4em);
+}
+
+header > .container > nav {
+	width: 45%;
+}
+
+header > .container > nav a {
+	color: white;
+}
+
+header > .container > nav a:hover {
+	color: hsl(34, 100%, 83%);
+}
+
+#main-menu {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+}
+
+#main-menu > li {
+	width: 100%;
+	margin: 1rem 0;
+	position: relative;
+}
+
+#main-menu > li > a {
+	display: block;
+	text-align: right;
+	width: 100%;
+	font-size: clamp(2em, 5.1vw + 0.2rem, 3.2em);
+}
+
+#main-menu > li > a:hover {
+	background-image: linear-gradient(
+		to right,
+		hsl(220, 90%, 20%, 0),
+		hsl(220, 90%, 20%, 0) 10%,
+		hsl(220, 90%, 20%, 0.5) 65%,
+		hsl(220, 90%, 20%, 0)
+	);
+}
+
+#products-submenu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+
+	background-color: hsl(220, 90%, 50%);
+	font-size: clamp(1.4em, 3.1vw + 0.2rem, 2.2em);
+}
+
+#products-submenu li {
+	margin: 1.2rem 0;
+}
+
+#products-submenu li a {
+	display: block;
+	width: 100%;
+	text-align: right;
+}
+
+#products-submenu li a:hover {
+	color: hsl(34, 75%, 69%);
+	background-image: linear-gradient(
+		to right,
+		hsl(210, 90%, 30%, 0),
+		hsl(210, 90%, 30%, 0) 25%,
+		hsl(210, 90%, 30%, 0.5) 75%,
+		hsl(210, 90%, 30%, 0)
+	);
+}
+
+#products:hover {
+	cursor: pointer;
+}
+
+/* Products Stylization */
+.img-container {
+	max-width: 80%;
+}
+
+.img-container img {
+	width: 100%;
+}
