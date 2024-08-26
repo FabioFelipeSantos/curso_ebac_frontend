@@ -2,6 +2,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 html {
@@ -11,17 +12,15 @@ html {
 }
 
 body {
+	position: relative;
 	min-height: 100%;
 	font-size: 1em;
+	line-height: 1.5;
 }
 
 h1 {
 	font-family: "Macondo";
 	text-transform: uppercase;
-}
-
-p {
-	font-size: 1.6em;
 }
 
 a {
@@ -35,7 +34,6 @@ li {
 .container {
 	max-width: 87.5%;
 	width: 100%;
-	margin: 0 auto;
 }
 
 /* Header Stylization */
@@ -46,6 +44,8 @@ header {
 }
 
 header > .container {
+	margin: 0 auto;
+
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -99,6 +99,7 @@ header > .container > nav a:hover {
 }
 
 #products-submenu {
+	padding: 0 1rem;
 	display: none;
 	position: absolute;
 	top: 100%;
@@ -129,15 +130,292 @@ header > .container > nav a:hover {
 	);
 }
 
-#products:hover {
+#products-link:hover {
 	cursor: pointer;
 }
 
-/* Products Stylization */
+/* Main Stylization */
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: hsl(0, 0%, 80%);
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .img-container {
-	max-width: 80%;
+	max-width: 70%;
 }
 
 .img-container img {
 	width: 100%;
+}
+
+section h2 {
+	margin-bottom: 4rem;
+	padding-bottom: 1rem;
+	color: hsl(220, 90%, 40%);
+	font-family: "Oswald";
+	font-size: clamp(2.4em, 6vw + 0.2rem, 3.4em);
+	font-weight: bold;
+	font-style: italic;
+	border-bottom: 0.3rem solid hsl(220, 90%, 50%);
+}
+
+section h3 {
+	font-family: "Raleway";
+	font-weight: 800;
+	font-size: clamp(2.2rem, 4vw + 0.2rem, 3em);
+}
+
+section h4 {
+	font-size: clamp(1.4em, 2.9vw + 0.2rem, 2em);
+}
+
+section p {
+	font-size: clamp(1.2em, 2.8vw + 0.2rem, 1.8em);
+}
+
+button {
+	width: 70%;
+	padding: 1rem 1.4rem;
+
+	border: none;
+	border-radius: 0.48rem;
+	background-color: hsl(220, 90%, 50%);
+
+	font-family: "Raleway";
+	font-weight: bold;
+	font-size: clamp(1.2em, 2.8vw + 0.2rem, 1.8em);
+	color: white;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: hsl(220, 90%, 35%);
+	border: 0.2rem solid hsl(225, 90%, 50%);
+}
+
+/* About Stylization */
+.about > .container {
+	margin-top: 4rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.about .img-container {
+	max-width: 85%;
+	margin-bottom: 4rem;
+	align-self: center;
+}
+
+/* Products Stylization */
+#products {
+	margin-top: 4rem;
+}
+
+.one-product {
+	margin: 3.6rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+/* Footer */
+footer {
+	padding: 3rem 0;
+	width: 100%;
+
+	color: white;
+	background-color: hsl(220, 90%, 50%);
+}
+
+footer > .container {
+	margin: 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+footer p {
+	font-size: clamp(1em, 2.2vw + 0.2rem, 1.6em);
+}
+
+#footer-rights {
+	margin-bottom: 2rem;
+	width: 100%;
+	text-align: center;
+}
+
+#footer-rights time {
+	margin-left: 0.8rem;
+}
+
+#footer-rights time::after {
+	margin: 0 1rem;
+	content: "—";
+}
+
+#footer-rights a {
+	font-size: 1.1em;
+	text-decoration: none;
+	transition: all 0.2s ease;
+	&:visited {
+		color: hsl(200, 80%, 80%);
+	}
+	&:link {
+		color: hsl(177, 50%, 71%);
+	}
+	&:hover {
+		cursor: pointer;
+		color: hsl(230, 100%, 80%);
+		transition: all 0.2s ease;
+	}
+	&:active {
+		color: hsl(0, 70%, 60%);
+	}
+}
+
+#footer-more-about-project {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+#footer-more-about-project p {
+	margin-right: 3.2rem;
+	width: 100%;
+	text-align: justify;
+	text-indent: 3.4rem;
+}
+
+#footer-more-about-project button {
+	padding: 1.5rem 1.6rem;
+	max-width: 25rem;
+	width: 60%;
+
+	border: none;
+	border-radius: 9999999rem;
+	background-color: hsl(244, 100%, 50%);
+	color: white;
+	font-weight: 700;
+	&:hover {
+		cursor: pointer;
+		background-color: hsl(244, 100%, 40%);
+	}
+}
+
+/* Modal with project goals */
+#know-more {
+	position: absolute;
+	bottom: 50vh;
+	left: 50%;
+	transform: translate(-50%, 50%);
+
+	display: none;
+	flex-direction: column;
+
+	max-width: 90%;
+	max-height: 95vh;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 2rem 3rem;
+	overflow-y: scroll;
+
+	background-image: linear-gradient(25deg, hsl(220, 100%, 90%), hsl(220, 90%, 84%), hsl(220, 100%, 90%));
+	box-shadow: 0 0 20rem 9rem rgb(109, 109, 109);
+}
+
+#know-more::-webkit-scrollbar {
+	display: none;
+}
+
+#know-more section {
+	margin-bottom: 4rem;
+}
+
+#know-more h2 {
+	align-self: flex-start;
+	padding-bottom: 0.2rem;
+	margin: 4rem 0 2.4rem;
+}
+
+#know-more p {
+	text-align: justify;
+}
+
+#know-more code {
+	padding: 0.2rem 0.6rem;
+	background-color: hsl(0, 0%, 75%, 0.4);
+
+	font-family: "Chivo Mono";
+	font-weight: 500;
+	font-size: 1.02em;
+	letter-spacing: 0.04rem;
+}
+
+#know-more .simple-words-code {
+	font-weight: 100;
+}
+
+#know-more h3 {
+	margin: 1.8rem 0 0.8rem;
+	font-family: "Raleway";
+	font-weight: 600;
+	font-size: clamp(2rem, 5vw + 0.2rem, 2.8em);
+	color: hsl(220, 90%, 30%);
+}
+
+#know-more li {
+	margin: 1rem 0;
+	text-align: justify;
+	font-size: clamp(1.2em, 2.8vw + 0.2rem, 1.8em);
+}
+
+#know-more ul,
+#know-more ol {
+	width: 100%;
+	margin: 0 1rem 0 2.5rem;
+}
+
+#know-more ul li {
+	list-style: disc;
+	list-style-position: inside;
+}
+
+#know-more ol li {
+	list-style: upper-latin;
+	list-style-position: inside;
+}
+
+#know-more li::marker {
+	font-weight: bold;
+}
+
+.back-option {
+	max-width: 18rem;
+	width: 50%;
+	padding: 1rem 2rem;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.back-option:hover {
+	border: none;
+	background-color: hsl(220, 90%, 45%);
+}
+
+span.left-arrow {
+	font-size: clamp(2em, 2.8vw + 0.2rem, 2.4em);
+	margin-right: 2rem;
 }

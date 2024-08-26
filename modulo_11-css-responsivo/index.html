@@ -3,14 +3,18 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Lendo Mangas</title>
-		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Macondo&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Macondo&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet"
 		/>
+		<title>Lendo Mangas</title>
+		<link rel="stylesheet" href="style.css" />
 	</head>
 
 	<body>
@@ -24,7 +28,7 @@
 								<a href="#about">Sobre a Loja</a>
 							</li>
 							<li>
-								<a id="products"> Produtos </a>
+								<a id="products-link"> Produtos </a>
 								<ul id="products-submenu">
 									<li><a href="">Dragon Ball</a></li>
 									<li><a href="">Kaiju nº 8</a></li>
@@ -38,88 +42,95 @@
 			</header>
 
 			<main>
-				<section class="container">
-					<div class="img-container">
-						<img src="./assets/logo.jpg" alt="Foto da casa do Mestre Kami, Dragon Ball" />
+				<section class="about">
+					<div class="container">
+						<div class="img-container">
+							<img src="./assets/logo.jpg" alt="Foto da casa do Mestre Kami, Dragon Ball" />
+						</div>
+						<h2 id="about">Sobre a Loja</h2>
+						<p>
+							Sit aliquam sed quisquam officia expedita praesentium, in, aut quaerat laboriosam
+							optio quo quas dolorum minus! Cumque ipsam provident unde tempora sint? Dolores
+							sint doloribus eaque facere recusandae voluptate totam dolore possimus deserunt
+							illo voluptatum molestias reprehenderit, expedita aperiam magni iure quas
+							distinctio? Vel facere repellat dicta quibusdam quas nemo tempora ipsum. Voluptate
+							aliquam nobis fugiat quidem qui et amet tempore voluptas neque ratione,
+							temporibus, enim esse consequuntur odit placeat reprehenderit magnam hic quo ipsum
+							fugit sapiente officiis saepe. Quasi, nemo tempora!
+						</p>
 					</div>
-					<h2 id="about">Sobre a Loja</h2>
-					<p>
-						Sit aliquam sed quisquam officia expedita praesentium, in, aut quaerat laboriosam
-						optio quo quas dolorum minus! Cumque ipsam provident unde tempora sint? Dolores sint
-						doloribus eaque facere recusandae voluptate totam dolore possimus deserunt illo
-						voluptatum molestias reprehenderit, expedita aperiam magni iure quas distinctio? Vel
-						facere repellat dicta quibusdam quas nemo tempora ipsum. Voluptate aliquam nobis
-						fugiat quidem qui et amet tempore voluptas neque ratione, temporibus, enim esse
-						consequuntur odit placeat reprehenderit magnam hic quo ipsum fugit sapiente officiis
-						saepe. Quasi, nemo tempora!
-					</p>
 				</section>
 
-				<section id="products" class="container">
-					<h2>Produtos</h2>
-					<div class="one-product">
-						<div class="img-container">
-							<img
-								src="./assets/dragon-ball.jpg"
-								alt="Foto da casa do Mestre Kami, Dragon Ball"
-							/>
+				<section id="products">
+					<div class="container">
+						<h2>Produtos</h2>
+						<div class="one-product">
+							<div class="img-container">
+								<img
+									src="./assets/dragon-ball.jpg"
+									alt="Foto da casa do Mestre Kami, Dragon Ball"
+								/>
+							</div>
+							<h3>Dragon Ball</h3>
+							<p>Coleção completa Dragon Ball</p>
+							<h4>R$ 9.999,99</h4>
+							<button type="button">Adicionar ao carrinho</button>
 						</div>
-						<h3>Dragon Ball</h3>
-						<p>Coleção completa Dragon Ball</p>
-						<h4>R$ 9.999,99</h4>
-						<button type="button">Adicionar ao carrinho</button>
-					</div>
-					<div class="one-product">
-						<div class="img-container">
-							<img src="./assets/kaiju-no-8.jpg" alt="Capa do anime Kaiju nº 8" />
+						<div class="one-product">
+							<div class="img-container">
+								<img src="./assets/kaiju-no-8.jpg" alt="Capa do anime Kaiju nº 8" />
+							</div>
+							<h3>Kaiju nº 8</h3>
+							<p>Coleção completa Kaiju nº 8</p>
+							<h4>R$ 9.999,99</h4>
+							<button type="button">Adicionar ao carrinho</button>
 						</div>
-						<h3>Kaiju nº 8</h3>
-						<p>Coleção completa Kaiju nº 8</p>
-						<h4>R$ 9.999,99</h4>
-						<button type="button">Adicionar ao carrinho</button>
-					</div>
-					<div class="one-product">
-						<div class="img-container">
-							<img
-								src="./assets/classroom-of-the-elite.jpg"
-								alt="Foto do anime Classroom of the Elite"
-							/>
+						<div class="one-product">
+							<div class="img-container">
+								<img
+									src="./assets/classroom-of-the-elite.jpg"
+									alt="Foto do anime Classroom of the Elite"
+								/>
+							</div>
+							<h3>Classroom of the Elite</h3>
+							<p>Coleção completa Classroom of the Elite</p>
+							<h4>R$ 9.999,99</h4>
+							<button type="button">Adicionar ao carrinho</button>
 						</div>
-						<h3>Classroom of the Elite</h3>
-						<p>Coleção completa Classroom of the Elite</p>
-						<h4>R$ 9.999,99</h4>
-						<button type="button">Adicionar ao carrinho</button>
-					</div>
-					<div class="one-product">
-						<div class="img-container">
-							<img src="./assets/spy-family.jpg" alt="Foto do manga Spy x Family" />
+						<div class="one-product">
+							<div class="img-container">
+								<img src="./assets/spy-family.jpg" alt="Foto do manga Spy x Family" />
+							</div>
+							<h3>Spy x Family</h3>
+							<p>Coleção completa Spy x Family</p>
+							<h4>R$ 9.999,99</h4>
+							<button type="button">Adicionar ao carrinho</button>
 						</div>
-						<h3>Spy x Family</h3>
-						<p>Coleção completa Spy x Family</p>
-						<h4>R$ 9.999,99</h4>
-						<button type="button">Adicionar ao carrinho</button>
 					</div>
 				</section>
 			</main>
 
 			<footer>
-				<div id="footer-rights">
-					<p>
-						&copy; <time datetime="">2024</time> Todos os direitos reservados a
-						<a href="https://github.com/FabioFelipeSantos" target="_blank">Fábio Santos</a>.
-						Desenvolvimento e Design.
-					</p>
-					<p>
-						Contato:
-						<a href="mailto:fabiotrabmat@gmail.com" target="_blank">fabiotrabmat@gmail.com</a>
-					</p>
-				</div>
-				<div id="footer-more-about-project">
-					<p>
-						Clique aqui para ver o porquê deste projeto, tecnologias utilizadas, desafios e outras
-						informações.
-					</p>
-					<button type="button">Saiba mais!</button>
+				<div class="container">
+					<div id="footer-rights">
+						<p>
+							&copy; <time datetime="">2024</time> Todos os direitos reservados a
+
+							<a href="https://github.com/FabioFelipeSantos" target="_blank">Fábio Santos</a>
+							. Desenvolvimento e Design.
+						</p>
+						<p>
+							Contato:
+							<a href="mailto:fabiotrabmat@gmail.com" target="_blank">fabiotrabmat@gmail.com</a>
+						</p>
+					</div>
+					<div id="footer-more-about-project">
+						<p>
+							Clique aqui para ver o porquê deste projeto, tecnologias utilizadas, desafios e
+							outras informações.
+						</p>
+						<button id="open-know-more" type="button">Saiba mais!</button>
+					</div>
 				</div>
 			</footer>
 		</div>
@@ -133,53 +144,62 @@
 				<h2>Módulo de Aprendizado</h2>
 				<p>
 					Este projeto se destina à avaliação dos conhecimentos adquiridos no módulo de aprendizado
-					Conhecendo o jQuery.
+					Fundamentos do CSS Responsivo.
 				</p>
 				<p>
-					Por mais que o jQuery não seja uma tecnologia empregada no desenvolvimento web nos dias de
-					hoje, eu consigo justificar a importância de ter aprendido a tecnologia.
+					Uma das maiores qualidade de um excelente web site é a sua aptidão à se adaptar aos
+					diferentes tamanhos de tela em que será apresentado. Nesse ponto, o CSS possui uma série
+					de ferramentas diferentes para lidar com a variação do tamanho da tela. Se destacam a
+					possibilidade de: setar tamanhos em função do comprimento e altura da tela, como as
+					unidades <code>vw</code> e <code>vh</code>; setar valores para as propriedades de forma
+					dinâmica, usando a função <code>clamp()</code>; adicionar breakpoints dependentes do
+					tamanho da tela com a regra atribuída (<i>at-rule</i>) <code>@media</code>.
 				</p>
 				<p>
-					O jQuery trouxe, à época, uma forma de facilitar algumas manipulações do DOM e os
-					elementos que formam a página. Alguns novos métodos facilitam a obtenção dos elementos na
-					árvore de elementos, além de conseguirmos aplicar de maneira menos verbosa novas
-					estilizações e adição de ouvintes para eventos.
+					O web developer que venha dominar tais técnicas se torna um melhor profissional, mais
+					capacitado a lidar com as diferentes formas de apresentar os conteúdos desejados em web
+					sites.
 				</p>
-				<p>
-					Portanto, de maneira geral, imagino que esta ferramenta teve um uso importante enquanto
-					novos frameworks, como o React, ainda não haviam sido implementados.
-				</p>
+
 				<h2>O Projeto</h2>
 				<p>
-					Se trata da criação de uma aplicação de Tarefas. Deveria-se criar um formulário em que o
-					usuário entrasse com o nome de uma tarefa e um botão de envio. Ao clicar no botão, a
-					tarefa deveria ser adiciona à uma lista ordenada ou não.
+					Se trata da criação de uma web store, uma loja de vendas. Deveria-se criar um layout
+					responsivo a telas de celulares, tablets e desktops. A utilização adequada das
+					funcionalidades do CSS deveria ser aplicada levando em consideração a aplicação dos
+					conceitos de implementação do <i>Mobile First</i>, em que primeiro devemos implementar o
+					website para telas de mobiles, como smartphones, e após isso adicionar a
+					<i>media queries</i> com o uso da regra atribuída <code>@media</code>.
 				</p>
+
 				<h3>Funcionalidades exigidas e implementadas:</h3>
 				<ol>
-					<li>Entrada do nome da tarefa;</li>
-					<li>Botão para cadastro da tarefa;</li>
+					<li>Criar um layout responsivo de uma loja virtual;</li>
 					<li>
-						Ao cadastrar, adicionar um item com a tarefa em um elemento de lista, ordenada ou não;
+						Criar uma seção “sobre a loja”, nesta seção teremos duas colunas uma com a imagem da
+						loja e outra com um texto;
 					</li>
 					<li>
-						Ao clicar nos itens da lista uma linha deveria ser adiciona em cima do texto da
-						tarefa;
+						Criar uma seção de produtos onde haverá uma listagem de 4 produtos, lado a lado, com a
+						imagem, nome e descrição do produto e um botão para adicionar ao carrinho;
+					</li>
+					<li>
+						Seguir as adaptações de layout propostas e fazer a publicação na Vercel nos enviando
+						link do projeto.
 					</li>
 				</ol>
+
 				<h3>Funcionalidades adicionais implementadas:</h3>
 				<ol>
+					<li>Um footer para informações sobre a implementação;</li>
+					<li>Um menu e um submenu;</li>
 					<li>
-						Opção de escolher uma cor para a tarefa. Esta cor estilizará o card da tarefa na
-						lista. (Opcional);
+						Abertura do submenu com o click sobre o link
+						<code class="simple-words-code">Produtos</code>;
 					</li>
-					<li>Opção de escolher uma data para realizar a tarefa até esta data. (Opcional);</li>
-					<li>Estilização da mensagem de erro ao tentar enviar uma tarefa sem descrição;</li>
-					<li>Cômputo e apresentação do total de tarefas cadastradas e finalizadas;</li>
-					<li>Scroll fixo para a página e para o campo da lista de tarefas;</li>
-					<li>Opção de clicar em um checkbox para marcar a tarefa como concluída;</li>
-					<li>Possibilidade de clique em qualquer lugar do card para finalizar a tarefa</li>
+					<li>Scroll da página do menu até a seção correspondente;</li>
+					<li>Criação desse modal e ajustes no scroll da página quando o modal estiver ativo</li>
 				</ol>
+
 				<h2>Tecnologias utilizadas</h2>
 				<ul>
 					<li>HTML5</li>
@@ -188,31 +208,17 @@
 					<li>jQuery v3.7.1</li>
 					<li>VS Code</li>
 				</ul>
+
 				<h2>Desafios encontrados:</h2>
 				<ul>
-					<li>Eliminação da borda do input do seletor de cor. Resolvido com uso de CSS.</li>
-					<li>
-						Definição da data inicial do seletor de datas com a data do dia atual. Resolvido no JS
-						com o jQuery.
-					</li>
-					<li>Cômputo das quantidades de tarefas cadastradas. Implementação em JS.</li>
-					<li>Evitar que uma tarefa fosse descadastrada mais de uma vez. Implementação no JS.</li>
-					<li>
-						Criação desse modal que consta das informações do projeto. Resolvido com CSS e
-						dinâmica no JS.
-					</li>
+					<li>Mudar a forma de implementação para se adequar ao paradigma <i>Mobile First</i>. Resolvido com CSS.</li>
+					<li>Alguns ajustes do scroll do menu até o item correspondente. Resolvido com jQuery e CSS.</li>
+					<li>Criação de um menu escondido e apresentado quando um evento é disparado no parente mais próximo do elemento. Resolvido com o jQuery e com CSS.</li>
 				</ul>
+
 				<h2>Conclusão</h2>
 				<p>
-					Por mais que o jQuery não seja utilizado, eu consegui rever e aprender novas
-					possibilidades de uso do JS, habilidades que certamente farão importância crucial no meu
-					desenvolvimento e caminho como programador e pessoa criativa, não um mero copiador de
-					código.
-				</p>
-				<p>
-					Ter implementado mais funcionalidades no projeto fez com que eu melhorasse minha
-					habilidade criativa e cognitiva, de modo a fazer valer todo o tempo extra gasto nas
-					atividades.
+					Utilizando de ferramentas básicas de CSS somos capazes de criar com qualidade websites de forma responsiva que se adéqua a qualquer tipo de tela. A utilização da regra atribuída <code>@media</code> torna o código menos dependente da quantidade de comandos em JS que se deve executar para adaptar um site via código. Apenas a estilização é capaz de responder à essa tarefa.
 				</p>
 			</section>
 			<button class="back-option">
