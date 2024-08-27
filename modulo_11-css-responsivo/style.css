@@ -13,7 +13,7 @@ html {
 
 body {
 	position: relative;
-	min-height: 100%;
+	height: 100%;
 	font-size: 1em;
 	line-height: 1.5;
 }
@@ -32,32 +32,33 @@ li {
 }
 
 .container {
-	max-width: 87.5%;
-	width: 100%;
+	max-width: 160rem;
+	width: 87.5%;
 }
 
 /* Header Stylization */
 header {
-	padding: 2rem 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: hsl(220, 90%, 50%);
 	color: white;
 }
 
 header > .container {
 	margin: 0 auto;
-
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 }
 
 header > .container > h1 {
-	width: 45%;
-	font-size: clamp(2.8em, 6vw + 0.2rem, 4em);
+	width: 50%;
+	font-size: clamp(2.4em, 5.5vw + 0.2rem, 3.2em);
 }
 
 header > .container > nav {
-	width: 45%;
+	width: 50%;
 }
 
 header > .container > nav a {
@@ -85,7 +86,7 @@ header > .container > nav a:hover {
 	display: block;
 	text-align: right;
 	width: 100%;
-	font-size: clamp(2em, 5.1vw + 0.2rem, 3.2em);
+	font-size: clamp(1.6em, 3.45vw + 0.2rem, 2.4em);
 }
 
 #main-menu > li > a:hover {
@@ -106,7 +107,7 @@ header > .container > nav a:hover {
 	right: 0;
 
 	background-color: hsl(220, 90%, 50%);
-	font-size: clamp(1.4em, 3.1vw + 0.2rem, 2.2em);
+	font-size: clamp(1.3em, 2.82vw + 0.2rem, 2em);
 }
 
 #products-submenu li {
@@ -143,6 +144,7 @@ main {
 }
 
 section {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -161,7 +163,7 @@ section h2 {
 	padding-bottom: 1rem;
 	color: hsl(220, 90%, 40%);
 	font-family: "Oswald";
-	font-size: clamp(2.4em, 6vw + 0.2rem, 3.4em);
+	font-size: clamp(2.4em, 4.6vw + 0.2rem, 3.1em);
 	font-weight: bold;
 	font-style: italic;
 	border-bottom: 0.3rem solid hsl(220, 90%, 50%);
@@ -170,15 +172,15 @@ section h2 {
 section h3 {
 	font-family: "Raleway";
 	font-weight: 800;
-	font-size: clamp(2.2rem, 4vw + 0.2rem, 3em);
+	font-size: clamp(2.2rem, 4.4vw + 0.2rem, 3em);
 }
 
 section h4 {
-	font-size: clamp(1.4em, 2.9vw + 0.2rem, 2em);
+	font-size: clamp(1.4em, 2.817vw + 0.2rem, 2em);
 }
 
 section p {
-	font-size: clamp(1.2em, 2.8vw + 0.2rem, 1.8em);
+	font-size: clamp(1.2em, 2.504vw + 0.2rem, 1.8em);
 }
 
 button {
@@ -191,7 +193,7 @@ button {
 
 	font-family: "Raleway";
 	font-weight: bold;
-	font-size: clamp(1.2em, 2.8vw + 0.2rem, 1.8em);
+	font-size: clamp(1.2em, 2.5039045vw + 0.2rem, 1.8em);
 	color: white;
 }
 
@@ -229,15 +231,20 @@ button:hover {
 
 /* Footer */
 footer {
-	padding: 3rem 0;
 	width: 100%;
 
 	color: white;
 	background-color: hsl(220, 90%, 50%);
 }
 
-footer > .container {
+footer {
 	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer > .container {
 
 	display: flex;
 	flex-direction: column;
@@ -286,6 +293,7 @@ footer p {
 #footer-more-about-project {
 	width: 100%;
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -309,6 +317,167 @@ footer p {
 	&:hover {
 		cursor: pointer;
 		background-color: hsl(244, 100%, 40%);
+	}
+}
+
+@media screen and (min-width: 641px) {
+	header > .container > h1 {
+		width: 50%;
+		font-size: clamp(3em, 4vw + 0.2rem, 4.2em);
+	}
+
+	header > .container > nav {
+		width: 50%;
+	}
+
+	nav {
+		max-width: 37rem;
+
+	}
+
+	#main-menu {
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	#main-menu > li {
+		width: 100%;
+		margin: 0 0;
+		position: relative;
+	}
+
+	#main-menu > li > a {
+		text-align: right;
+		font-size: clamp(2.4em, 3.43vw + 0.2rem, 3.2em);
+	}
+
+	#products-submenu {
+		width: clamp(120%, 140% - 1vw, 140%);
+		font-size: clamp(2em, 2.8vw + 0.2rem, 2.6em);
+	}
+
+	.img-container {
+		max-width: 100%;
+	}
+
+	.about .img-container {
+		max-width: 100%;
+		margin-bottom: 4rem;
+		align-self: center;
+	}
+
+	section h2 {
+		font-size: clamp(3.1em, 4.5241888vw + 0.2rem, 4.15em);
+	}
+
+	section h3 {
+		font-size: clamp(3rem, 4.3681826vw + 0.2rem, 3.8em);
+	}
+
+	section h4 {
+		font-size: clamp(2em, 2.80812vw + 0.2rem, 3.2em);
+	}
+
+	section p {
+		font-size: clamp(1.8em, 2.496107vw + 0.2rem, 2.7em);
+	}
+
+	#products {
+		margin-bottom: 4rem;
+	}
+
+	#products .container:not(h2) {
+		display: grid;
+		grid-template-columns: repeat(2, 48%);
+		grid-template-rows: repeat(2, auto);
+		column-gap: 4%;
+		row-gap: 4rem;
+	}
+
+	.one-product {
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	button {
+		width: 100%;
+		font-size: clamp(1.9em, 2.639291247vw + 0.2rem, 2.9em);
+	}
+
+	footer p {
+		font-size: clamp(1.6em, 2.184095vw + 0.2rem, 2.2em);
+	}
+
+	#footer-more-about-project p {
+		width: 100%;
+		text-align: justify;
+		text-indent: 3.4rem;
+	}
+
+	#footer-more-about-project button {
+		max-width: 220rem;
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	body .content-site {
+		min-height: 100vh;
+		display: grid;
+		grid-template-rows: 0.5fr 9fr 1.1fr;
+	}
+
+	main {
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.about {
+		align-self: self-start;
+	}
+
+	.about > .container {
+		display: grid;
+		grid-template-columns: 34% 62%;
+		grid-template-rows: repeat(3, auto);
+		column-gap: 4%;
+	}
+
+	.about .img-container {
+		align-self: self-start;
+		grid-area: 1 / 1 / 4 / 2;
+	}
+
+	#products .container:not(h2) {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 1.2%;
+	}
+
+	.one-product {
+		max-height: 75rem;
+		display: grid;
+		grid-template-rows: repeat(4, 1fr);
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.one-product h4 {
+		justify-self: center;
+	}
+
+	#footer-more-about-project p {
+		width: 100%;
+	}
+
+	#footer-more-about-project button {
+		max-width: 37rem;
+		width: 100%;
 	}
 }
 
@@ -368,16 +537,16 @@ footer p {
 
 #know-more h3 {
 	margin: 1.8rem 0 0.8rem;
+	width: 100%;
 	font-family: "Raleway";
 	font-weight: 600;
-	font-size: clamp(2rem, 5vw + 0.2rem, 2.8em);
 	color: hsl(220, 90%, 30%);
 }
 
 #know-more li {
 	margin: 1rem 0;
 	text-align: justify;
-	font-size: clamp(1.2em, 2.8vw + 0.2rem, 1.8em);
+	font-size: clamp(1.8em, 2.496107vw + 0.2rem, 2.7em);
 }
 
 #know-more ul,
@@ -401,7 +570,7 @@ footer p {
 }
 
 .back-option {
-	max-width: 18rem;
+	max-width: 32rem;
 	width: 50%;
 	padding: 1rem 2rem;
 	border: none;

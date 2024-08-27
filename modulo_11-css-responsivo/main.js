@@ -36,7 +36,7 @@ $("#open-know-more").on("click", function (e) {
 	const positionBeforeScroll = $(window).scrollTop();
 
 	$(window).on("scroll", function (e) {
-        e.preventDefault();
+		e.preventDefault();
 		$(window).scrollTop(positionBeforeScroll);
 	});
 
@@ -47,6 +47,6 @@ $(".back-option").each(function (index, element) {
 	$(element).on("click", function (e) {
 		e.preventDefault();
 		$("#know-more").fadeOut(400);
-        $(window).off("scroll");
+		$(window).off("scroll");
 	});
 });
