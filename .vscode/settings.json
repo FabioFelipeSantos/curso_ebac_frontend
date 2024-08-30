@@ -1,5 +1,5 @@
 {
 	"editor.wordWrap": "bounded",
 	"editor.wordWrapColumn": 110,
-	"editor.wrappingIndent": "deepIndent"
+	"editor.wrappingIndent": "same"
 }

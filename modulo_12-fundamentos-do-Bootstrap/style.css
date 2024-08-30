@@ -38,5 +38,14 @@ body {
 	margin-bottom: 9px;
 	padding: 2px 9px;
 	border: 1px solid hsl(350, 80%, 35%);
-	color: hsl(350, 75%, 70%);;
+	color: hsl(350, 75%, 70%);
+}
+
+.modal-body > .container-fluid > h3 {
+	margin-top: 36px;
+	margin-bottom: 16px;
+}
+
+footer {
+	max-width: 1200px;
 }

@@ -4,18 +4,14 @@ $("#phoneHelpId").hide();
 
 $("#phone").mask("(00) 0 0000 - 0000");
 
-// $("#form-submit-btn").on("click", function (e) {
-// 	e.preventDefault();
-// 	const windowWidth = $(window).width();
-// 	const formWidth = $("#form-container").width();
-// 	shake($("#form-container"), 400, 3, 9);
-// 	appendAlert("Os dados foram enviados com sucesso!", "success");
-// 	$("#liveAlertPlaceholder").slideDown(800);
+const date = new Date();
 
-// 	setTimeout(function () {
-// 		$("#liveAlertPlaceholder").slideUp(800);
-// 	}, 3500);
-// });
+$("#footer-date-time").attr(
+	"datetime",
+	[date.getUTCFullYear(), date.getUTCMonth()+1 < 10 ? `0${date.getUTCMonth()+1}` : date.getUTCMonth() + 1, date.getUTCDate() < 10 ? `0${date.getUTCDate()}` : date.getUTCDate()].join("-")
+);
+
+$("#footer-date-time").html(date.getUTCFullYear());
 
 $("#main-form").validate({
 	errorClass: "invalid-labels",
@@ -91,7 +87,7 @@ function showSendedData(data) {
 
 function showAnAlert(message, type) {
 	$("#form-submit-btn").attr("disabled", true);
-	
+
 	$("#liveAlertPlaceholder").html("");
 
 	$("#liveAlertPlaceholder").append(

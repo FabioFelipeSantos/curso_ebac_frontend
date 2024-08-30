@@ -21,25 +21,218 @@
 							type="text"
 							id="name"
 							name="Nome"
-							placeholder="Digite seu nome: "		
+							placeholder="Digite seu nome: "
 						/>
 					</div>
 
 					<div class="mb-3">
-						<label for="email" class="form-label">Email</label>
-						<input type="email" class="form-control" id="email" placeholder="abc@mail.com" name="E-Mail"/>
+						<label for="email" class="form-label">E-mail</label>
+						<input
+							type="email"
+							class="form-control"
+							id="email"
+							placeholder="abc@mail.com"
+							name="E-Mail"
+						/>
 					</div>
 
 					<div class="mb-3">
 						<label for="phone" class="form-label">Telefone</label>
-						<input class="form-control" type="text" id="phone" placeholder="(00) 0 0000 - 0000" name="Telefone"/>
+						<input
+							class="form-control"
+							type="text"
+							id="phone"
+							placeholder="(00) 0 0000 - 0000"
+							name="Telefone"
+						/>
 					</div>
 
 					<button id="form-submit-btn" type="submit" class="btn btn-primary">Enviar dados</button>
 				</form>
 			</div>
 		</div>
-        <div id="liveAlertPlaceholder" class="mt-2"></div>
+
+		<div id="liveAlertPlaceholder" class="mt-5" style="margin-bottom: 80px;"></div>
+
+		<div class="container-fluid fixed-bottom bg-info-subtle d-flex justify-content-center g-0" data-bs-theme="dark">
+			<footer class="w-100 g-0">
+				<div class="container p-3 g-0">
+					<div class="row text-center g-0">
+						<div class="col-sm-12 col-md-7 col-lg-9 g-0">
+							<div class="text-center" id="footer-rights">
+								<p>
+									&copy; <time id="footer-date-time"></time> - Todos os direitos reservados a
+
+									<a href="https://github.com/FabioFelipeSantos" target="_blank"
+										>Fábio Santos</a
+									>
+									. Desenvolvimento e Design.
+								</p>
+								<p>
+									Contato:
+									<a href="mailto:fabiotrabmat@gmail.com" target="_blank"
+										>fabiotrabmat@gmail.com</a
+									>
+								</p>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-5 col-lg-3">
+							<button
+								type="button"
+								class="btn btn-info btn-lg w-75"
+								data-bs-toggle="modal"
+								data-bs-target="#modalId"
+							>
+								Saiba Mais
+							</button>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<div
+			class="modal fade"
+			id="modalId"
+			tabindex="-1"
+			role="dialog"
+			data-bs-theme="dark"
+		>
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title" id="modalTitleId">Módulo: Fundamentos do Bootstrap</h2>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						<div class="container-fluid" style="text-align: justify">
+							<h3>Módulo de Aprendizado</h3>
+							<p>
+								Este projeto se destina à avaliação dos conhecimentos adquiridos no módulo de
+								aprendizado Fundamentos do Bootstrap.
+							</p>
+							<p>
+								Uma ferramenta já pouco utilizada, mas que foi muito importante, é o
+								Bootstrap. Seu paradigma de criar páginas utilizando um sistema pré
+								configurado de grid com vários componentes já estilizados, certamente
+								trouxeram praticidade e agilidade para que desenvolvedores web trouxessem à
+								vida seus projetos.
+							</p>
+							<p>
+								Por trás dos panos, o Bootstrap utiliza a tecnologia <code>SASS</code> para
+								criar uma arquitetura modular e altamente customizável. Utilizando as várias
+								ferramentas que o <code>SASS</code> oferece, o Bootstrap vem com dezenas de
+								componentes como Modais, Alertas, Abas de Navegação, Tooltips, Formulários,
+								Tabelas, entre outras, já estilizadas e prontas para uso, não requerendo
+								nenhuma estilização ou criação de dinamismo por parte do usuário. Bastava
+								consultar sua documentação e sair utilizando seus componentes.
+							</p>
+							<p>
+								Hoje em dia, para aplicações mais robustas, principalmente utilizando
+								<i>frameworks</i> bem estabelecidos como o React, Angular ou Vue, o Bootstrap
+								possa ter perdido um pouco de espaço, principalmente pelo uso extensivo do
+								<code>Tailwind CSS</code> como alternativa. Porém, o estudo e aplicação do
+								Bootstrap em módulos de ensino é justificável, principalmente do ponto de
+								vista de importância e de seus paradigmas.
+							</p>
+
+							<h3>O Projeto</h3>
+							<p>
+								Se trata da criação de um formulário simples que permita o usuário entrar com
+								seu Nome, E-mail e Telefone.
+							</p>
+
+							<h4>Funcionalidades exigidas e implementadas:</h4>
+							<ol>
+								<li>Adicionar o Bootstrap em uma página HTML utilizando a CDN;</li>
+								<li>
+									Nesta página HTML, crie um formulário de cadastro que deverá conter os
+									campos: nome, e-mail e telefone, e um botão para o envio;
+								</li>
+								<li>Aplique as classes do Bootstrap nos elementos do formulário;</li>
+								<li>
+									Crie uma branch chamada <code>exercicio_bootstrap</code> no repositório do
+									curso.
+								</li>
+							</ol>
+
+							<h4>Funcionalidades adicionais implementadas:</h4>
+							<ol>
+								<li>Um footer para informações sobre a implementação;</li>
+								<li>
+									Máscaras de formato de envio do e-mail e telefone utilizando o plugin
+									<i>Mask</i> do jQuery;
+								</li>
+								<li>
+									Validação ativa dos campos do formulário, mostrando para o usuário quais
+									campos ele deve preencher e como preencher, utilizando o plugin
+									<i>Validate</i> do jQuery;
+								</li>
+								<li>
+									Alertas mostrando o envio ou não do formulário, com diferentes classes do
+									Bootstrap para controlar a estilização;
+								</li>
+								<li>
+									Um alerta do tipo <code>primary</code> mostrando quais foram os dados
+									fornecidos pelo usuário
+								</li>
+								<li>
+									Os alertas sendo apresentados com a utilização do método
+									<code>setTimeOut()</code> do componente <code>window</code> do DOM.
+								</li>
+							</ol>
+
+							<h3>Tecnologias utilizadas</h3>
+							<ul>
+								<li><a href="https://getbootstrap.com/">Bootstrap v5.3.3</a></li>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML5</a></li>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS3</a></li>
+								<li>
+									<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+										>Vanilla JS (ES6)</a
+									>
+								</li>
+								<li><a href="https://jquery.com/">jQuery v3.7.1</a></li>
+								<li>
+									<a href="https://jqueryvalidation.org/"
+										>Validate, um plugin jQuery v1.19.5</a
+									>
+								</li>
+								<li>
+									<a href="https://igorescobar.github.io/jQuery-Mask-Plugin/"
+										>jQuery Mask, um plugin jQuery v1.14.16</a
+									>
+								</li>
+								<li><a href="https://code.visualstudio.com/Download">VS Code</a></li>
+							</ul>
+
+							<h3>Desafios resolvidos e conclusão</h3>
+							<p>
+								Durante a implementação não houve grandes desafios, pois, já havia tido a
+								oportunidade de trabalhar com a criação de outros formulários antes. Talvez o
+								maior fluxo de pensamento e criatividade ficou devido à criação das funções
+								que fazem a adição dos alertas e as devidas utilizações do método
+								<code>setTimeOut()</code>. A estilização foi básica, já que o foco era na
+								utilização do Bootstrap para criação da aplicação. Portanto, mesmo sendo uma
+								tecnologia de entrada nos pacotes de implementação, desenvolvidos para o
+								desenvolvimento web, o Bootstrap ainda se mantém como uma excelente
+								alternativa para desenvolvedores novatos ou simplesmente aventureiros do
+								desenvolvimento web, já que proporciona agilidade e facilidade em lidar com
+								dinâmicas um pouco mais avançadas como Modais e Alertas.
+							</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<script
 			src="https://code.jquery.com/jquery-3.7.1.js"
@@ -51,7 +244,7 @@
 			integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w=="
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
-		></script>		
+		></script>
 		<script src="./jquery.validate.min.js"></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
