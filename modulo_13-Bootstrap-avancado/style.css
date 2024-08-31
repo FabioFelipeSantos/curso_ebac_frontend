@@ -5,9 +5,37 @@
 
 html {
 	min-height: 100vh;
+	font-size: 17px;
 }
 
 body {
 	height: 100%;
-	background-color: hsl(280, 18%, 15%);
+	background-color: hsl(280, 18%, 11%);
+}
+
+header {
+	background-color: hsl(0, 65%, 10%);
+	height: 90px;
+}
+
+#carouselId > .carousel-inner .carousel-item > img {
+	max-height: 280px;
+	height: 100%;
+}
+
+button.carousel-control-prev > span, button.carousel-control-next > span {
+	background-color: hsl(0, 0%, 0%, 0.8);
+}
+
+p {
+	text-align: justify;
+	text-indent: 40px;
+}
+
+h4 {
+	margin: 16px 0;
+}
+
+li {
+	margin-bottom: 28px;
 }

@@ -1,46 +1,322 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>História do Metal</title>
-		<link rel="stylesheet" href="./bootstrap.min.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body class="text-light">
-		<div class="container-fluid border border-2 border-danger">
-			<header class="row">
-                <h1>História do Metal</h1>
-				<nav class="navbar navbar-expand-lg">
-					<div class="container-fluid">
-						<button
-							class="navbar-toggler"
-							type="button"
-							data-bs-toggle="collapse"
-							data-bs-target="#navbarTogglerDemo01"
-						>
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-							<a class="navbar-brand" href="#">Hidden brand</a>
-							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-								<li class="nav-item">
-									<a class="nav-link active" aria-current="page" href="#">Home</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Link</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link disabled" aria-disabled="true">Disabled</a>
-								</li>
-							</ul>
+		<header class="container-fluid py-3">
+			<div class="row mx-5 g-0 justify-content-center justify-content-md-start">
+				<h1 id="site-title" class="col-md-6 text-center text-md-start">
+					<a
+						href="#"
+						class="link-light link-underline-opacity-0 link-opacity-75-hover link-body-emphasis"
+						>História do Metal</a
+					>
+				</h1>
+				<nav
+					id="navegation-menu"
+					class="col-md-6 navbar navbar-expand justify-content-center justify-content-md-end"
+				>
+					<ul class="nav navbar-nav nav-underline gap-1">
+						<li class="nav-item"><a href="#" class="nav-link">História</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Gêneros</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main class="container-fluid py-3 lh-md">
+			<section
+				class="row mx-5 mt-3 px-5 py-3 border border-light-subtle rounded rounded-3 g-0 bg-dark-subtle"
+			>
+				<h3 class="pb-1 border-bottom border-1 border-dark-subtle">
+					História do <i><b>Heavy Metal</b></i>
+				</h3>
+				<div class="container mb-3">
+					<div class="row">
+						<div class="col-md-7">
+							<p>
+								<i>Heavy metal</i> (ou simplesmente metal) é um gênero do <i>rock</i> que se
+								desenvolveu no final da década de 1960 e no início da década de 1970, em
+								grande parte no Reino Unido e nos Estados Unidos. Tendo como raízes o
+								blues-rock e o rock psicodélico, as bandas que criaram o heavy metal
+								desenvolveram um som massivo e encorpado, caracterizado por um timbre saturado
+								e distorcido dos amplificadores, pelas cordas graves da guitarra para a
+								criação de riffs e pela exploração de sonoridades em tons menores, dando um ar
+								sombrio às composições.
+							</p>
+							<p>
+								As primeiras bandas de heavy metal como
+								<b class="text-info-emphasis">Led Zeppelin</b>,
+								<b class="text-info-emphasis">Deep Purple</b> e
+								<b class="text-info-emphasis">Black Sabbath</b> atraíram um grande público,
+								apesar de muitas vezes serem desdenhadas pelos críticos, um fato comum em toda
+								a história do gênero. Em meados da década de 1970, a banda
+								<b class="text-info-emphasis">Judas Priest</b> ajudou a impulsionar a evolução
+								do gênero suprimindo muito da influência do blues existente; o
+								<b class="text-info-emphasis">Motörhead</b> introduziu a sensibilidade do punk
+								rock e uma ênfase crescente na velocidade. Bandas do New Wave of British Heavy
+								Metal como <b class="text-info-emphasis">Iron Maiden</b> e
+								<b class="text-info-emphasis">Saxon</b> seguiram o mesmo caminho.
+							</p>
+							<p>
+								Durante a década de 1980, o glam metal tornou-se uma força comercial com
+								grupos como <b class="text-info-emphasis">Mötley Crüe</b> e
+								<b class="text-info-emphasis">Poison</b>. O underground produziu cenas mais
+								extremas e estilos agressivos: o thrash metal invadiu o mainstream trazendo à
+								luz bandas como <b class="text-info-emphasis">Anthrax</b>,
+								<b class="text-info-emphasis">Megadeth</b>,
+								<b class="text-info-emphasis">Metallica</b> e
+								<b class="text-info-emphasis">Slayer</b>, enquanto outros estilos ainda mais
+								pesados como o death metal e o black metal permaneceram como fenômenos da
+								subcultura do metal. Desde meados da década de 1990, estilos populares como o
+								groove metal (ex.: <b class="text-info-emphasis">Pantera</b>) que combina
+								metal extremo com hardcore punk, e o nu metal (ex.:
+								<b class="text-info-emphasis">Korn</b>), que incorpora elementos de grunge e
+								hip hop, ajudaram a ampliar a definição do gênero.
+							</p>
+						</div>
+						<div class="col-md-5">
+							<div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+								<div class="carousel-inner" role="listbox">
+									<div class="carousel-item active" data-bs-interval="3000">
+										<img
+											src="https://www.acreditanisso.com.br/wp-content/uploads/2016/06/Metal_Collage.jpg"
+											class="w-100 d-block"
+										/>
+									</div>
+									<div class="carousel-item" data-bs-interval="3000">
+										<img
+											src="https://rockandrollgarage.com/wp-content/uploads/2018/08/Ronnie-James-Dio-horns-in-concert.jpg"
+											class="w-100 d-block"
+										/>
+									</div>
+									<div class="carousel-item" data-bs-interval="3000">
+										<img
+											src="https://images2.alphacoders.com/172/172322.jpg"
+											class="w-100 d-block"
+											alt="Third slide"
+										/>
+									</div>
+								</div>
+								<button
+									class="carousel-control-prev"
+									type="button"
+									data-bs-target="#carouselId"
+									data-bs-slide="prev"
+								>
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="visually-hidden">Previous</span>
+								</button>
+								<button
+									class="carousel-control-next"
+									type="button"
+									data-bs-target="#carouselId"
+									data-bs-slide="next"
+								>
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="visually-hidden">Next</span>
+								</button>
+							</div>
 						</div>
 					</div>
-				</nav>
-			</header>
-		</div>
+				</div>
+				<h3 class="pb-1 border-bottom border-1 border-dark-subtle">Principais Características</h3>
+				<div class="container mb-3">
+					<ul class="list-unstyled">
+						<li>
+							<h4 class="mt-0">Música e sons</h4>
+							<p>
+								O heavy metal se caracteriza tradicionalmente por guitarras altas e
+								distorcidas, ritmos enfáticos, um som de baixo-e-bateria denso e vocais
+								vigorosos. Os subgêneros do metal tradicionalmente enfatizam, alteram ou
+								omitem um ou mais destes atributos. A típica formação da banda inclui um
+								baterista, um baixista, um guitarrista base, um guitarrista solo e um cantor,
+								que pode ou não também tocar algum dos instrumentos. Teclados são por vezes
+								usados para enriquecer o corpo do som.
+							</p>
+						</li>
+						<li>
+							<h4>Instrumentos</h4>
+							<p>
+								A guitarra elétrica e o poder sônico que ela projeta através dos
+								amplificadores é o elemento chave do heavy metal. As guitarras frequentemente
+								são tocadas com pedais de distorção, por meio de amplificadores de tubo com
+								bastante overdrive, criando um som espesso, poderoso e "pesado". Guitarristas
+								usam técnicas como sweep-picking e tapping para tocar com mais velocidade, e
+								diversos estilos do metal enfatizam demonstrações de virtuosismo. Uma
+								característica importante é o uso de escalas em alguns gêneros, principalmente
+								a escala
+								<a
+									href="https://www.youtube.com/watch?v=q5SXyNsMXd0"
+									target="_blank"
+									class="link-warning link-offset-2"
+									data-bs-toggle="tooltip"
+									data-bs-title="A pentatônica é uma escala musical formada por cinco notas por oitava. (C-D-E-G-A-C)"
+									>pentatônica</a
+								>.
+							</p>
+							<p>
+								O papel de relevo do baixo também é crucial para o som do metal, fornecendo o
+								som grave necessário para tornar a música "pesada". As linhas de baixo do
+								metal variam enormemente em termos de complexidade, desde a manutenção de um
+								simples ponto pedal grave até servir como "alicerce" para os guitarristas,
+								dobrando riffs e licks complexos juntamente com as guitarras base e/ou ritmo.
+							</p>
+							<p>
+								A essência da bateria do metal consiste em criar uma batida alta e constante
+								para a banda, usando a "trifeta" do instrumento: Velocidade, Força e Precisão.
+								A bateria do metal requer uma quantidade excepcional de resistência, e os
+								bateristas do estilo têm de desenvolver "destreza, coordenação e velocidade
+								consideráveis para tocar os padrões complexos" utilizados no metal. Em gêneros
+								que necessitam de mais velocidade e "barulho" faz-se uso excessivo de técnicas
+								que conseguem perfazer mais notas em menor tempo. Utilização de dois bumbos ou
+								o pedal-duplo, além de técnicas como
+								<a
+									href="https://youtu.be/B4KNXi-SWWc"
+									target="_blank"
+									class="link-warning link-offset-2"
+									data-bs-toggle="tooltip"
+									data-bs-title="Padrão em que usualmente se toca a caixa e prato juntos em subdivisão maior que o bumbo (ex. caixa em semicolcheia e bumbo em colcheia)."
+									>blast beat</a
+								>
+								e
+								<a
+									href="https://youtu.be/W1Ex1y41H40"
+									target="_blank"
+									class="link-warning link-offset-2"
+									data-bs-toggle="tooltip"
+									data-bs-title="Toca-se duas notas com cada pé no pedal do bumbo, deslizando uma nota para direita e uma para a esquerda, girando levemente o joelho quando fizer cada nota."
+									>swivel</a
+								>
+								auxiliam o baterista nesta parte.
+							</p>
+							<p>
+								Nem tão presente em todos os estilos, temos o teclado / orgão / sintetizador.
+								Sua sonoridade vai depender bastante do efeito desejado, que vão desdes
+								ambientações a solos complexos.
+							</p>
+						</li>
+						<li>
+							<h4>Ritmos e Tempos</h4>
+							<p>
+								O ritmo nas canções de metal é enfático, com acentuações intencionais. A ampla
+								gama de efeitos sonoros disponíveis para os bateristas do metal permite que os
+								padrões rítmicos utilizados assumam grande complexidade e mantenham a sua
+								insistência e potência elementares.
+							</p>
+							<p>
+								Células rítmicas breves, abruptas e independentes são juntadas a frases
+								rítmicas com uma textura distinta, frequentemente irregular. Estas frases são
+								utilizadas para criar um acompanhamento rítmico e figuras melódicas chamadas
+								de <i>riffs</i>, que ajudam a criar ganchos temáticos. Uma das marcas
+								registradas do estilo é uma forma de acorde tocada na guitarra, e conhecida
+								como <i>power chord</i>. Envolve apenas um único intervalo principal,
+								geralmente a quinta perfeita, embora uma oitava possa ser acrescentada para
+								dobrar a raiz. A maior parte dos <i>power chords</i> também é tocada com base
+								numa disposição dos dedos que pode ser facilmente deslocada por todo a
+								extensão do braço.
+							</p>
+						</li>
+						<li>
+							<h4>Temática</h4>
+							<p>
+								No começo do movimento, as letras vieram com temáticas de assuntos soturnos,
+								depressivos e não-midiáticos, até então nunca abordados em qualquer forma de
+								música popular, certamente característica que fez o heavy metal crescer como
+								estilo para pessoas que se sentiam deslocadas da sociedade e agora tinham a
+								quem podem recorrer culturalmente. São diversos os temas descritos no gênero,
+								porém um que foi recorrentemente abordado é a Morte. Foram tantas as formas de
+								abordar o fim da vida, que o gênero foi sempre alvo de críticas e
+								pré-julgamento por parte da mídia e dos desavisados. Para muitos, o principal
+								tema do heavy metal é tido como simples e virtualmente universal, e a forma
+								como é executada, com grunhidos, gemidos e letras subliterárias, deixa apenas
+								a certeza da celebração infinita de uma festa sem limites que pode ser a vida,
+								e o quão curta você a faz. O grosso da música fica assim, estilizado e
+								formulista. Diversos críticos de música definiram as letras do metal como
+								juvenis e banais, enquanto outros manifestaram suas objeções, ao que a viam
+								como apologia à misoginia e ao ocultismo.
+							</p>
+						</li>
+					</ul>
+				</div>
+			</section>
 
-		<script src="./bootstrap.bundle.min.js"></script>
+			<section
+				class="container mx-5 mt-5 px-5 py-3 border border-light-subtle rounded rounded-3 g-0 bg-dark-subtle"
+			>
+			<h3 class="pb-2 border-bottom border-1 border-dark-subtle">
+				Gêneros
+			</h3>
+			<div class="row mt-3 g-0">
+				<div class="col-sm-12 col-md-6 col-lg-4 card">
+					<div class="card-header bg-danger-subtle">
+						<h5>Gênero Principal</h5>
+						<h4>Rock e Blues</h4>
+					</div>
+					<div class="card-body bg-info-subtle">
+						<h5>Vertentes</h5>
+						<p class="card-text">Heavy Metal</p>
+						<p class="card-text">Heavy Metal</p>
+						<p class="card-text">Heavy Metal</p>
+						<p class="card-text">Heavy Metal</p>
+					</div>
+				</div>
+	
+				<div class="col-sm-12 col-md-6 col-lg-4 card">
+					<div class="card-header bg-danger-subtle">
+						<h5>Gênero Principal</h5>
+						<h4>Rock e Blues</h4>
+					</div>
+					<div class="card-body bg-info-subtle">
+						<h5>Vertentes</h5>
+						<p class="card-text">Heavy Metal</p>
+						<p class="card-text">Heavy Metal</p>
+						<p class="card-text">Heavy Metal</p>
+						<p class="card-text">Heavy Metal</p>
+					</div>
+				</div>
+	
+				<div class="col-sm-12 col-md-6 col-lg-4 card">
+					<div class="card-header bg-danger-subtle">
+						<h5>Gênero Principal</h5>
+						<h4>Rock e Blues</h4>
+					</div>
+					<div class="card-body bg-info-subtle">
+						<h5>Vertentes</h5>
+						<p class="card-text">Heavy Metal</p>
+						<p class="card-text">Heavy Metal</p>
+						<p class="card-text">Heavy Metal</p>
+						<p class="card-text">Heavy Metal</p>
+					</div>
+				</div>
+			</div>
+			
+			</section>
+		</main>
+
+		<footer class="container"></footer>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+			integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+			integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 		<script src="./main.js"></script>
 	</body>
 </html>
