@@ -1,0 +1,13 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	min-height: 100vh;
+}
+
+body {
+	height: 100%;
+	background-color: hsl(280, 18%, 15%);
+}
