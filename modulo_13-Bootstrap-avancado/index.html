@@ -253,59 +253,190 @@
 			</section>
 
 			<section
-				class="container mx-5 mt-5 px-5 py-3 border border-light-subtle rounded rounded-3 g-0 bg-dark-subtle"
+				class="row mx-5 mt-3 px-5 py-3 border border-light-subtle rounded rounded-3 g-0 bg-success-subtle"
 			>
-			<h3 class="pb-2 border-bottom border-1 border-dark-subtle">
-				Gêneros
-			</h3>
-			<div class="row mt-3 g-0">
-				<div class="col-sm-12 col-md-6 col-lg-4 card">
-					<div class="card-header bg-danger-subtle">
-						<h5>Gênero Principal</h5>
-						<h4>Rock e Blues</h4>
+				<h3 class="pb-2 border-bottom border-1 border-dark-subtle">Gêneros</h3>
+				<div class="row mt-3 g-0">
+					<div class="col-sm-12 col-md-6 col-lg-4 card">
+						<div class="card-header bg-danger-subtle">
+							<h5>Gêneros Principais</h5>
+							<h4>Rock e Blues</h4>
+						</div>
+						<div class="card-body bg-info-subtle">
+							<h5>Vertentes</h5>
+							<p class="card-text">Heavy Metal</p>
+							<p class="card-text">New Wave of British Heavy Metal</p>
+							<p class="card-text">Metal Neoclássico</p>
+							<p class="card-text">Glam Metal</p>
+							<p class="card-text">Metal Alternativo</p>
+							<p class="card-text">Speed Metal</p>
+						</div>
 					</div>
-					<div class="card-body bg-info-subtle">
-						<h5>Vertentes</h5>
-						<p class="card-text">Heavy Metal</p>
-						<p class="card-text">Heavy Metal</p>
-						<p class="card-text">Heavy Metal</p>
-						<p class="card-text">Heavy Metal</p>
+
+					<div class="col-sm-12 col-md-6 col-lg-4 card">
+						<div class="card-header bg-danger-subtle">
+							<h5>Gêneros Principais</h5>
+							<h4>Heavy Metal e Speed Metal</h4>
+						</div>
+						<div class="card-body bg-info-subtle">
+							<h5>Vertentes</h5>
+							<p class="card-text">Thrash Metal</p>
+							<p class="card-text">Power Metal</p>
+							<p class="card-text">Metal Progressivo</p>
+							<p class="card-text">Power Metal Sinfônico</p>
+							<p class="card-text">Black Metal</p>
+							<p class="card-text">Doom e Gothic Metal</p>
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-4 card">
+						<div class="card-header bg-danger-subtle">
+							<h5>Gêneros Principais</h5>
+							<h4>Speed, Thrash e Black Metal</h4>
+						</div>
+						<div class="card-body bg-info-subtle">
+							<h5>Vertentes</h5>
+							<p class="card-text">Nu Metal</p>
+							<p class="card-text">Metal Industrial</p>
+							<p class="card-text">Deathcore</p>
+							<p class="card-text">Metalcore</p>
+							<p class="card-text">Djent</p>
+							<p class="card-text">Sludge Metal</p>
+						</div>
 					</div>
 				</div>
-	
-				<div class="col-sm-12 col-md-6 col-lg-4 card">
-					<div class="card-header bg-danger-subtle">
-						<h5>Gênero Principal</h5>
-						<h4>Rock e Blues</h4>
-					</div>
-					<div class="card-body bg-info-subtle">
-						<h5>Vertentes</h5>
-						<p class="card-text">Heavy Metal</p>
-						<p class="card-text">Heavy Metal</p>
-						<p class="card-text">Heavy Metal</p>
-						<p class="card-text">Heavy Metal</p>
-					</div>
-				</div>
-	
-				<div class="col-sm-12 col-md-6 col-lg-4 card">
-					<div class="card-header bg-danger-subtle">
-						<h5>Gênero Principal</h5>
-						<h4>Rock e Blues</h4>
-					</div>
-					<div class="card-body bg-info-subtle">
-						<h5>Vertentes</h5>
-						<p class="card-text">Heavy Metal</p>
-						<p class="card-text">Heavy Metal</p>
-						<p class="card-text">Heavy Metal</p>
-						<p class="card-text">Heavy Metal</p>
-					</div>
-				</div>
-			</div>
-			
 			</section>
 		</main>
 
-		<footer class="container"></footer>
+		<div
+			class="mt-5 row container-fluid bg-danger-subtle d-flex justify-content-center g-0"
+			data-bs-theme="dark"
+		>
+			<footer class="w-100 g-0">
+				<div class="container p-3 g-0">
+					<div class="row text-center g-0">
+						<div class="col-sm-12 col-md-7 col-lg-9 g-0">
+							<div class="text-center" id="footer-rights">
+								<p>
+									&copy; <time id="footer-date-time"></time> - Todos os direitos reservados
+									a
+
+									<a href="https://github.com/FabioFelipeSantos" target="_blank"
+										>Fábio Santos</a
+									>
+									. Desenvolvimento e Design.
+								</p>
+								<p>
+									Contato:
+									<a href="mailto:fabiotrabmat@gmail.com" target="_blank"
+										>fabiotrabmat@gmail.com</a
+									>
+								</p>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-5 col-lg-3">
+							<button
+								type="button"
+								class="btn btn-info btn-lg w-75"
+								data-bs-toggle="modal"
+								data-bs-target="#modalId"
+							>
+								Saiba Mais
+							</button>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<div class="modal fade" id="modalId" tabindex="-1" role="dialog" data-bs-theme="dark">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title" id="modalTitleId">Módulo: Bootstrap Avançado</h2>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						<div class="container-fluid" style="text-align: justify">
+							<h3>Módulo de Aprendizado</h3>
+							<p>
+								Este projeto se destina à avaliação dos conhecimentos adquiridos no módulo de
+								aprendizado Bootstrap Avançado.
+							</p>
+							<p>
+								No módulo foram aplicadas as estilizações e criações de Modais, Navbars,
+								Cards, Carousels, menus Dropdowns, Abas e Toasts. Como se tratava apenas de
+								componentes do Bootstrap, o projeto foi mais aplicação dos componentes
+								Carousel e Cards, utilizando um esquema de grid responsivo.
+							</p>
+
+							<h3>O Projeto</h3>
+							<p>
+								Se trata da criação de uma página com um carousel de imagens e um layout com
+								grid responsivo. Em cada coluna do grid deveríamos colocar um elemento de
+								card.
+							</p>
+
+							<h4>Funcionalidades exigidas e implementadas:</h4>
+							<ol>
+								<li>Adicionar o Bootstrap em uma página HTML utilizando a CDN;</li>
+								<li>Criar um carousel de imagens;</li>
+								<li>
+									Um layout com grid, onde na visão desktop teremos 3 itens por linha, no
+									tablet 2 itens por linha e no smartphone 1 item por linha;
+								</li>
+								<li>
+									Inserir um card dentro das colunas, o conteúdo do card fica a seu
+									critério;
+								</li>
+								<li>Publique o projeto na Vercel;</li>
+							</ol>
+
+							<h4>Funcionalidades adicionais implementadas:</h4>
+							<ol>
+								<li>Um footer para informações sobre a implementação;</li>
+								<li>Algumas estilizações fora do Bootstrap;</li>
+							</ol>
+
+							<h3>Tecnologias utilizadas</h3>
+							<ul>
+								<li><a href="https://getbootstrap.com/">Bootstrap v5.3.3</a></li>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML5</a></li>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS3</a></li>
+								<li>
+									<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+										>Vanilla JS (ES6)</a
+									>
+								</li>
+								<li><a href="https://jquery.com/">jQuery v3.7.1</a></li>
+								<li><a href="https://code.visualstudio.com/Download">VS Code</a></li>
+							</ul>
+
+							<h3>Desafios resolvidos e conclusão</h3>
+							<p>
+								Durante a implementação não houve grandes desafios, pois, já havia tido a
+								oportunidade de trabalhar com o Bootstrap. A estilização foi básica, já que o
+								foco era na utilização do Bootstrap para criação da aplicação. Portanto, mesmo
+								sendo uma tecnologia de entrada nos pacotes de implementação, desenvolvidos
+								para o desenvolvimento web, o Bootstrap ainda se mantém como uma excelente
+								alternativa para desenvolvedores novatos ou simplesmente aventureiros do
+								desenvolvimento web, já que proporciona agilidade e facilidade em lidar com
+								dinâmicas um pouco mais avançadas como Modais e Alertas.
+							</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
 			integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -316,7 +447,11 @@
 			integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
 			crossorigin="anonymous"
 		></script>
-		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.js"
+			integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+			crossorigin="anonymous"
+		></script>
 		<script src="./main.js"></script>
 	</body>
 </html>
