@@ -17,3 +17,4 @@ Fazer um repositório no GitHub com várias _branches_ diferentes, cada responde
 |      Plugins jQuery       |     sem branch      |   17 / 08 / 2024   |
 |   Fundamentos CSS Resp.   |     sem branch      |   28 / 08 / 2024   |
 | Fundamentos do Bootstrap  | exercicio_bootstrap |   30 / 08 / 2024   |
+|    Bootstrap Avançado     |     sem branch      |   02 / 09 / 2024   |
