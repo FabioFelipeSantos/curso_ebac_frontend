@@ -2,7 +2,6 @@ const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const sourceMaps = require("gulp-sourcemaps");
 const uglify = require("gulp-uglify");
-const obfuscate = require("gulp-obfuscate");
 const imagemin = require("gulp-imagemin");
 
 function compressImages() {
@@ -10,7 +9,7 @@ function compressImages() {
 }
 
 function compressJS() {
-	return gulp.src("./src/scripts/*.js").pipe(uglify()).pipe(obfuscate()).pipe(gulp.dest("./build/scripts"));
+	return gulp.src("./src/scripts/*.js").pipe(uglify()).pipe(gulp.dest("./build/scripts"));
 }
 
 function compileSass() {
@@ -31,5 +30,3 @@ exports.default = function () {
 	gulp.watch("./src/scripts/*.js", { ignoreInitial: false }, gulp.series(compressJS));
 	gulp.watch("./src/images/*", { ignoreInitial: false }, gulp.series(compressImages));
 };
-exports.javaScript = compressJS;
-exports.images = compressImages;
