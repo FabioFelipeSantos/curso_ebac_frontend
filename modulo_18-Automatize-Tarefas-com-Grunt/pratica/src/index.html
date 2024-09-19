@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contador de Segundos de Vida</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=BioRhyme:200,300,regular,500,600,700,800"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Texturina:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="@@ENDERECO_CSS" />
+	</head>
+	<body>
+		<main class="container">
+			<h1>Contador dos Segundos de Vida!</h1>
+			<time datetime=""></time>
+			<form id="name-age-form">
+				<div class="container-input">
+					<label for="nome">Digite seu nome</label>
+					<input type="text" name="nome" id="nome" required minlength="2" value="" />
+				</div>
+				<div class="container-input">
+					<label for="idade">Digite sua idade</label>
+					<input type="number" name="idade" id="idade" min="1" max="100000000" required value="" />
+				</div>
+				<button type="submit">Conte!</button>
+			</form>
+		</main>
+
+		<div id="answer-container" class="container">
+			<h3 class="" id="message-header"></h3>
+			<h4>
+				<time datetime=""> <span id="date"></span><span id="hour"></span> </time>
+			</h4>
+			<p id="person-infos">
+				Se você tem
+				<span id="just-info"></span>
+				anos, então já viveu por pelo menos:
+				<span id="seconds-of-life"></span>
+				segundos a partir do clique do botão!
+			</p>
+		</div>
+
+		<script type="module" src="@@ENDERECO_JS"></script>
+	</body>
+</html>

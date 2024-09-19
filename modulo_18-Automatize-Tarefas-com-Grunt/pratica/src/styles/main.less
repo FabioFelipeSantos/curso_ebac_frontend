@@ -1,0 +1,157 @@
+@fontBody: BioRhyme;
+@message-font: Texturina;
+@bg-color: hsl(220, 100%, 96%);
+@input-color: hsl(182, 77%, 32%);
+@header-bottom-main-color: hsl(20, 100%, 60%);
+@message-bg-color: lighten(@header-bottom-main-color, 30%);
+
+.containerFlex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	max-width: 1024px;
+	width: 100%;
+	.containerFlex();
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: @fontBody;
+}
+
+html {
+	min-height: 100vh;
+	font-size: 62.5%;
+}
+
+body {
+	min-height: 100vh;
+	font-size: 2em;
+	background-color: @bg-color;
+	.containerFlex();
+}
+
+h1 {
+	font-size: 2.5em;
+	margin-bottom: 3.6rem;
+	position: relative;
+
+	&::before {
+		content: " ";
+		width: 100%;
+		height: 0.4rem;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		background-image: linear-gradient(
+			to right,
+			@bg-color,
+			lighten(@header-bottom-main-color, 30%) 18%,
+			lighten(@header-bottom-main-color, 5%) 42%,
+			lighten(@header-bottom-main-color, 5%) 58%,
+			lighten(@header-bottom-main-color, 30%) 82%,
+			@bg-color
+		);
+	}
+}
+
+form {
+	// width: 100%;
+	padding: 4rem 8rem;
+	border: none;
+	border-radius: 2.4rem;
+	background-color: darken(@input-color, 5%);
+	color: lighten(@input-color, 85%);
+	.containerFlex();
+
+	.container-input {
+		width: 100%;
+		margin-bottom: 3.8rem;
+		.containerFlex();
+		label {
+			text-align: center;
+			margin-bottom: 0.2rem;
+			font-size: 1.6em;
+		}
+		input {
+			background-color: darken(@input-color, 5%);
+			display: block;
+			width: 100%;
+			padding-bottom: 0.2rem;
+			text-align: center;
+			font-size: 1.5em;
+			color: lighten(@header-bottom-main-color, 12%);
+			border: none;
+			border-bottom: 0.3rem solid lighten(@input-color, 45%);
+			&:focus-visible {
+				outline-style: none;
+			}
+			&::-webkit-inner-spin-button {
+				display: none;
+			}
+		}
+	}
+	button {
+		padding: 1.2rem 6rem;
+		font-size: 1.4em;
+		font-weight: 700;
+		border: none;
+		border-radius: 2rem;
+		background-color: @header-bottom-main-color;
+		transition: all 0.3s ease-out;
+		&:hover {
+			cursor: pointer;
+			background-color: darken(@header-bottom-main-color, 7%);
+			transform: scale(1.05);
+		}
+	}
+}
+
+#answer-container {
+	background-color: @message-bg-color;
+	font-family: @message-font;
+	font-size: 2rem;
+	margin-top: 2rem;
+	padding: 2rem 3.6rem;
+	border: 0.3rem solid darken(#f00, 25%);
+	border-radius: 1.6rem;
+	.containerFlex();
+	gap: 1.8rem;
+	transform: scale(0);
+	opacity: 0;
+	animation-duration: 0.9s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	#message-header {
+		font-size: 1.5em;
+	}
+	h4 {
+		font-size: 1.2em;
+	}
+	#person-infos {
+		font-size: 1.1em;
+		text-align: center;
+		#just-info,
+		#seconds-of-life {
+			color: hsl(230, 100%, 50%);
+			font-size: 1.15em;
+			text-decoration: underline;
+			text-underline-offset: 0.5rem;
+			text-decoration-color: darken(hsl(230, 100%, 50%), 15%);
+		}
+	}
+}
+
+@keyframes messageAnim {
+	to {
+		transform: scale(1.05);
+		opacity: 1;
+	}
+}
