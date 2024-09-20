@@ -18,3 +18,8 @@ Fazer um repositório no GitHub com várias _branches_ diferentes, cada responde
 |   Fundamentos CSS Resp.   |     sem branch      |   28 / 08 / 2024   |
 | Fundamentos do Bootstrap  | exercicio_bootstrap |   30 / 08 / 2024   |
 |    Bootstrap Avançado     |     sem branch      |   02 / 09 / 2024   |
+|    Introdução ao SASS     |   exercicio_sass    |   11 / 09 / 2024   |
+|   Automatize com o GULP   |   exercicio_gulp    |   15 / 09 / 2024   |
+|           LESS            |   exercicio_less    |   16 / 09 / 2024   |
+|  Automatize com o GRUNT   |   exercicio_grunt   |   19 / 09 / 2024   |
+|       BEM e SMACSS        |  boas_praticas_css  |   20 / 09 / 2024   |
