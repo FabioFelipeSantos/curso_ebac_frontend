@@ -4,4 +4,27 @@
   font-family: sans-serif;
 }
 
+.produtos {
+  max-width: 640px;
+  width: 100%;
+  margin: 56px auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-column-gap: 1%;
+}
+.produtos__item__imagem {
+  width: 100%;
+}
+.produtos__item__nome {
+  font-size: 1.2em;
+}
+.produtos__item__descricao {
+  color: gray;
+}
+.produtos__item--em-destaque {
+  border: 2px solid gold;
+  padding: 8px;
+  background-color: #ffff42;
+}
+
 /*# sourceMappingURL=main.css.map */
