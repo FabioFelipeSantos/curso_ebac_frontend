@@ -1,0 +1,14 @@
+{
+	"name": "pratica",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"sass": "sass ./src/styles/main.sass ./dev/styles/main.css -w",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": ""
+}
+
