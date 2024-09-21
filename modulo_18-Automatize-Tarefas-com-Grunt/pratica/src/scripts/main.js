@@ -32,7 +32,9 @@ function showHeaderWithDate() {
 
 	timeElement.setAttribute("datetime", [dateObj.year, dateObj.month, dateObj.dayNumber].join("-"));
 
-	timeElement.children["date"].innerText = `Hoje é uma ${dateObj.dayOfTheWeek}${
+	const umOrUma = dateObj.dayIndex === 0 || dateObj.dayIndex === 6 ? "um" : "uma";
+
+	timeElement.children["date"].innerText = `Hoje é ${umOrUma} ${dateObj.dayOfTheWeek}${
 		dateObj.dayIndex > 0 ? (dateObj.dayIndex < 6 ? "-feira" : "") : ""
 	}, ${dateObj.dayNumber} de ${dateObj.monthOfTheYear} de ${dateObj.year}`;
 }
