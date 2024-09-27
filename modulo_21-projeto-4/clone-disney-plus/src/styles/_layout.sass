@@ -1,0 +1,23 @@
+@use "./_variables" as *
+@use "./_mixins" as *
+
+body
+  background-color: $corDeFundo
+
+.text
+  @include text
+  &--big
+    @include text(18px)
+  &--small
+    @include text(14px)
+
+.link-text
+  @include text(18px)
+  text-decoration: underline
+
+.title
+  @include title
+  &--small
+    @include title(28px)
+  &--big
+    @include title(44px)

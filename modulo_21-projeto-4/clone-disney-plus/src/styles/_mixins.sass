@@ -1,0 +1,10 @@
+@use "./_variables" as *
+
+@mixin text($fontSize: 16px)
+  font-size: $fontSize
+  line-height: $fontSize + 10px
+  color: $corTextoPrincipal
+
+@mixin title($fontSize: 40px)
+  @include text($fontSize)
+  color: $corTextoSecundario

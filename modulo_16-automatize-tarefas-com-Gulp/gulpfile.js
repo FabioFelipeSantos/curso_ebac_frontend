@@ -5,7 +5,7 @@ const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
 
 function compressImages() {
-	return gulp.src("./src/images/*").pipe(imagemin()).pipe(gulp.dest("./build/images"));
+	return gulp.src("./src/imag/*", { encoding: false }).pipe(imagemin()).pipe(gulp.dest("./build/images"));
 }
 
 function compressJS() {
