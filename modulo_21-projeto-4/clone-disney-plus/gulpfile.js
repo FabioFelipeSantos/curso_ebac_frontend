@@ -5,7 +5,7 @@ const sourcemaps = require("gulp-sourcemaps");
 
 function styles() {
 	return gulp
-		.src("./src/styles/*.sass")
+		.src("./src/styles/**/*.sass")
 		.pipe(sourcemaps.init())
 		.pipe(sass({ outputStyle: "compressed" }))
 		.pipe(sourcemaps.write("./maps"))
@@ -21,5 +21,5 @@ function images() {
 
 exports.default = gulp.parallel(styles, images);
 exports.watch = function () {
-	gulp.watch("./src/styles/*.sass", gulp.parallel(styles));
+	gulp.watch("./src/styles/**/*.sass", gulp.parallel(styles));
 };
