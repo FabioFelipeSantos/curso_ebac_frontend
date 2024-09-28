@@ -1,0 +1,39 @@
+@use "./../_variables" as *
+
+.shows
+  padding: 2vw 5.6vw
+
+  &__list
+    margin-top: 44px
+    display: none
+    grid-template-columns: repeat(3, 1fr)
+    gap: 24px
+
+    &--is-active
+      display: grid
+
+    &__item
+      img
+        max-width: 100%
+        border-radius: 4px
+
+  &__tabs
+    display: flex
+    justify-content: center
+
+    &__button
+      color: $corTextoSecundario
+      background: none
+      font-size: 20px
+      border: none
+      border-bottom: 5px solid transparent
+      padding-bottom: 5px
+      text-transform: uppercase
+      margin: 0 1vw
+      transition: border-bottom 0.5s ease
+
+      &:hover
+        cursor: pointer
+
+      &--is-active
+        border-bottom: 5px solid $corTextoSecundario
