@@ -23,4 +23,17 @@ document.addEventListener("DOMContentLoaded", function () {
 			});
 		});
 	});
+
+	const questions = document.querySelectorAll("[data-faq-question]");
+
+	questions.forEach((question) => {
+		question.addEventListener("click", abreOuFechaResposta);
+	});
 });
+
+function abreOuFechaResposta(element) {
+	const classIsOpen = "faq__questions__item--is-open";
+	const parentElement = element.target.parentNode;
+
+	parentElement.classList.toggle(classIsOpen);
+}
