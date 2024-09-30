@@ -10,6 +10,9 @@
     grid-template-columns: repeat(3, 1fr)
     gap: 24px
 
+    @media (max-width: 768px)
+      grid-template-columns: repeat(2, 1fr)
+
     &--is-active
       display: grid
 
@@ -21,6 +24,11 @@
   &__tabs
     display: flex
     justify-content: center
+
+    @media (max-width: 768px)
+      white-space: nowrap
+      overflow-x: scroll
+      padding-left: 20px
 
     &__button
       color: $corTextoSecundario
@@ -38,3 +46,6 @@
 
       &--is-active
         border-bottom: 5px solid $corTextoSecundario
+
+      @media (max-width: 768px)
+        font-size: 16px

@@ -7,10 +7,21 @@ body
 
 .text
   @include text
+
+  @media (max-width: 768px)
+    @include text(14px)
+
   &--big
     @include text(18px)
+
+    @media (max-width: 768px)
+      @include text(15px)
+
   &--small
     @include text(14px)
+
+    @media (max-width: 768px)
+      @include text(11px)
 
 .link-text
   @include text(18px)
@@ -18,10 +29,21 @@ body
 
 .title
   @include title
+
+  @media (max-width: 768px)
+    @include title(24px)
+
   &--small
     @include title(28px)
+
+    @media (max-width: 768px)
+      @include title(22px)
+
   &--big
     @include title(44px)
+
+    @media (max-width: 768px)
+      @include title(26px)
 
 .button
   display: flex
@@ -62,6 +84,9 @@ body
   grid-template-columns: repeat(2, 1fr)
   align-items: center
 
+  @media (max-width: 768px)
+    display: block
+
   img
     max-width: 100%
 
@@ -87,3 +112,8 @@ body
       display: flex
       flex-direction: column
       justify-content: center
+
+      @media (max-width: 768px)
+        position: relative
+        left: 0
+        width: 100%
