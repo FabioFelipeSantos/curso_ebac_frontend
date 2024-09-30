@@ -29,6 +29,23 @@ document.addEventListener("DOMContentLoaded", function () {
 	questions.forEach((question) => {
 		question.addEventListener("click", abreOuFechaResposta);
 	});
+
+	const heroHeight = document.querySelector(".hero").clientHeight;
+	const header = document.querySelector(".header");
+
+	window.addEventListener("scroll", function () {
+		const actualPosition = window.scrollY;
+
+		if (actualPosition < heroHeight) {
+			if (!header.classList.contains("header--is-hidden")) {
+				header.classList.add("header--is-hidden");
+			}
+		} else {
+			if (header.classList.contains("header--is-hidden")) {
+				header.classList.remove("header--is-hidden");
+			}
+		}
+	});
 });
 
 function abreOuFechaResposta(element) {
