@@ -1,0 +1,37 @@
+@use "./../_variables" as *
+@use "./../_mixins" as *
+
+.kramer
+  margin-top: 15vh
+  margin-bottom: 20vh
+  background-color: hsl(250, 100%, 0%)
+  padding: 3rem 0
+  background-image: url(./../../dist/img/hero_2.jpg)
+  background-repeat: no-repeat
+  background-size: contain
+  background-position-x: 80%
+  height: auto
+
+  &__hero
+    max-width: 45vw
+    margin-left: 10vw
+    padding: 3.6rem 0 0 1.8rem
+    border: 3px solid $text-color-primary
+    border-radius: 1.6rem 0 0 0
+    border-right-color: transparent
+    border-bottom-color: transparent
+
+    &__description
+      max-width: 70vw
+      margin-left: 4.8rem
+      &__title
+        margin-bottom: 2.4rem
+        font-size: 2.35em
+      &__text
+        font-size: 1.25em
+        text-align: justify
+        text-indent: 3.2rem
+      &__btn
+        display: block
+        margin: 4rem auto
+        border-radius: 0 1.2rem

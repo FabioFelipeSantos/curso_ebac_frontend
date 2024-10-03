@@ -1,0 +1,58 @@
+@use "./_variables" as *
+@use "sass:color"
+
+html
+  font-size: 62.5%
+
+body
+  min-height: 100vh
+  background-color: $bg-color-primary
+  color: $text-color-primary
+  font-size: 2rem
+
+h1
+  font-family: $title-font
+  font-size: 4.2rem
+
+h2
+  font-family: $title-font
+  font-size: 4.8rem
+
+a
+  color: $text-color-primary
+  font-size: 1.25em
+  text-decoration: none
+
+li
+  list-style: none
+
+i
+  font-weight: 300
+
+p
+  line-height: 1.8
+
+label
+  font-family: $main-font
+  font-size: 1.25em
+
+select
+  font-family: $main-font
+  font-size: 1.35em
+
+.container
+  max-width: $max-width
+  margin: 0 auto
+
+.button
+  padding: 1.6rem 4rem
+  font-size: 1.8em
+  font-family: $title-font
+  font-weight: 800
+  border: none
+  background-color: $btn-primary
+  color: $text-color-primary
+
+  &:hover
+    cursor: pointer
+    background-color: color.adjust($btn-primary, $lightness: -8%)

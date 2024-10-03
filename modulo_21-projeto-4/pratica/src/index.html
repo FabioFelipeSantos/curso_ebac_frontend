@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogos Mortais a Franquia</title>
+    <link rel="stylesheet" href="./../dist/css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="div header container">
+        <div class="header__logo">
+          <img
+            src="./../dist/img/header_logo.jpg"
+            alt="Espiral do filme com pessoas na borda"
+          />
+        </div>
+        <h1 class="header__title">Jogos Mortais</h1>
+        <nav class="header__nav">
+          <ul class="header__nav__links">
+            <li>
+              <a href="#" class="header__nav__links__item">Sobre</a>
+            </li>
+            <li>
+              <a href="#" class="header__nav__links__item">Filmes</a>
+            </li>
+            <li>
+              <a href="#" class="header__nav__links__item">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="about">
+        <div class="about__hero container">
+          <div class="about__hero__img-ctn">
+            <img
+              src="./../dist/img/hero_1.png"
+              alt="O mascote do filme Billy the Puppet"
+            />
+          </div>
+          <div class="about__hero__description">
+            <h2 class="about__hero__description__title">
+              <em>Let the Game Begins!</em>
+            </h2>
+            <p class="about__hero__description__text">
+              Jogos mortais (<i>Saw</i>) é uma franquia de filmes de terror,
+              sendo a mais bem sucedida de todos os tempos. Seu arco está em
+              torno da vida e obra do serial killer John
+              <em>"Jigsaw" Kramer</em>, que, ao colocar suas vítimas em
+              situações de tortura física e psicológica extrema, se conseguirem
+              sobreviver, estarão de uma vez por todas reabilitadas.
+            </p>
+            <button
+              id="make-your-choice-btn"
+              class="about__hero__description__btn button"
+            >
+              Make Your Choice
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="kramer">
+        <div class="kramer__hero container">
+          <div class="kramer__hero__description">
+            <h2 class="kramer__hero__description__title">
+              John Kramer - <em>JigSaw</em>
+            </h2>
+            <p class="kramer__hero__description__text">
+              Sem ser tecnicamente um serial killer, pois ele nunca matou
+              efetivamente, John Kramer é um paciente de câncer terminal que viu
+              em vários momentos sua vida se transformar. Pelo aborto de seu
+              filho Gideon, a separação de sua amada Jill Tuck, por um câncer
+              mal diagnosticado, e por um suicídio não concluído, John acredita
+              que a vida é um dom, e que não se deve desperdiçá-la. Logo,
+              aqueles que de alguma forma criaram as situações que levaram
+              Kramer a desistir da sua vida, são testadas por ele, em um jogo de
+              vida ou morte, em que se vencerem, terão sua vida validada nas
+              métricas de Kramer. Porém, vencer significa se libertar das
+              atitudes que desperdiçam o dom da vida que lhe foi dado, ou seja,
+              significa se libertar do pior em você.
+            </p>
+            <button class="kramer__hero__description__btn button">
+              Live or Die
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="movies">
+        <div class="movies__container container">
+          <h2>Saiba mais sobre cada filme</h2>
+
+          <div class="movies__select">
+            <h3 class="movies__select__title">Escolha um filme</h3>
+
+            <ul id="film" class="movies__select__list">
+              <li class="movies__select__list__item" selected>Saw</li>
+              <li class="movies__select__list__item">Saw II</li>
+              <li class="movies__select__list__item">Saw III</li>
+              <li class="movies__select__list__item">Saw IV</li>
+              <li class="movies__select__list__item">Saw V</li>
+              <li class="movies__select__list__item">Saw VI</li>
+              <li class="movies__select__list__item">Saw 3D</li>
+              <li class="movies__select__list__item">Jigsaw</li>
+              <li class="movies__select__list__item">Spiral</li>
+              <li class="movies__select__list__item">Saw X</li>
+            </ul>
+          </div>
+
+          <ul class="movies__list">
+            <li class="movies__list__item"></li>
+            <li class="movies__list__item"></li>
+            <li class="movies__list__item"></li>
+            <li class="movies__list__item"></li>
+            <li class="movies__list__item"></li>
+            <li class="movies__list__item"></li>
+            <li class="movies__list__item"></li>
+            <li class="movies__list__item"></li>
+            <li class="movies__list__item"></li>
+            <li class="movies__list__item"></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
