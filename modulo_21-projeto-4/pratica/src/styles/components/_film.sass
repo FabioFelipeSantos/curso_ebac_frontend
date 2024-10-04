@@ -1,0 +1,61 @@
+@use "./../_variables" as *
+@use "./../_mixins" as *
+@use "sass:color"
+
+.film
+  @include containerFlex($dir: column)
+  &__ctn
+    @include containerFlex($justify: space-evenly)
+    margin-bottom: 2rem
+
+  &__img
+    min-width: 50rem
+    max-width: 80rem
+    img
+      width: 100%
+  &__data
+    margin-left: 4.4rem
+    &__ctn
+      @include containerFlex($justify: space-between)
+      border-bottom: 0.16rem solid color.adjust($bg-color-primary, $lightness: 35%)
+      padding-bottom: 2.8rem
+      margin-bottom: 3.2rem
+    &__main
+      margin-right: 2rem
+      &__title
+        margin-bottom: 0.8rem
+        font-size: 1.85em
+      &__year
+        font-size: 1.2em
+    &__rating
+      font-size: 1.2em
+      &__star
+        font-size: 1.35em
+      &__total
+        opacity: 0.5
+    &__description
+      text-align: justify
+      font-size: 1.1em
+      font-weight: 300
+      text-indent: 6.4rem
+      margin-bottom: 2rem
+    &__money
+      margin-bottom: 2rem
+  &__cast
+    padding: 2.4rem
+    &__list
+      @include containerFlex($justify: center, $wrap: wrap)
+      &__item
+        max-width: 18rem
+        min-height: 20rem
+        margin: 2rem 4rem
+        &__img
+          max-width: 20rem
+          img
+            width: 100%
+            border-radius: 50%
+        &__names
+          margin-top: 1rem
+          em
+            display: block
+            margin-top: 0.6rem

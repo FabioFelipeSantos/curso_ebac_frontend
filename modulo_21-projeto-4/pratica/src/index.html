@@ -92,36 +92,188 @@
 
       <section class="movies">
         <div class="movies__container container">
-          <h2>Saiba mais sobre cada filme</h2>
+          <h2 class="movies__section-title">Saiba mais sobre cada filme</h2>
 
           <div class="movies__select">
             <h3 class="movies__select__title">Escolha um filme</h3>
 
             <ul id="film" class="movies__select__list">
-              <li class="movies__select__list__item" selected>Saw</li>
-              <li class="movies__select__list__item">Saw II</li>
-              <li class="movies__select__list__item">Saw III</li>
-              <li class="movies__select__list__item">Saw IV</li>
-              <li class="movies__select__list__item">Saw V</li>
-              <li class="movies__select__list__item">Saw VI</li>
-              <li class="movies__select__list__item">Saw 3D</li>
-              <li class="movies__select__list__item">Jigsaw</li>
-              <li class="movies__select__list__item">Spiral</li>
-              <li class="movies__select__list__item">Saw X</li>
+              <li
+                data-movie-select="saw"
+                class="movies__select__list__item"
+                selected
+              >
+                <span>Saw</span>
+              </li>
+              <li data-movie-select="saw-2" class="movies__select__list__item">
+                <span>Saw II</span>
+              </li>
+              <li data-movie-select="saw-3" class="movies__select__list__item">
+                <span>Saw III</span>
+              </li>
+              <li data-movie-select="saw-4" class="movies__select__list__item">
+                <span>Saw IV</span>
+              </li>
+              <li data-movie-select="saw-5" class="movies__select__list__item">
+                <span>Saw V</span>
+              </li>
+              <li data-movie-select="saw-6" class="movies__select__list__item">
+                <span>Saw VI</span>
+              </li>
+              <li data-movie-select="saw-3d" class="movies__select__list__item">
+                <span>Saw 3D</span>
+              </li>
+              <li data-movie-select="jigsaw" class="movies__select__list__item">
+                <span>Jigsaw</span>
+              </li>
+              <li data-movie-select="spiral" class="movies__select__list__item">
+                <span>Spiral</span>
+              </li>
+              <li data-movie-select="saw-x" class="movies__select__list__item">
+                <span>Saw X</span>
+              </li>
             </ul>
           </div>
 
           <ul class="movies__list">
-            <li class="movies__list__item"></li>
-            <li class="movies__list__item"></li>
-            <li class="movies__list__item"></li>
-            <li class="movies__list__item"></li>
-            <li class="movies__list__item"></li>
-            <li class="movies__list__item"></li>
-            <li class="movies__list__item"></li>
-            <li class="movies__list__item"></li>
-            <li class="movies__list__item"></li>
-            <li class="movies__list__item"></li>
+            <li
+              data-selected-movie="saw"
+              class="movies__list__item movies__list__item--is-active"
+            >
+              <div class="film">
+                <div class="film__ctn">
+                  <div class="film__img">
+                    <img
+                      src="./assets/img/saw1.jpg"
+                      alt="Pôster Filme Jogos Mortais 1"
+                    />
+                  </div>
+
+                  <div class="film__data">
+                    <div class="film__data__ctn">
+                      <div class="film__data__main">
+                        <h2 class="film__data__main__title">Jogos Mortais</h2>
+                        <h4 class="film__data__main__year">2004</h4>
+                      </div>
+
+                      <span class="film__data__rating">
+                        <span class="film__data__rating__star">⭐</span>
+                        <span>IMDb 7.6 /</span>
+                        <span class="film__data__rating__total">10</span>
+                      </span>
+                    </div>
+
+                    <p class="film__data__description">
+                      O filme conta uma narrativa não linear que gira em torno
+                      do mistério do serial killer Jigsaw, que testa a vontade
+                      de viver de suas vítimas submetendo-as a "jogos" mortais
+                      em que elas precisam infligir grande dor física a si
+                      mesmas para sobreviver. A história segue as últimas
+                      vítimas de Jigsaw (Adam e Dr. Gordon), que acordam em um
+                      banheiro grande e em ruínas, e um deles recebe a ordem de
+                      matar o outro para salvar a própria família.
+                    </p>
+
+                    <div class="film__data__money">
+                      <p class="film__data__money__budget">
+                        Orçamento: $ 1,2 mi
+                      </p>
+                      <p class="film__data__money__revenue">
+                        Bilheteria: $ 103 mi
+                      </p>
+                      <p class="film__data__money__profit">Retorno: 8.483%</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="film__cast">
+                  <ul class="film__cast__list">
+                    <li class="film__cast__list__item">
+                      <div class="film__cast__list__item__ctn">
+                        <div class="film__cast__list__item__img">
+                          <img src="./assets/img/saw1/jigsaw.jpg" />
+                        </div>
+
+                        <div class="film__cast__list__item__names">
+                          <h3>Jigsaw</h3>
+                          <em>Tobin Bell</em>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="film__cast__list__item">
+                      <div class="film__cast__list__item__ctn">
+                        <div class="film__cast__list__item__img">
+                          <img src="./assets/img/saw1/drGordom.jpg" />
+                        </div>
+                        <div class="film__cast__list__item__names">
+                          <h3>Dr. Laurence Gordon</h3>
+                          <em>Cary Elwes</em>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="film__cast__list__item">
+                      <div class="film__cast__list__item__ctn">
+                        <div class="film__cast__list__item__img">
+                          <img src="./assets/img/saw1/adam.jpg" />
+                        </div>
+                        <div class="film__cast__list__item__names">
+                          <h3>Adam</h3>
+                          <em>Leigh Whannell</em>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="film__cast__list__item">
+                      <div class="film__cast__list__item__ctn">
+                        <div class="film__cast__list__item__img">
+                          <img src="./assets/img/saw1/amanda.jpg" />
+                        </div>
+                        <div class="film__cast__list__item__names">
+                          <h3>Amanda</h3>
+                          <em>Shawnee Smith</em>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="film__cast__list__item">
+                      <div class="film__cast__list__item__ctn">
+                        <div class="film__cast__list__item__img">
+                          <img src="./assets/img/saw1/david.webp" />
+                        </div>
+                        <div class="film__cast__list__item__names">
+                          <h3>David</h3>
+                          <em>Danny Glover</em>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="film__cast__list__item">
+                      <div class="film__cast__list__item__ctn">
+                        <div class="film__cast__list__item__img">
+                          <img src="./assets/img/saw1/zep.jpg" />
+                        </div>
+                        <div class="film__cast__list__item__names">
+                          <h3>Zep</h3>
+                          <em>Michael Emerson</em>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li data-selected-movie="saw-2" class="movies__list__item">2</li>
+            <li data-selected-movie="saw-3" class="movies__list__item">3</li>
+            <li data-selected-movie="saw-4" class="movies__list__item">4</li>
+            <li data-selected-movie="saw-5" class="movies__list__item">5</li>
+            <li data-selected-movie="saw-6" class="movies__list__item">6</li>
+            <li data-selected-movie="saw-3d" class="movies__list__item">7</li>
+            <li data-selected-movie="jigsaw" class="movies__list__item">8</li>
+            <li data-selected-movie="spiral" class="movies__list__item">9</li>
+            <li data-selected-movie="saw-x" class="movies__list__item">10</li>
           </ul>
         </div>
       </section>
