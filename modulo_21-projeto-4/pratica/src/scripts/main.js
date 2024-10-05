@@ -13,7 +13,10 @@ window.addEventListener("DOMContentLoaded", function () {
 
   moviesListSelect.forEach((movie) => {
     movie.addEventListener("click", closeMoviesOptions);
-    movie.addEventListener("click", (e) => sowFilmTab(e));
+    movie.addEventListener("click", (e) => {
+      movieChoice.textContent = movie.children[0].textContent;
+      sowFilmTab(e);
+    });
   });
 
   const trailerButton = document.querySelectorAll("[data-trailer]");
@@ -44,13 +47,21 @@ function closeTrailerModal(event) {
   const filmTrailer = document.querySelector(`[data-movie-trailer=${film}]`);
   const filmContainer = filmTrailer.parentNode;
 
+  filmTrailer.classList.remove("modals__ctn--is-open");
   filmContainer.classList.remove("modals--is-open");
 }
 
 function showTrailerModal(event) {
   const film = event.target.dataset.trailer;
+  console.log(film);
   const filmTrailer = document.querySelector(`[data-movie-trailer=${film}`);
+  console.log(filmTrailer);
   const filmContainer = filmTrailer.parentNode;
+  console.log(filmContainer);
+
+  !filmTrailer.classList.contains("modals__ctn--is-open")
+    ? filmTrailer.classList.add("modals__ctn--is-open")
+    : "";
 
   !filmContainer.classList.contains("modals--is-open")
     ? filmContainer.classList.add("modals--is-open")

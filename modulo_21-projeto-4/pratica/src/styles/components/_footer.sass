@@ -1,0 +1,30 @@
+@use "./../_variables" as *
+@use "./../_mixins" as *
+@use "sass:color"
+
+.footer
+  background-color: color.adjust($btn-primary, $lightness: -16%)
+  height: 14vh
+  @include containerFlex()
+
+  &__ctn
+    @include containerFlex($dir: column)
+
+  &__time
+    margin-left: 0.8rem
+    &::after
+      margin: 0 1rem
+      content: "—"
+
+  &__link
+    font-size: 1.1em
+    text-decoration: none
+    transition: all 0.3s ease
+    &:visited
+      color: hsl(0, 100%, 90%)
+
+    &:hover
+      cursor: pointer
+      color: hsl(0, 70%, 70%)
+      margin: 0 0.8rem
+      transition: all 0.5s ease

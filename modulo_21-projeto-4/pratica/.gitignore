@@ -1,3 +1,4 @@
+./dist
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
@@ -11,3 +12,4 @@
 
 #!.yarn/cache
 .pnp.*
+

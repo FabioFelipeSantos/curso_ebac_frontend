@@ -10,7 +10,6 @@
   z-index: 1000
   top: 0
   left: 0
-  // transform: translate(-50%)
   width: 100%
   height: 100%
   background-color: rgba($bg-color-primary, 0.6)
@@ -19,7 +18,7 @@
     display: block
     animation-name: modalOpen
   &__ctn
-    @include containerFlex($dir: column)
+    display: none
     position: absolute
     top: 50%
     left: 50%
@@ -28,6 +27,8 @@
     width: 88%
     height: 88%
     padding: 2.5rem 5rem
+    &--is-open
+      @include containerFlex($dir: column)
   &__close
     width: 100%
     @include containerFlex($justify: space-between)
