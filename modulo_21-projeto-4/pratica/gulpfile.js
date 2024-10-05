@@ -10,7 +10,7 @@ function html() {
   return gulp
     .src("./src/*.html")
     .pipe(htmlMin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("./dist/html"));
+    .pipe(gulp.dest("./dist/"));
 }
 
 function scripts() {
