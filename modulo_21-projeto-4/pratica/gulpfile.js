@@ -3,6 +3,15 @@ const sass = require("gulp-sass")(require("sass"));
 const imagemin = require("gulp-imagemin");
 const sourcemaps = require("gulp-sourcemaps");
 const uglify = require("gulp-uglify");
+const htmlMin = require("gulp-htmlmin");
+const useref = require("gulp-useref");
+
+function html() {
+  return gulp
+    .src("./src/*.html")
+    .pipe(htmlMin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("./dist/html"));
+}
 
 function scripts() {
   return gulp
@@ -27,8 +36,9 @@ function images() {
     .pipe(gulp.dest("./dist/img"));
 }
 
-exports.default = gulp.parallel(styles, images, scripts);
+exports.default = gulp.parallel(styles, images, scripts, html);
 exports.watch = function () {
   gulp.watch("./src/styles/**/*.sass", gulp.parallel(styles));
   gulp.watch("./src/scripts/**/*.js", gulp.parallel(scripts));
+  gulp.watch("./src//*.html", gulp.parallel(html));
 };
