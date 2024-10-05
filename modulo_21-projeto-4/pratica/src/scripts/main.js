@@ -15,7 +15,47 @@ window.addEventListener("DOMContentLoaded", function () {
     movie.addEventListener("click", closeMoviesOptions);
     movie.addEventListener("click", (e) => sowFilmTab(e));
   });
+
+  const trailerButton = document.querySelectorAll("[data-trailer]");
+  trailerButton.forEach((btn) => {
+    btn.addEventListener("click", showTrailerModal);
+  });
+
+  const trailersModal = document.querySelectorAll("[data-close-trailer]");
+  trailersModal.forEach((btn) => {
+    btn.addEventListener("click", closeTrailerModal);
+  });
+
+  window.addEventListener("click", closeModalClickingOutsideModal);
 });
+
+function closeModalClickingOutsideModal(event) {
+  const filmContainer =
+    document.querySelectorAll(`[data-movie-trailer]`)[0].parentNode;
+
+  // The reason why we must use "==" as comparison operator is that when the modal is open, your most exterior container should occupy te whole screen, so, when the user clicks outside the modal, it'll click on the modal's outside container.
+  if (event.target == filmContainer) {
+    filmContainer.classList.remove("modals--is-open");
+  }
+}
+
+function closeTrailerModal(event) {
+  const film = event.target.dataset.closeTrailer;
+  const filmTrailer = document.querySelector(`[data-movie-trailer=${film}]`);
+  const filmContainer = filmTrailer.parentNode;
+
+  filmContainer.classList.remove("modals--is-open");
+}
+
+function showTrailerModal(event) {
+  const film = event.target.dataset.trailer;
+  const filmTrailer = document.querySelector(`[data-movie-trailer=${film}`);
+  const filmContainer = filmTrailer.parentNode;
+
+  !filmContainer.classList.contains("modals--is-open")
+    ? filmContainer.classList.add("modals--is-open")
+    : "";
+}
 
 function sowFilmTab(event) {
   const activeMovie = event.target.parentNode.dataset.movieSelect;
