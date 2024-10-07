@@ -6,27 +6,35 @@
 
   &.container
     @include containerFlex($justify: space-between)
+    @media screen and (max-width: $sm)
+      @include containerFlex($dir: column, $justify: flex-start , $items: center)
 
   &__logo
-    max-width: 25rem
-
+    max-width: 14rem
+    @media screen and (max-width: $sm)
+      max-width: 45%
+    @media screen and (min-width: $sm) and (max-width: $md)
+      max-width: 35%
     img
       width: 100%
 
   &__title
-    font-size: 3.5em
-    height: 70px
+    font-size: 2.2em
+    @media screen and (max-width: $sm)
+      display: none
+    @media screen and (min-width: $sm) and (max-width: $md)
+      display: none
 
   &__nav
     display: flex
     align-content: center
-    height: 70px
+    // height: 70px
     &__links
       display: flex
       align-items: center
       &__item
-        margin: 0 1.6rem
-        padding: 0.8rem
+        margin: 0 1rem
+        padding: 0.4rem
         position: relative
         font-size: 1.5em
         &::before
@@ -45,6 +53,11 @@
         &:hover
           &::before
             animation-name: linkAnim
+        @media screen and (max-width: $sm)
+          font-size: 1em
+        @media screen and (min-width: $sm) and (max-width: $md)
+          font-size: 1.3em
+          margin: 0 1rem
 
 @keyframes linkAnim
   from

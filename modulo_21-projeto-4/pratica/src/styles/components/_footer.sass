@@ -4,17 +4,16 @@
 
 .footer
   background-color: color.adjust($btn-primary, $lightness: -16%)
-  height: 14vh
+  // height: 14vh
   @include containerFlex()
 
   &__ctn
     @include containerFlex($dir: column)
+    margin: 5rem 1rem
 
   &__time
-    margin-left: 0.8rem
-    &::after
-      margin: 0 1rem
-      content: "—"
+    text-align: center
+    margin-bottom: 2rem
 
   &__link
     font-size: 1.1em
@@ -28,3 +27,5 @@
       color: hsl(0, 70%, 70%)
       margin: 0 0.8rem
       transition: all 0.5s ease
+  &__email
+    text-align: center

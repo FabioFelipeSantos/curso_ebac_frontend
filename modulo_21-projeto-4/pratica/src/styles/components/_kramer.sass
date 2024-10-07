@@ -11,6 +11,14 @@
   background-size: contain
   background-position-x: 80%
   height: auto
+  @media screen and (max-width: $sm)
+    margin-top: 0
+    background-repeat: no-repeat
+    background-size: auto
+  @media screen and (min-width: $sm) and (max-width: $md)
+    margin-top: 0
+    background-repeat: no-repeat
+    background-size: auto
 
   &__hero
     max-width: 45vw
@@ -20,10 +28,29 @@
     border-radius: 1.6rem 0 0 0
     border-right-color: transparent
     border-bottom-color: transparent
+    @media screen and (max-width: $sm)
+      border: none
+      max-width: 92%
+      margin: 0 auto
+      padding: 0
+    @media screen and (min-width: $sm) and (max-width: $md)
+      border: none
+      max-width: 0
+      padding: 0
+      max-width: 92%
+      margin: 0 auto
 
     &__description
       max-width: 70vw
       margin-left: 4.8rem
+      @media screen and (max-width: $sm)
+        max-width: 100%
+        margin-left: 0
+        background-color: #0002
+      @media screen and (min-width: $sm) and (max-width: $md)
+        max-width: 100%
+        margin-left: 0
+        background-color: #0002
       &__title
         margin-bottom: 2.4rem
         font-size: 2.35em
@@ -35,3 +62,31 @@
         display: block
         margin: 4rem auto
         border-radius: 0 1.2rem
+      @media screen and (max-width: $sm)
+        &__title
+          margin-bottom: 1.2rem
+          font-size: 1.8em
+          text-align: center
+        &__text
+          font-size: 0.8em
+          text-align: justify
+          text-indent: 0
+        &__btn
+          display: block
+          margin: 4rem auto
+          font-size: 1em
+          border-radius: 0 1.2rem
+      @media screen and (min-width: $sm) and (max-width: $md)
+        &__title
+          margin-bottom: 1.8rem
+          font-size: 2em
+          text-align: center
+        &__text
+          font-size: 1.15em
+          text-align: justify
+          text-indent: 0
+        &__btn
+          display: block
+          margin: 4rem auto
+          font-size: 1em
+          border-radius: 0 1.2rem
