@@ -1,0 +1,15 @@
+@use "./_variables" as *
+
+.container
+  max-width: 960px
+  width: 100%
+  margin: 0 auto
+
+  @media screen and ( max-width: $sm )
+    max-width: 80%
+
+  @media screen and ( max-width: $md)
+    max-width: 90%
+
+li
+  list-style: none

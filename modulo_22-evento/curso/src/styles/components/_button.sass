@@ -1,0 +1,22 @@
+@use "./../_variables" as *
+
+.button
+  padding: 12px
+  font-size: 18px
+  font-weight: bold
+  text-decoration: none
+  text-align: center
+  white-space: nowrap
+
+  &--primary
+    color: white
+    background-color: #4f2ac3
+
+  @media (max-width: $md)
+    display: flex
+    align-items: center
+
+  @media screen and (max-width: $sm)
+    display: flex
+    align-items: center
+    width: 100%
