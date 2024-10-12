@@ -1,0 +1,73 @@
+@use "./../_variables" as *
+@use "./../_mixin" as *
+@use "sass:color"
+
+.tickets
+  background-image: url(/fundo4.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  min-height: 60vh
+  height: 100vh
+
+  position: relative
+
+  display: flex
+  justify-content: center
+  align-items: center
+
+  &::before
+    content: " "
+    background-color: #000
+    opacity: 0.78
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+  &__container
+    position: relative
+    @include container($mw: $mw-sm)
+    text-align: center
+    border: 1px solid #000aaa
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__title
+    font-size: 2.45em
+
+  &__regressive-count
+    margin-top: 6rem
+    display: flex
+    flex-direction: column
+    align-items: center
+    font-size: 2.85em
+
+  &__button
+    margin: 6rem 0
+    display: block
+    width: 60%
+    padding: 2rem 4rem
+    font-size: 2em
+    font-weight: 800
+    border: none
+    border-radius: 9999rem
+    background-color: $btn-bg-primary
+    color: $text-primary
+    transition: all 0.3s ease-out
+
+    &:hover
+      cursor: pointer
+      background-color: color.adjust($btn-bg-primary, $lightness: -8%)
+      font-size: 2.2em
+      border: 2px solid $text-primary
+      width: 65%
+
+  @media screen and (min-width: $sm)
+    &__container
+      @include container($mw: $mw-md )
+
+  // @media screen and (min-width: $md)
+  // @media screen and (min-width: $lg)

@@ -1,0 +1,96 @@
+@use "./../_variables" as *
+@use "./../_mixin" as *
+@use "sass:color"
+
+.bands
+  background-image: url(/fundo2.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  position: relative
+  height: 100vh
+  &__container
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    position: relative
+    @include container($mw: $mw-sm)
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: #100
+    opacity: 0.5
+  &__title
+    margin-top: 4rem
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 8%
+    font-size: 3em
+    color: color.adjust($text-dates, $lightness: -8%)
+    text-shadow: 0 0 8rem color.adjust($text-dates, $lightness: -10%)
+  &__list
+    height: 92%
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+
+    &__item
+      display: flex
+      flex-direction: column
+      justify-content: space-evenly
+      height: 20rem
+  &__logo
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 100%
+    padding: 2rem 1.5rem
+    width: 100%
+    &__img
+      width: 100%
+    &__name-band
+      color: $text-primary
+      font-size: 1.6em
+      opacity: 0.6
+    &--gojira
+      max-height: 20rem
+      img
+        height: 100%
+
+  @media screen and (min-width: $sm)
+    height: 120vh
+    &__container
+      @include container($mw: $mw-md)
+    &__list
+      &__item
+        height: 30rem
+    &__logo
+      padding: 6rem
+      &__img
+        width: 100%
+      &--gojira
+        max-height: 30rem
+
+  @media screen and (min-width: $md)
+    &__container
+      @include container($mw: $mw-lg)
+    &__list
+      &__item
+        height: 30rem
+    &__logo
+      &__img
+        width: 80%
+      &--gojira
+        max-height: 30rem
+  @media screen and (min-width: $lg)
+    &__container
+      @include container($mw: $mw-xl)
+    &__logo
+      &__img
+        width: 55%

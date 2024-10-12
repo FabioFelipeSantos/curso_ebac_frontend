@@ -1,15 +1,15 @@
 {
-  "name": "000-base-project-vite",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "sass-embedded": "^1.79.4",
-    "vite": "^5.4.8"
-  }
+	"name": "000-base-project-vite",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"sass-embedded": "^1.79.4",
+		"vite": "^5.4.8"
+	}
 }
