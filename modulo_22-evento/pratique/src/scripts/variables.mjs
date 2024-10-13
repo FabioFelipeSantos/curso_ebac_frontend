@@ -1,7 +1,13 @@
-const dates = {
-	day1: [2025, 2, 21, 13, 0, 0],
-	day2: [2025, 2, 22, 13, 0, 0],
-};
+function specifyingADate(date) {
+	return [
+		date.getUTCFullYear(),
+		date.getUTCMonth(),
+		date.getUTCDate(),
+		date.getHours(),
+		date.getMinutes(),
+		date.getSeconds(),
+	];
+}
 
 const monthsOfTheYear = [
 	"Janeiro",
@@ -18,4 +24,4 @@ const monthsOfTheYear = [
 	"Dezembro",
 ];
 
-export { dates, monthsOfTheYear };
+export { specifyingADate, monthsOfTheYear };

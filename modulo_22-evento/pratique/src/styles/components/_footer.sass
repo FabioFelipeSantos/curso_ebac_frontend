@@ -1,0 +1,72 @@
+@use "./../_variables" as *
+@use "./../_mixin" as *
+@use "sass:color"
+
+.footer
+  height: 20vh
+  display: flex
+  justify-content: center
+  align-items: center
+  &__container
+    @include container($mw: $mw-sm)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  &__copy
+    margin-bottom: 4rem
+    font-size: 1.5em
+    text-align: center
+    letter-spacing: 0.18rem
+  &__social
+    width: 90%
+    padding: 1rem
+    border-radius: 2rem
+    background-color: color.adjust($btn-bg-primary, $lightness: -2.5%, $alpha: -0.5)
+    &__list
+      display: flex
+      justify-content: space-between
+      align-items: center
+      &__item
+        font-size: 2.2em
+        padding: 0.5rem 1.25rem
+        &:hover
+          background-color: hsl(0, 100%, 85%, 0.15)
+          border-radius: 1.4rem
+          .fa-regular, .fa-brands
+            color: color.adjust($bg-primary, $lightness: 5%)
+            font-size: 1.1em
+
+  @media screen and (min-width: $sm)
+    &__container
+      @include container($mw: $mw-md )
+    &__copy
+      font-size: 1.8em
+    &__social
+      width: 95%
+      &__list
+        &__item
+          font-size: 2.8em
+
+  @media screen and (min-width: $md)
+    &__container
+      @include container($mw: $mw-lg )
+    &__copy
+      font-size: 2em
+    &__social
+      width: 95%
+      &__list
+        justify-content: space-around
+        &__item
+          font-size: 3.2em
+  @media screen and (min-width: $lg)
+    &__container
+      @include container($mw: $mw-xl )
+    &__copy
+      font-size: 2.4em
+    &__social
+      width: 95%
+      &__list
+        justify-content: space-around
+        &__item
+          font-size: 3.8em

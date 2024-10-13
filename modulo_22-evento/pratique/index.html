@@ -214,29 +214,82 @@
 						class="tickets__button">
 						Compre Agora
 					</button>
+					<form
+						id="date-form"
+						class="tickets__date">
+						<h3 class="tickets__date__title">Data do primeiro dia</h3>
+						<p class="tickets__date__info">
+							Se você quiser alterar a data de início para uma data futura, entre um número de segundos maior
+							que zero para o primeiro dia. Caso quiser colocar que o evento já começou, deixe o campo com o
+							valor 0 e clique no botão <em>Alterar</em>.
+						</p>
+						<div class="tickets__date__input-container">
+							<label
+								class="tickets__date__label"
+								for="day">
+								Data do Primeiro dia:</label
+							>
+							<input
+								id="day"
+								class="tickets__date__input"
+								type="number"
+								name="dia1"
+								value="0"
+								placeholder="Entre com um inteiro..."
+								min="0"
+								step="1"
+								required />
+						</div>
+						<button
+							type="submit"
+							class="tickets__button">
+							Alterar
+						</button>
+					</form>
 				</div>
 			</section>
 		</main>
 
 		<footer class="footer">
 			<div class="footer__container">
-				<h3 class="footer__copy"></h3>
+				<h3 class="footer__copy">
+					&COPY;
+					<span class="footer__current-year"></span> <i class="nf nf-cod-dash"></i>
+					Todos os direitos reservado a Fábio Santos.
+				</h3>
+
 				<nav class="footer__social">
 					<ul class="footer__social__list">
 						<li class="footer__social__list__item">
-							<i class="fa-brands fa-github"></i>
+							<a
+								href="https://github.com/FabioFelipeSantos"
+								target="_blank">
+								<i class="fa-brands fa-github"> </i
+							></a>
 						</li>
 						<li class="footer__social__list__item">
-							<i class="fa-brands fa-instagram"></i>
+							<a
+								href="https://www.instagram.com/fabio__fsantos/"
+								target="_blank">
+								<i class="fa-brands fa-instagram"> </i
+							></a>
 						</li>
 						<li class="footer__social__list__item">
-							<i class="fa-brands fa-linkedin"></i>
+							<a
+								href="https://www.linkedin.com/in/f%C3%A1bio-santos-a417a0127/"
+								target="_blank">
+								<i class="fa-brands fa-linkedin"> </i
+							></a>
 						</li>
 						<li class="footer__social__list__item">
-							<i class="fa-brands fa-youtube"></i>
+							<a
+								href="https://www.youtube.com/@derivadadekonoha"
+								target="_blank">
+								<i class="fa-brands fa-youtube"> </i
+							></a>
 						</li>
 						<li class="footer__social__list__item">
-							<i class="fa-regular fa-paper-plane"></i>
+							<a href="mailto:fabiotrabmat@gmail.com"> <i class="fa-regular fa-paper-plane"> </i></a>
 						</li>
 					</ul>
 				</nav>
