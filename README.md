@@ -29,3 +29,11 @@ Fazer um repositório no GitHub com várias _branches_ diferentes, cada responde
 |  19   |       BEM e SMACSS        |  boas_praticas_css  |   20 / 09 / 2024   |                                                                                      |
 |  20   | Construa e-mails com HTML |     sem branch      |   21 / 09 / 2024   |                [Email de notícias](https://imagensemail.vercel.app/)                 |
 |  21   |         Projeto 4         |     sem branch      |   07 / 10 / 2024   | [Site do filme Jogos Mortais](https://vercel.live/link/jogosmortais-ek99.vercel.app) |
+|  22   |    Landing Page Evento    |     sem branch      |   13 / 10 / 2024   |              [Forget Everything](https://forgeteverything.vercel.app/)               |
+
+<div  align="center" style="min-width: 400px; max-width: 700px; width: 100%; transform: scale(1); margin: 50px auto">
+    <img width=90% src="https://github-readme-streak-stats.herokuapp.com?user=FabioFelipeSantos/&theme=radical&mode=weekly" />
+</div>
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=FabioFelipeSantos&theme=transparent&bg_color=000&border_color=30A3DC&show_icons=true&icon_color=30A3DC&title_color=E94D5F&text_color=FFF)
+![Top Langs](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=FabioFelipeSantos&layout=compact&bg_color=000&border_color=30A3DC&title_color=E94D5F&text_color=FFF)
