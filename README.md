@@ -30,6 +30,7 @@ Fazer um repositório no GitHub com várias _branches_ diferentes, cada responde
 |  20   | Construa e-mails com HTML |   21 / 09 / 2024   |                [Email de notícias](https://imagensemail.vercel.app/)                 |
 |  21   |         Projeto 4         |   07 / 10 / 2024   | [Site do filme Jogos Mortais](https://vercel.live/link/jogosmortais-ek99.vercel.app) |
 |  22   |    Landing Page Evento    |   13 / 10 / 2024   |              [Forget Everything](https://forgeteverything.vercel.app/)               |
+|  23   |      Ajax e exceções      |   15 / 10 / 2024   |            [GitHub](https://github.com/FabioFelipeSantos/ebac-modulo-23)             |
 
 <div  align="center" style="min-width: 400px; max-width: 700px; width: 100%; transform: scale(1); margin: 50px auto">
     <img width=90% src="https://github-readme-streak-stats.herokuapp.com?user=FabioFelipeSantos/&theme=radical&mode=weekly" />
