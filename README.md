@@ -32,10 +32,14 @@ Fazer um repositório no GitHub com várias _branches_ diferentes, cada responde
 |  22   |    Landing Page Evento    |   13 / 10 / 2024   |              [Forget Everything](https://forgeteverything.vercel.app/)               |
 |  23   |      Ajax e exceções      |   15 / 10 / 2024   |            [GitHub](https://github.com/FabioFelipeSantos/ebac-modulo-23)             |
 |  24   |  Orientação a Objetos JS  |   19 / 10 / 2024   |          [GitHub](https://github.com/FabioFelipeSantos/ebac-modulo-24.git)           |
+|  25   |     Recursos do ES6+      |   21 / 10 / 2024   |          [GitHub](https://github.com/FabioFelipeSantos/ebac-modulo-25.git)           |
 
-<div  align="center" style="min-width: 400px; max-width: 700px; width: 100%; transform: scale(1); margin: 50px auto">
-    <img width=90% src="https://github-readme-streak-stats.herokuapp.com?user=FabioFelipeSantos/&theme=radical&mode=weekly" />
+<div  align="center" style="min-width: 400px; max-width: 700px; width: 100%; transform: scale(1); margin: 50px auto; display: flex; flex-direction: column; justify-content: center; align-items: center">
+    <img width=55% src="https://github-readme-streak-stats.herokuapp.com?user=FabioFelipeSantos/&theme=radical&mode=weekly" />
+    <div style="margin: 24px 0">
+      <img width=50% src="https://github-readme-stats.vercel.app/api?username=FabioFelipeSantos&theme=transparent&bg_color=000&border_color=30A3DC&show_icons=true&icon_color=30A3DC&title_color=E94D5F&text_color=FFF" />
+    </div>
+    <div>
+      <img width=45% src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=FabioFelipeSantos&layout=compact&bg_color=000&border_color=30A3DC&title_color=E94D5F&text_color=FFF" />
+    </div>  
 </div>
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=FabioFelipeSantos&theme=transparent&bg_color=000&border_color=30A3DC&show_icons=true&icon_color=30A3DC&title_color=E94D5F&text_color=FFF)
-![Top Langs](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=FabioFelipeSantos&layout=compact&bg_color=000&border_color=30A3DC&title_color=E94D5F&text_color=FFF)
