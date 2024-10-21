@@ -7,3 +7,6 @@
 [submodule "modulo_25-recursos-ES6/pratica"]
 	path = modulo_25-recursos-ES6/pratica
 	url = https://github.com/FabioFelipeSantos/ebac-modulo-25.git
+[submodule "modulo_26-conheca-o-typescript/pratica"]
+	path = modulo_26-conheca-o-typescript/pratica
+	url = https://github.com/FabioFelipeSantos/ebac-modulo-26.git
