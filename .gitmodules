@@ -4,3 +4,6 @@
 [submodule "modulo_24-orientacao-a-objetos-JS/pratica"]
 	path = modulo_24-orientacao-a-objetos-JS/pratica
 	url = https://github.com/FabioFelipeSantos/ebac-modulo-24.git
+[submodule "modulo_25-recursos-ES6/pratica"]
+	path = modulo_25-recursos-ES6/pratica
+	url = https://github.com/FabioFelipeSantos/ebac-modulo-25.git
