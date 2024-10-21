@@ -1,0 +1,19 @@
+{
+	"name": "curso",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"build": "babel src --watch -d dist",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"browserslist": "> 0.25%",
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"@babel/cli": "^7.25.7",
+		"@babel/core": "^7.25.8",
+		"@babel/preset-env": "^7.25.8"
+	}
+}
