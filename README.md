@@ -34,6 +34,7 @@ Fazer um repositório no GitHub com várias _branches_ diferentes, cada responde
 |  24   |  Orientação a Objetos JS  |   19 / 10 / 2024   |          [GitHub](https://github.com/FabioFelipeSantos/ebac-modulo-24.git)           |
 |  25   |     Recursos do ES6+      |   21 / 10 / 2024   |          [GitHub](https://github.com/FabioFelipeSantos/ebac-modulo-25.git)           |
 |  26   |   Conheça o Typescript    |   21 / 10 / 2024   |          [GitHub](https://github.com/FabioFelipeSantos/ebac-modulo-26.git)           |
+|  27   |   Visão Geral do VueJS    |   28 / 10 / 2024   |            [Calculadora VueJS](https://calculadoravuejs-opal.vercel.app/)            |
 
 <div  align="center" style="min-width: 400px; max-width: 700px; width: 100%; transform: scale(1); margin: 50px auto; display: flex; flex-direction: column; justify-content: center; align-items: center">
     <img width=55% src="https://github-readme-streak-stats.herokuapp.com?user=FabioFelipeSantos/&theme=radical&mode=weekly" />
