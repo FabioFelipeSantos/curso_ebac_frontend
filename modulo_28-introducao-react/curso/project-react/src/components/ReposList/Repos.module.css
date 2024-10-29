@@ -1,0 +1,58 @@
+.containerList {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.repoTitle {
+	margin: 48px 0 16px;
+}
+
+.list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+}
+
+.listItem {
+	list-style: none;
+	padding: 16px;
+	border: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+.itemName b em,
+.itemLanguage b em {
+	margin-left: 8px;
+}
+
+.itemLink {
+	display: block;
+	width: 85%;
+	margin: 16px auto 0;
+	background-color: var(--mainColor);
+	border-radius: 8px;
+	color: var(--secondaryColor);
+	text-align: center;
+	font-weight: bold;
+	padding: 8px;
+	text-decoration: none;
+	&:visited {
+		color: var(--secondaryColor);
+	}
+	&:hover {
+		background-color: var(--mainColorDarker);
+	}
+}
+
+@media screen and (max-width: 780px) {
+	.list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 540px) {
+	.list {
+		grid-template-columns: 1fr;
+	}
+}

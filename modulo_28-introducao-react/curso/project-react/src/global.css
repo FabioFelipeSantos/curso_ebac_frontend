@@ -1,0 +1,18 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.container {
+	max-width: 960px;
+	width: 96%;
+	margin: 0 auto;
+}
+
+:root {
+	--mainColor: #f9ca24;
+	--mainColorDarker: #efba09;
+	--secondaryColor: #111;
+}

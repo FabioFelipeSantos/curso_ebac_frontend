@@ -1,0 +1,21 @@
+.header {
+	padding: 140px 0 60px;
+	background-color: var(--mainColor);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* margin-bottom: 80px; */
+}
+
+.avatar {
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+}
+
+.name {
+	font-size: 24px;
+	color: var(--secondaryColor);
+}

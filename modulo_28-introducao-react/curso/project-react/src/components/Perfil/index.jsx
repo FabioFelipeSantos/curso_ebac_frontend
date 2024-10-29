@@ -1,16 +1,16 @@
 /* eslint-disable react/prop-types */
-import "./perfil.css";
+import styles from "./Perfil.module.css";
 
-const Perfil = ({ image, name }) => {
+const Perfil = ({ userName }) => {
 	return (
-		<div>
+		<header className={styles.header}>
 			<img
-				className="profile-image"
-				src={image}
-				alt="Fabio Santos' photo"
+				className={styles.avatar}
+				src={`https://github.com/${userName}.png`}
+				alt={`userName's photo.`}
 			/>
-			<h3 className="profile-title">{name}</h3>
-		</div>
+			<h1 className={styles.name}>{userName}</h1>
+		</header>
 	);
 };
 
