@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modulo_18-Automatize-Tarefas-com-Grunt/pratica" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modulo_21-projeto-4/pratica" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modulo_22-evento/pratique" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modulo_23-ajax-e-excecoes/pratique" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modulo_24-orientacao-a-objetos-JS/pratica" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modulo_25-recursos-ES6/pratica" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modulo_26-conheca-o-typescript/pratica" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modulo_27-visao-geral-VueJS/calculadora-vue" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modulo_27-visao-geral-VueJS/curso/todo-list-vue" vcs="Git" />
+  </component>
+</project>
