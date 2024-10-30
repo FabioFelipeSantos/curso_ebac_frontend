@@ -36,8 +36,8 @@ Fazer um repositório no GitHub com várias _branches_ diferentes, cada responde
 |  26   |   Conheça o Typescript    |   21 / 10 / 2024   |          [GitHub](https://github.com/FabioFelipeSantos/ebac-modulo-26.git)           |
 |  27   |   Visão Geral do VueJS    |   28 / 10 / 2024   |            [Calculadora VueJS](https://calculadoravuejs-opal.vercel.app/)            |
 
-<div  align="center" style="min-width: 400px; max-width: 700px; width: 100%; transform: scale(1); margin: 50px auto; display: flex; flex-direction: column; justify-content: center; align-items: center">
-    <img width=55% src="https://github-readme-streak-stats.herokuapp.com?user=FabioFelipeSantos/&theme=radical&mode=weekly" />
+<div style="min-width: 400px; max-width: 700px; width: 100%; transform: scale(1); margin: 50px auto; display: flex; flex-direction: column; justify-content: center; align-items: center">
+    <img width=55% src="https://github-readme-streak-stats.herokuapp.com?user=FabioFelipeSantos/&theme=radical&mode=weekly"  alt=""/>
     <div style="margin: 24px 0">
       <img width=50% src="https://github-readme-stats.vercel.app/api?username=FabioFelipeSantos&theme=transparent&bg_color=000&border_color=30A3DC&show_icons=true&icon_color=30A3DC&title_color=E94D5F&text_color=FFF" />
     </div>
