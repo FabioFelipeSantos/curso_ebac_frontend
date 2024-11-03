@@ -10,3 +10,6 @@
 [submodule "modulo_26-conheca-o-typescript/pratica"]
 	path = modulo_26-conheca-o-typescript/pratica
 	url = https://github.com/FabioFelipeSantos/ebac-modulo-26.git
+[submodule "modulo_28-introducao-react/ebac-modulo-28-intro-react"]
+	path = modulo_28-introducao-react/ebac-modulo-28-intro-react
+	url = https://github.com/FabioFelipeSantos/ebac-modulo-28-intro-react
