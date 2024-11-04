@@ -13,3 +13,6 @@
 [submodule "modulo_28-introducao-react/ebac-modulo-28-intro-react"]
 	path = modulo_28-introducao-react/ebac-modulo-28-intro-react
 	url = https://github.com/FabioFelipeSantos/ebac-modulo-28-intro-react
+[submodule "modulo_29-css-in-js-com-react/ebac-pratique-29"]
+	path = modulo_29-css-in-js-com-react/ebac-pratique-29
+	url = https://github.com/FabioFelipeSantos/ebac-modulo-29-styled-components-base_exercicio_css_in_js.git
