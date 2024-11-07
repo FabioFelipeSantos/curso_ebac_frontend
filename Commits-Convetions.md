@@ -101,3 +101,14 @@ git submodule update --init --recursive
 ## Observation
 
 The commands that modify GitHub repositories like, `add`, `commit`, `push`, `pull`, `branch`, and others, will just modify the repo that you were be at the moment that you used the git commands. For example, a `commit` made in the `cd ~/main-repo` will occur in the `main-repo` repository. Similarly, if you create a branch with the `branch` command in `cd ~/main-repo/folder-as-submodule`, Git will create a branch in the original repo that the submodule came.
+
+# NPM Tools to analyze packages and their utilization
+
+-   [NPM TRENDS](https://npmtrends.com/)
+-   [NPM COMPARE](https://npm-compare.com/)
+
+# To Study
+
+-   [ ] **Redux** with _Redux Toolkit_
+-   [ ] **Zustand**
+-   [ ] **Jotai**
