@@ -19,3 +19,6 @@
 [submodule "modulo_30-redux-com-react/projeto-curso"]
 	path = modulo_30-redux-com-react/projeto-curso
 	url = https://github.com/FabioFelipeSantos/ebac_games_redux
+[submodule "modulo_30-redux-com-react/pratique-modulo-30"]
+	path = modulo_30-redux-com-react/pratique-modulo-30
+	url = https://github.com/FabioFelipeSantos/ebac-pratique-modulo-30-ebac_sports
