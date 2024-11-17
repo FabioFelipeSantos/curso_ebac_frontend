@@ -10,6 +10,7 @@ export interface Tarefa {
 }
 
 type TarefaEditada = Pick<Tarefa, 'id' | 'descricao'>
+export type TarefaNova = Pick<Tarefa, 'titulo' | 'descricao' | 'prioridade'>
 
 const initialState: Tarefa[] = [
   {
@@ -53,6 +54,32 @@ const tarefasSlice = createSlice({
       if (tarefaExistente) {
         tarefaExistente.descricao = descricao
       }
+    },
+    cadastrar: (state, { payload }: PayloadAction<TarefaNova>) => {
+      const tarefaJaExiste = state.find(
+        (tarefa) => tarefa.titulo.toLowerCase() === payload.titulo.toLowerCase()
+      )
+
+      if (tarefaJaExiste) {
+        alert('Já existe uma tarefa com este nome!')
+      } else {
+        const novaTarefa: Tarefa = {
+          ...payload,
+          id: state.length + 1,
+          status: enums.Status.PENDENTE
+        }
+        state.push(novaTarefa)
+      }
+    },
+    alteraStatus: (
+      state,
+      { payload }: PayloadAction<{ id: number; finalizado: enums.Status }>
+    ) => {
+      const tarefaExistente = state.find((task) => task.id === payload.id)
+
+      if (tarefaExistente) {
+        tarefaExistente.status = payload.finalizado
+      }
     }
   },
   selectors: {
@@ -74,7 +101,7 @@ const tarefasSlice = createSlice({
 
 export default tarefasSlice.reducer
 
-export const { remover, editar } = tarefasSlice.actions
+export const { remover, editar, cadastrar, alteraStatus } = tarefasSlice.actions
 
 export const { selectTarefas, selectNumeroTarefasPeloFiltro } =
   tarefasSlice.selectors

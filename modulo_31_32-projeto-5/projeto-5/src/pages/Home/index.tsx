@@ -5,7 +5,7 @@ import ListaDeTarefas from '../../containers/ListaDeTarefas'
 export default function Home() {
   return (
     <>
-      <BarraLateral />
+      <BarraLateral mostrarFiltros />
       <ListaDeTarefas />
       <BotaoAdicionar />
     </>

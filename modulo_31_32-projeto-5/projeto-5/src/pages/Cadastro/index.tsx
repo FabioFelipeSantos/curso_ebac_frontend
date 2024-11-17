@@ -1,3 +1,12 @@
+import BarraLateral from '../../containers/BarraLateral'
+import Formulario from '../../containers/Formulario'
+
 export default function Cadastro() {
-  return <h1>Nova tarefa</h1>
+  return (
+    <>
+      <BarraLateral mostrarFiltros={false} />
+
+      <Formulario />
+    </>
+  )
 }

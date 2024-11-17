@@ -1,7 +1,7 @@
 import { useAppSelector } from '../../store/hooks'
 
 import Tarefa from '../../components/Tarefa'
-import * as S from './styles'
+import { MainContainer, Titulo } from '../../styles'
 import { selectTarefas } from '../../store/reducers/tarefas'
 import { selectFiltro } from '../../store/reducers/filtro'
 
@@ -40,8 +40,8 @@ const ListaDeTarefas = () => {
   const mensagemTarefas = inicio + fim + '.'
 
   return (
-    <S.Container>
-      <S.Resultado>{mensagemTarefas}</S.Resultado>
+    <MainContainer>
+      <Titulo as="p">{mensagemTarefas}</Titulo>
       <ul>
         {tarefas.map((tarefa) => (
           <li key={tarefa.id}>
@@ -55,7 +55,7 @@ const ListaDeTarefas = () => {
           </li>
         ))}
       </ul>
-    </S.Container>
+    </MainContainer>
   )
 }
 
