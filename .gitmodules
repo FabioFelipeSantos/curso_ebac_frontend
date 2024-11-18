@@ -22,3 +22,6 @@
 [submodule "modulo_30-redux-com-react/pratique-modulo-30"]
 	path = modulo_30-redux-com-react/pratique-modulo-30
 	url = https://github.com/FabioFelipeSantos/ebac-pratique-modulo-30-ebac_sports
+[submodule "modulo_31_32-projeto-5/pratique-modulo-32"]
+	path = modulo_31_32-projeto-5/pratique-modulo-32
+	url = https://github.com/FabioFelipeSantos/ebac-pratique-32-contac-list
