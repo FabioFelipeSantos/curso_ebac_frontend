@@ -4,6 +4,7 @@ export const colors = {
 	white: "#eee",
 	black: "#111",
 	gray: "#333",
+	lightGray: "#a3a3a3",
 	green: "#10ac84",
 };
 
@@ -18,5 +19,16 @@ export const GlobalStyle = createGlobalStyle`
     body {
         background-color: ${colors.black};
         color: ${colors.white};
+        padding-top: 40px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .container {
+        max-width: 1024px;
+	    width: 100%;
+	    margin: 0 auto;
     }
 `;
