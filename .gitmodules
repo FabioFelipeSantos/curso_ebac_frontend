@@ -25,3 +25,6 @@
 [submodule "modulo_31_32-projeto-5/pratique-modulo-32"]
 	path = modulo_31_32-projeto-5/pratique-modulo-32
 	url = https://github.com/FabioFelipeSantos/ebac-pratique-32-contac-list
+[submodule "modulo_35_39-projeto-6/pratique-35-efood"]
+	path = modulo_35_39-projeto-6/pratique-35-efood
+	url = https://github.com/FabioFelipeSantos/efood-m35-ebac
