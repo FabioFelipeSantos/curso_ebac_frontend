@@ -1,30 +1,26 @@
-import { ButtonContainer, ButtonLink } from "./styles";
+import { ButtonContainer, ButtonLink } from "./styles"
 
-type ButtonProps = {
-	type: "button" | "link";
-	title: string;
-	to?: string;
-	onClick?: () => void;
-	children: string;
-};
+export type ButtonProps = {
+	type: "button" | "link"
+	title: string
+	to?: string
+	onClick?: () => void
+	children: string
+	variant?: "primary" | "secondary"
+}
 
-export default function Button({ title, type, to, onClick, children }: ButtonProps) {
+export default function Button({ title, type, to, onClick, children, variant = "primary" }: ButtonProps) {
 	if (type === "button") {
 		return (
-			<ButtonContainer
-				type={"button"}
-				title={title}
-				onClick={onClick}>
+			<ButtonContainer variant={variant} type={"button"} title={title} onClick={onClick}>
 				{children}
 			</ButtonContainer>
-		);
+		)
 	}
 
 	return (
-		<ButtonLink
-			to={to!}
-			title={title}>
+		<ButtonLink to={to!} title={title}>
 			{children}
 		</ButtonLink>
-	);
+	)
 }

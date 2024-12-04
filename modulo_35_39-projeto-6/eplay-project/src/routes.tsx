@@ -1,7 +1,8 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"
 
-import Home from "./Pages/Home";
-import Genres from "./Pages/Genres";
+import Home from "./Pages/Home"
+import Genres from "./Pages/Genres"
+import Product from "./Pages/Product"
 
 export default function MyRoutes() {
 	return (
@@ -14,6 +15,10 @@ export default function MyRoutes() {
 				path="/genres"
 				element={<Genres />}
 			/>
+			<Route
+				path="/product/:id"
+				element={<Product />}
+			/>
 		</Routes>
-	);
+	)
 }

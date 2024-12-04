@@ -1,53 +1,53 @@
-import * as S from "./styles";
+import * as S from "./styles"
 
-const actualYear = new Date().getFullYear();
+const actualYear = new Date().getFullYear()
 
 export default function Footer() {
 	return (
 		<S.FooterContainer>
 			<div className="container">
 				<S.SectionFooter>
-					<S.SectionFooterTitle>Genres</S.SectionFooterTitle>
+					<S.SectionFooterTitle>Gêneros</S.SectionFooterTitle>
 					<S.Links>
 						<li>
 							<S.Link>RPG</S.Link>
 						</li>
 						<li>
-							<S.Link>Action</S.Link>
+							<S.Link>Ação</S.Link>
 						</li>
 						<li>
-							<S.Link>Adventure</S.Link>
+							<S.Link>Aventura</S.Link>
 						</li>
 						<li>
-							<S.Link>Sports</S.Link>
+							<S.Link>Esportes</S.Link>
 						</li>
 						<li>
-							<S.Link>Simulation</S.Link>
+							<S.Link>Simuladores</S.Link>
 						</li>
 						<li>
-							<S.Link>RTS - Real Time Strategy</S.Link>
+							<S.Link>Estratégia</S.Link>
 						</li>
 						<li>
-							<S.Link>FPS - First Person Shooter</S.Link>
+							<S.Link>FPS</S.Link>
 						</li>
 					</S.Links>
 				</S.SectionFooter>
 				<S.SectionFooter>
-					<S.SectionFooterTitle>Quick access</S.SectionFooterTitle>
+					<S.SectionFooterTitle>Acesso rápido</S.SectionFooterTitle>
 					<S.Links>
 						<li>
-							<S.Link>New Releases</S.Link>
+							<S.Link>Lançamentos</S.Link>
 						</li>
 						<li>
-							<S.Link>Promotions</S.Link>
+							<S.Link>Promoções</S.Link>
 						</li>
 						<li>
-							<S.Link>Next Releases</S.Link>
+							<S.Link>Em breve</S.Link>
 						</li>
 					</S.Links>
 				</S.SectionFooter>
-				<p>{actualYear} - &copy; EPLAY; All rights under protection.</p>
+				<p>{actualYear} - &copy; EPLAY; Todos os direitos protegidos.</p>
 			</div>
 		</S.FooterContainer>
-	);
+	)
 }

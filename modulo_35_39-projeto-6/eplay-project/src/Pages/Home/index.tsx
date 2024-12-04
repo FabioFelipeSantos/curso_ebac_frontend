@@ -1,104 +1,51 @@
-import Banner from "../../components/Banner";
-import ProductsList from "../../components/ProductsList";
-import Game from "../../models/Game";
+import { useEffect, useState } from "react"
 
-import resident from "../../assets/resident.png";
-import diablo from "../../assets/diablo.png";
-// import zelda from "../../../public/zelda.png";
-// import starWars from "../../../public/star_wars.png";
+import Banner from "../../components/Banner"
+import ProductsList from "../../components/ProductsList"
 
-const promotions: Game[] = [
-	{
-		id: 1,
-		title: "Resident Evil 4 - Remake",
-		description: "Has been known in Japan as Biohazard 4, Resident Evil 4 is a survivor horror game...",
-		genre: "Action",
-		image: resident,
-		infos: ["10%", "$54"],
-		system: "Windows",
-	},
-	{
-		id: 2,
-		title: "Resident Evil 4 - Remake",
-		description: "Has been known in Japan as Biohazard 4, Resident Evil 4 is a survivor horror game...",
-		genre: "Action",
-		image: resident,
-		infos: ["5%", "$57"],
-		system: "PS5",
-	},
-	{
-		id: 3,
-		title: "Resident Evil 4 - Remake",
-		description: "Has been known in Japan as Biohazard 4, Resident Evil 4 is a survivor horror game...",
-		genre: "Action",
-		image: resident,
-		infos: ["10%", "$54"],
-		system: "Windows",
-	},
-	{
-		id: 4,
-		title: "Resident Evil 4 - Remake",
-		description: "Has been known in Japan as Biohazard 4, Resident Evil 4 is a survivor horror game...",
-		genre: "Action",
-		image: resident,
-		infos: ["5%", "$57"],
-		system: "PS5",
-	},
-];
+export interface GalleryItem {
+	type: "image" | "video"
+	url: string
+}
 
-const nextReleases: Game[] = [
-	{
-		id: 5,
-		title: "Diablo IV",
-		description: "Diablo IV is an action RPG in development by Blizzard Entertainment",
-		genre: "RPG",
-		image: diablo,
-		infos: ["05/17"],
-		system: "Windows",
-	},
-	{
-		id: 6,
-		title: "Diablo IV",
-		description: "Diablo IV is an action RPG in development by Blizzard Entertainment",
-		genre: "RPG",
-		image: diablo,
-		infos: ["05/17"],
-		system: "Windows",
-	},
-	{
-		id: 7,
-		title: "Diablo IV",
-		description: "Diablo IV is an action RPG in development by Blizzard Entertainment",
-		genre: "RPG",
-		image: diablo,
-		infos: ["05/17"],
-		system: "Windows",
-	},
-	{
-		id: 8,
-		title: "Diablo IV",
-		description: "Diablo IV is an action RPG in development by Blizzard Entertainment",
-		genre: "RPG",
-		image: diablo,
-		infos: ["05/17"],
-		system: "Windows",
-	},
-];
+export type Game = {
+	id: number
+	name: string
+	description: string
+	release_date?: string
+	prices: { discount?: number; old?: number; current?: number }
+	details: {
+		category: string
+		system: string
+		developer: string
+		publisher: string
+		languages: string[]
+	}
+	media: {
+		thumbnail: string
+		cover: string
+		gallery: GalleryItem[]
+	}
+}
 
 export default function Home() {
+	const [promotions, setPromotions] = useState<Game[]>([])
+	const [nextReleases, setNextReleases] = useState<Game[]>([])
+
+	useEffect(() => {
+		fetch("https://fake-api-tau.vercel.app/api/eplay/promocoes")
+			.then(response => response.json())
+			.then(data => setPromotions(data))
+
+		fetch("https://fake-api-tau.vercel.app/api/eplay/em-breve")
+			.then(response => response.json())
+			.then(data => setNextReleases(data))
+	}, [])
 	return (
 		<>
 			<Banner />
-			<ProductsList
-				games={promotions}
-				title="Promotions"
-				background="gray"
-			/>
-			<ProductsList
-				games={nextReleases}
-				title="Next Releases"
-				background="black"
-			/>
+			<ProductsList games={promotions} title="Promotions" background="gray" />
+			<ProductsList games={nextReleases} title="Next Releases" background="black" />
 		</>
-	);
+	)
 }

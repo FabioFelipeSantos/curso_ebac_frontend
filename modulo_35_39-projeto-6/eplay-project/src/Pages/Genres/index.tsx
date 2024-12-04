@@ -1,112 +1,44 @@
-import ProductsList from "../../components/ProductsList";
-import Game from "../../models/Game";
+import { useEffect, useState } from "react"
 
-import resident from "../../assets/resident.png";
-import diablo from "../../assets/diablo.png";
-// import zelda from "../../../public/zelda.png";
-// import starWars from "../../../public/star_wars.png";
+import ProductsList from "../../components/ProductsList"
 
-const promotions: Game[] = [
-	{
-		id: 1,
-		title: "Resident Evil 4 - Remake",
-		description: "Has been known in Japan as Biohazard 4, Resident Evil 4 is a survivor horror game...",
-		genre: "Action",
-		image: resident,
-		infos: ["10%", "$54"],
-		system: "Windows",
-	},
-	{
-		id: 2,
-		title: "Resident Evil 4 - Remake",
-		description: "Has been known in Japan as Biohazard 4, Resident Evil 4 is a survivor horror game...",
-		genre: "Action",
-		image: resident,
-		infos: ["5%", "$57"],
-		system: "PS5",
-	},
-	{
-		id: 3,
-		title: "Resident Evil 4 - Remake",
-		description: "Has been known in Japan as Biohazard 4, Resident Evil 4 is a survivor horror game...",
-		genre: "Action",
-		image: resident,
-		infos: ["10%", "$54"],
-		system: "Windows",
-	},
-	{
-		id: 4,
-		title: "Resident Evil 4 - Remake",
-		description: "Has been known in Japan as Biohazard 4, Resident Evil 4 is a survivor horror game...",
-		genre: "Action",
-		image: resident,
-		infos: ["5%", "$57"],
-		system: "PS5",
-	},
-];
-
-const nextReleases: Game[] = [
-	{
-		id: 5,
-		title: "Diablo IV",
-		description: "Diablo IV is an action RPG in development by Blizzard Entertainment",
-		genre: "RPG",
-		image: diablo,
-		infos: ["05/17"],
-		system: "Windows",
-	},
-	{
-		id: 6,
-		title: "Diablo IV",
-		description: "Diablo IV is an action RPG in development by Blizzard Entertainment",
-		genre: "RPG",
-		image: diablo,
-		infos: ["05/17"],
-		system: "Windows",
-	},
-	{
-		id: 7,
-		title: "Diablo IV",
-		description: "Diablo IV is an action RPG in development by Blizzard Entertainment",
-		genre: "RPG",
-		image: diablo,
-		infos: ["05/17"],
-		system: "Windows",
-	},
-	{
-		id: 8,
-		title: "Diablo IV",
-		description: "Diablo IV is an action RPG in development by Blizzard Entertainment",
-		genre: "RPG",
-		image: diablo,
-		infos: ["05/17"],
-		system: "Windows",
-	},
-];
+import { Game } from "../Home"
 
 export default function Genres() {
+	const [actionGames, setActionGames] = useState<Game[]>([])
+	const [sportsGames, setSportsGames] = useState<Game[]>([])
+	const [simulationGames, setSimulationGames] = useState<Game[]>([])
+	const [fightGames, setFightGames] = useState<Game[]>([])
+	const [rpgGames, setRpgGames] = useState<Game[]>([])
+
+	useEffect(() => {
+		fetch("https://fake-api-tau.vercel.app/api/eplay/acao")
+			.then(response => response.json())
+			.then(data => setActionGames(data))
+
+		fetch("https://fake-api-tau.vercel.app/api/eplay/esportes")
+			.then(response => response.json())
+			.then(data => setSportsGames(data))
+
+		fetch("https://fake-api-tau.vercel.app/api/eplay/simulacao")
+			.then(response => response.json())
+			.then(data => setSimulationGames(data))
+
+		fetch("https://fake-api-tau.vercel.app/api/eplay/luta")
+			.then(response => response.json())
+			.then(data => setFightGames(data))
+
+		fetch("https://fake-api-tau.vercel.app/api/eplay/rpg")
+			.then(response => response.json())
+			.then(data => setRpgGames(data))
+	}, [])
 	return (
 		<>
-			<ProductsList
-				games={promotions}
-				title="RPG"
-				background="gray"
-			/>
-			<ProductsList
-				games={nextReleases}
-				title="Action"
-				background="black"
-			/>
-			<ProductsList
-				games={promotions}
-				title="Adventure"
-				background="gray"
-			/>
-			<ProductsList
-				games={nextReleases}
-				title="FPS - First Person Shooter"
-				background="black"
-			/>
+			<ProductsList games={actionGames} title="Ação" background="black" />
+			<ProductsList games={sportsGames} title="Esportes" background="gray" />
+			<ProductsList games={fightGames} title="Luta" background="black" />
+			<ProductsList games={rpgGames} title="RPG" background="gray" />
+			<ProductsList games={simulationGames} title="Simulação" background="black" />
 		</>
-	);
+	)
 }
