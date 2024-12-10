@@ -10,25 +10,19 @@ export default function Footer() {
 					<S.SectionFooterTitle>Gêneros</S.SectionFooterTitle>
 					<S.Links>
 						<li>
-							<S.Link>RPG</S.Link>
+							<S.Link to="/genres#rpg">RPG</S.Link>
 						</li>
 						<li>
-							<S.Link>Ação</S.Link>
+							<S.Link to="/genres#action">Ação</S.Link>
 						</li>
 						<li>
-							<S.Link>Aventura</S.Link>
+							<S.Link to="/genres#sports">Esportes</S.Link>
 						</li>
 						<li>
-							<S.Link>Esportes</S.Link>
+							<S.Link to="/genres#simulation">Simuladores</S.Link>
 						</li>
 						<li>
-							<S.Link>Simuladores</S.Link>
-						</li>
-						<li>
-							<S.Link>Estratégia</S.Link>
-						</li>
-						<li>
-							<S.Link>FPS</S.Link>
+							<S.Link to="/genres#luta">Luta</S.Link>
 						</li>
 					</S.Links>
 				</S.SectionFooter>
@@ -36,13 +30,10 @@ export default function Footer() {
 					<S.SectionFooterTitle>Acesso rápido</S.SectionFooterTitle>
 					<S.Links>
 						<li>
-							<S.Link>Lançamentos</S.Link>
+							<S.Link to="/#on-sale">Promoções</S.Link>
 						</li>
 						<li>
-							<S.Link>Promoções</S.Link>
-						</li>
-						<li>
-							<S.Link>Em breve</S.Link>
+							<S.Link to="/#coming-soon">Em breve</S.Link>
 						</li>
 					</S.Links>
 				</S.SectionFooter>

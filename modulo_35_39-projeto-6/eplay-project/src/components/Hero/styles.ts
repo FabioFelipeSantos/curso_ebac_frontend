@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { colors } from "../../style"
+import { breakpoints, colors } from "../../style"
 import { TagContainer } from "../Tag/styles"
 
 export const Banner = styled.div`
@@ -37,6 +37,10 @@ export const Banner = styled.div`
 
 	${TagContainer} {
 		margin-right: 8px;
+	}
+
+	@media (max-width: ${breakpoints.tablet}) {
+		background-size: cover;
 	}
 `
 

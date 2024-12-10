@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { colors } from "../../style";
+import styled from "styled-components"
+import { breakpoints, colors } from "../../style"
 
 export const HeaderBar = styled.header`
 	background-color: ${colors.gray};
@@ -19,21 +19,25 @@ export const HeaderBar = styled.header`
 		display: flex;
 		align-items: center;
 	}
-`;
+
+	@media (max-width: ${breakpoints.tablet}) {
+		display: none;
+	}
+`
 
 export const Links = styled.ul`
 	display: flex;
 	margin-left: 40px;
-`;
+`
 export const LinkItem = styled.li`
 	margin-right: 16px;
-`;
+`
 
-export const LinkCart = styled.a`
+export const CartButton = styled.a`
 	display: flex;
 	align-items: center;
 
 	img {
 		margin-left: 16px;
 	}
-`;
+`
