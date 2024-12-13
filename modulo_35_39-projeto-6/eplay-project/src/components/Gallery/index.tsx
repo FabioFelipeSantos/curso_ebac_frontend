@@ -75,11 +75,11 @@ export default function Gallery({ defaultCover, name, items }: Props) {
 				<ModalContent className="container">
 					<header>
 						<h4>{name}</h4>
-						<img src={close} alt="Close icon" onClick={() => handleCloseModal()} />
+						<img src={close} alt="Close icon" onClick={handleCloseModal} />
 					</header>
 					{modal.type === "image" ? <img src={modal.url} /> : <iframe src={modal.url} />}
 				</ModalContent>
-				<div className="overlay" onClick={() => handleCloseModal()}></div>
+				<div className="overlay" onClick={handleCloseModal}></div>
 			</Modal>
 		</>
 	)

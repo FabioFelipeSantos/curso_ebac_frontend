@@ -21,7 +21,7 @@ export default function Product({ id, title, genre, system, description, infos, 
 		return description
 	}
 	return (
-		<S.Card to={`/product/${id}`}>
+		<S.Card title={`Clique aqui para ver mais detalhes sobre o jogo ${title}`} to={`/product/${id}`}>
 			<img src={image} alt={title} />
 			<S.Infos>
 				{infos.map(info => (
