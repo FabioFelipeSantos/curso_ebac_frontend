@@ -30,7 +30,9 @@ export default function Header() {
 						<span />
 					</Hamburger>
 					<Link to="/">
-						<img src={logo} alt="EPlay" />
+						<h1>
+							<img src={logo} alt="EPlay" />
+						</h1>
 					</Link>
 					<nav>
 						<Links>
@@ -56,7 +58,7 @@ export default function Header() {
 						</Links>
 					</nav>
 				</div>
-				<CartButton onClick={openCart}>
+				<CartButton role="button" onClick={openCart}>
 					{items.length}
 					<span> - produtos(s)</span>
 					<img src={cart} alt="Store cart" />

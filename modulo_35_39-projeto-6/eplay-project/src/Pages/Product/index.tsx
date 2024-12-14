@@ -4,14 +4,19 @@ import Section from "../../components/Section"
 
 import Gallery from "../../components/Gallery"
 import { useGetGameQuery } from "../../services/api"
+import Loader from "../../components/Loader"
+
+type GameParams = {
+	id: string
+}
 
 export default function Product() {
-	const { id } = useParams()
+	const { id } = useParams() as GameParams
 
-	const { data: game } = useGetGameQuery(id!)
+	const { data: game } = useGetGameQuery(id)
 
 	if (!game) {
-		return <h3 className="container">Carregando...</h3>
+		return <Loader />
 	}
 
 	const { developer, languages, publisher, system } = game.details

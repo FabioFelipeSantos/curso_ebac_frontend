@@ -1,16 +1,17 @@
-import { Game } from "../../Pages/Home"
 import formatPrice from "../../utils/formatPrice"
+import Loader from "../Loader"
 import Product from "../Product"
 import { List, ProductsListContainer, ProductsListTitle } from "./styles"
 
 type Props = {
 	title: string
 	background: "gray" | "black"
-	games: Game[]
+	games?: Game[]
 	id?: string
+	isLoading: boolean
 }
 
-export default function ProductsList({ title, background, games, id }: Props) {
+export default function ProductsList({ title, background, games, id, isLoading }: Props) {
 	const getGameTags = (game: Game) => {
 		const tags = []
 
@@ -29,24 +30,29 @@ export default function ProductsList({ title, background, games, id }: Props) {
 		return tags
 	}
 
+	if (isLoading) {
+		return <Loader />
+	}
+
 	return (
 		<ProductsListContainer id={id} background={background}>
 			<div className="container">
 				<ProductsListTitle>{title}</ProductsListTitle>
 				<List>
-					{games.map(game => (
-						<li key={game.id}>
-							<Product
-								id={game.id}
-								title={game.name}
-								description={game.description}
-								genre={game.details.category}
-								image={game.media.thumbnail}
-								infos={getGameTags(game)}
-								system={game.details.system}
-							/>
-						</li>
-					))}
+					{games &&
+						games.map(game => (
+							<li key={game.id}>
+								<Product
+									id={game.id}
+									title={game.name}
+									description={game.description}
+									genre={game.details.category}
+									image={game.media.thumbnail}
+									infos={getGameTags(game)}
+									system={game.details.system}
+								/>
+							</li>
+						))}
 				</List>
 			</div>
 		</ProductsListContainer>

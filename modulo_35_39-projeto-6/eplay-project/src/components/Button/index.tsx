@@ -7,12 +7,26 @@ export type ButtonProps = {
 	onClick?: () => void
 	children: string
 	variant?: "primary" | "secondary"
+	disabled?: boolean
 }
 
-export default function Button({ title, type, to, onClick, children, variant = "primary" }: ButtonProps) {
+export default function Button({
+	title,
+	type,
+	to,
+	onClick,
+	children,
+	variant = "primary",
+	disabled,
+}: ButtonProps) {
 	if (type === "button") {
 		return (
-			<ButtonContainer variant={variant} type={"button"} title={title} onClick={onClick}>
+			<ButtonContainer
+				variant={variant}
+				type={"button"}
+				title={title}
+				onClick={onClick}
+				disabled={disabled}>
 				{children}
 			</ButtonContainer>
 		)

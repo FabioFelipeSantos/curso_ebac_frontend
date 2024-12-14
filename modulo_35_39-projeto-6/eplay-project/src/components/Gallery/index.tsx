@@ -3,8 +3,6 @@ import { useState } from "react"
 import { Action, Item, ItemsContainer, Modal, ModalContent } from "./styles"
 import Section from "../Section"
 
-import { GalleryItem } from "../../Pages/Home"
-
 import play from "../../assets/play.png"
 import zoom from "../../assets/zoom.png"
 import close from "../../assets/fechar.png"

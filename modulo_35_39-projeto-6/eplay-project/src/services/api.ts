@@ -1,5 +1,4 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
-import { Game } from "../Pages/Home"
 
 type Product = {
 	id: number

@@ -1,5 +1,4 @@
 import { useDispatch } from "react-redux"
-import { Game } from "../../Pages/Home"
 import formatPrice from "../../utils/formatPrice"
 import Button from "../Button"
 import Tag from "../Tag"
