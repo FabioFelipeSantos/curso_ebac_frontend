@@ -50,3 +50,47 @@ Fazer um repositório no GitHub com várias _branches_ diferentes, cada responde
       <img width=45% src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=FabioFelipeSantos&layout=compact&bg_color=000&border_color=30A3DC&title_color=E94D5F&text_color=FFF" />
     </div>  
 </div>
+
+Para mover todas as pastas de um repositório Git para uma nova pasta sem afetar a estrutura do repositório, você pode seguir estes passos:
+
+1. Crie a nova pasta onde você deseja mover todas as pastas existentes.
+2. Mova todas as pastas e arquivos para a nova pasta.
+3. Atualize o Git para refletir essas mudanças.
+4. Faça commit das mudanças.
+
+Aqui está um exemplo de como fazer isso:
+
+1. Crie a nova pasta:
+
+    ```sh
+    mkdir nova_pasta
+    ```
+
+2. Mova todas as pastas e arquivos para a nova pasta:
+
+    ```sh
+    git mv * nova_pasta/
+    ```
+
+3. Faça commit das mudanças:
+
+    ```sh
+    git commit -m "Moved all files and folders to nova_pasta"
+    ```
+
+4. (Opcional) Se houver arquivos ocultos (como
+
+.gitignore
+
+), mova-os também:
+
+```sh
+git mv .gitignore nova_pasta/
+```
+
+5. Faça commit das mudanças adicionais:
+    ```sh
+    git commit -m "Moved hidden files to nova_pasta"
+    ```
+
+Certifique-se de substituir `nova_pasta` pelo nome da pasta que você deseja usar. Isso deve mover todas as pastas e arquivos para a nova pasta sem afetar a estrutura do repositório.
