@@ -39,7 +39,7 @@ Fazer um repositório no GitHub com várias _branches_ diferentes, cada responde
 |   29    |    Introdução ao CSS in JS    |   06 / 11 / 2024   | [GitHub](https://github.com/FabioFelipeSantos/ebac-modulo-29-styled-components-base_exercicio_css_in_js) |
 |   30    | Introdução ao Redux com React |   12 / 11 / 2024   |            [GitHub](https://github.com/FabioFelipeSantos/ebac-pratique-modulo-30-ebac_sports)            |
 | 31 - 32 |          Projeto 05           |   23 / 11 / 2024   |                    [Lista de Contatos](https://listacontatosfabiosantos.vercel.app/)                     |
-|   35    |        eFood - Fase 01        |   23 / 11 / 2024   |                              [eFood](https://efoodfabiosantos.vercel.app/)                               |
+| 35 - 39 |             eFood             |   16 / 12 / 2024   |                              [eFood](https://efoodfabiosantos.vercel.app/)                               |
 
 <div style="min-width: 400px; max-width: 700px; width: 100%; transform: scale(1); margin: 50px auto; display: flex; flex-direction: column; justify-content: center; align-items: center">
     <img width=55% src="https://github-readme-streak-stats.herokuapp.com?user=FabioFelipeSantos/&theme=radical&mode=weekly"  alt=""/>
