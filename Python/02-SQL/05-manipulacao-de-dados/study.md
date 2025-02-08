@@ -60,3 +60,24 @@ Para deletar uma linha específica, deve-se usar o atributo `WHERE`. Caso contr�
 ```sql
 DELETE FROM 'table_name' WHERE some_column=the_column_value;
 ```
+
+### Selects Complexos
+
+#### Selecionar uma lista de resultados
+
+Podemos usar o `WHERE <campo> IN` passando uma lista de valores para filtrar apenas aqueles valores.
+
+```sql
+SELECT col1, col2, ... FROM table_name WHERE colName IN  ('val1', 'val2', 'val3', ...);
+```
+
+##### Selecionar dados de uma tabela, a partir da coluna de outra tabela (relações por exemplo)
+
+Suponha que uma tabela `orders` possua um campo `customerId` que referencia a coluna `id` na tabela `customer`. Para selecionarmos todas as ordens que possuem um respectivo `id` podemos fazer
+
+```sql
+SELECT * FROM orders
+WHERE customerId IN (
+    SELECT id FROM customer
+);
+```
