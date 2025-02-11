@@ -58,4 +58,50 @@ Nesse caso, o retorno do `GROUP BY` será filtrado pelas somas das quantidades c
 
 Podemos usar ainda com outros seletores como o `INNER JOiN`
 
+```sql
+SELECT customer.fullname, amount
+FROM customer
+INNER JOIN "order"
+ON customer.id = customerid
+GROUP BY customer.fullname, amount
+```
 
+## 7.2 - Ordenação com ORDER BY
+
+Um importante filtro é o `DISTINCT`, responsável por filtrar dados repetidos e apresentar somente uma entrada na tabela.
+
+```sql
+SELECT DISTINCT customerid FROM "order";
+```
+
+Para podermos fazer ordenações nos resultados apresentados, utilizamos a cláusula `ORDER BY <colname> [ ASC | DESC ]`. Essa ordenação irá ocorrer na coluna especificada `colname`.
+
+- `ASC`: irá retornar os dados de forma ASCENDENTE, ou crescente;
+
+- `DESC`: irá retornar os dados de forma DESCENDENTE, ou decrescente.
+
+O tipo default será `ASC`.
+
+```sql
+SELECT * FROM customer ORDER BY fullname DESC;
+```
+
+<img src="file:///home/fabio/snap/marktext/9/.config/marktext/images/2025-02-10-08-04-01-image.png" title="" alt="" data-align="center">
+
+## 7.3 - Limitando Resultados com LIMIT e OFFSET
+
+A cláusula `LIMIT` do PostgreSQL é usada para limitar a quantidade de dados retornada pela instrução `SELECT`.
+
+```sql
+SELECT * FROM "order" LIMIT 2;
+```
+
+Com a cláusula `OFFSET` podemos especificar quantas entradas deve ser pulada no início da tabela, para a partir de determinada posição retornar a quantidade indicada no `LIMIT`.
+
+```sql
+SELECT * FROM "order" LIMIT 3 OFFSET 3;
+```
+
+Se ordenação for importante, precisamos realizar ela antes de limitarmos as saídas
+
+<img title="" src="file:///home/fabio/snap/marktext/9/.config/marktext/images/2025-02-10-08-11-28-image.png" alt="" data-align="center">
