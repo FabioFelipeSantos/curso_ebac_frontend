@@ -67,3 +67,37 @@ Os índices são muito utilizados para colunas de grande seletividade em uma tab
 Por exemplo: em uma tabela de produtos, clientes, ou algo que possua um nome que o difere dos demais, podemos pensar que quando vamos fazer uma pesquisa ao banco de dados, não sabemos qual é a primary key desse campo, tendo que pesquisarmos com outros campos. Nesse sentido, um que certamente tentaremos será o nome do produto. Portanto, o nome seria uma coluna excelente para possuir um índice de pesquisa nesses tabelas.
 
 Nos bancos NoSQL temos a presença das mesmas informações, portanto, lá também temos a instância de índices.
+
+## 8.2.2 Tipos de Índices
+
+### 8.2.2.1 Índices Clusterizados
+
+Este tipo de índice organiza os dados de forma grupal, mantendo uma ordem de inserção automática pelo SQL. Durante a criação dos registros, a pilha é formada por camadas com informações vindas de diferentes tabelas. Logo, este índice consegue criar regiões da pilha de páginas que sejam de uma determinada tabela, e ordená-las seguindo a indexação realizada. Por exemplo: se uma tabela possui `id SERIAL PRIMARY KEY` como coluna indexada, o SQL irá automaticamente ordenar esta tabela por esse `id` e a cada nova entrada nessa mesma tabela, ele procura esse grupo e insere a informação ali, de acordo a manter a ordenação.
+
+O Postgres não possui suporte à este tipo de índice.
+
+### 8.2.2.2 Índices Não Clusterizados
+
+Neste caso, estes índices fornecerão uma nova página com as indicações das posições na pilha em que se encontra a entrada da tabela, funcionando como o sumário de um livro. Vamos à tabela de índices, buscamos pela indexação desejada, vemos em que parte da pilha estão os dados, e depois iremos direto para a pilha resgatar os dados, sem passar pelas demais páginas.
+
+Nesse caso os registros não são ordenados.
+
+Este tipo de indexação não é recomendado para dados que sofrerão muitas mutações ao longo do tempo, devendo ser mantidas para colunas que sejam permanentes nas tabelas.
+
+## 8.3 Sintaxe
+
+```sql
+CREATE INDEX customer_name_index ON customer(name DESC NULLS LAST);
+```
+
+Nesse caso criamos um índice `customer_name_index` para a tabela de `customer`, sobre a coluna `name`. A ordenação será dada pelo comando `DESC NULLS LAST` em que organizamos os nomes em ordem decrescente, e colocamos valores `null` de name por último na tabela.
+
+```sql
+CREATE INDEX customer_name_email_index ON customer(name, email);
+```
+
+Para o caso anterior, o índice é criado para as colunas `name` e `email` em conjunto.
+
+<img src="file:///home/fabio/snap/marktext/9/.config/marktext/images/2025-03-04-08-38-27-image.png" title="" alt="" data-align="center">
+
+<img title="" src="file:///home/fabio/snap/marktext/9/.config/marktext/images/2025-03-04-08-41-14-image.png" alt="" width="852" data-align="center">
