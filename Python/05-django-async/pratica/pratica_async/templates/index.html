@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Prática Django Async</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Inter, sans-serif;
+            list-style: none;
+        }
+        strong {
+            color: hsl(0, 68%, 45%);
+            text-decoration: underline;
+            text-underline-offset: 6px;
+        }
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .header {
+            height: 20vh;
+            margin-bottom: 32px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center
+        }
+        #result {
+            margin-top: 24px;
+        }
+        .updates-list {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-size: 14px;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #e0e0e0;
+            height: 20px;
+            margin-top: 10px;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background-color: #4caf50;
+            transition: width 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header">
+            <h1>{{ title }}</h1>
+            <h2>Tarefa de número: {% if task_id %}<strong>{{task_id}}</strong>{% endif %}</h2>
+            <h3>Nome do canal Websocket executado: {% if group_name %}<strong>{{group_name}}</strong>{% endif %}</h3>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div>
+                <h3>Status do WebSocket</h3>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-bar-fill" style="width: 0%">0%</div>
+                </div>
+                <div id="status-websocket" class="updates-list">
+                    <ul id="updates-list"></ul>
+                </div>
+            </div>
+
+            <div id="result">
+                <h3>Resultado Final:</h3>
+                <pre id="final-result">Aguardando conclusão da tarefa...</pre>
+            </div>
+        </div>       
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const taskId = "{{ task_id }}";
+            const updatesList = document.getElementById("updates-list");
+            const progressFill = document.getElementById("progress-fill");
+            const finalResult = document.getElementById("final-result");
+            
+            const socket = new WebSocket(`ws://${window.location.host}/ws/tasks/${taskId}/`);
+            
+            function addMessage(message, isError = false) {
+                const li = document.createElement("li");
+                li.textContent = message;
+                if (isError) li.style.color = "red";
+                updatesList.appendChild(li);
+                updatesList.scrollTop = updatesList.scrollHeight;
+            }
+            
+            socket.onopen = function(e) {
+                console.log("WebSocket conectado");
+                addMessage("🚀 WebSocket conectado com sucesso");
+            };
+            
+            socket.onmessage = function(e) {
+                const data = JSON.parse(e.data);
+                console.log("Dados recebidos:", data);
+                
+                if (data.type === "connection_established") {
+                    addMessage(`📶 Conexão estabelecida: ${data.message}`);
+                }
+                else if (data.type === "task_update") {
+                    progressFill.style.width = `${data.progress}%`;
+                    progressFill.textContent = `${data.progress}%`;
+                    
+                    addMessage(`✔️ [${data.status}] ${data.message}`);
+                }
+                else if (data.type === "task_completed") {
+                    addMessage(`✅ Tarefa concluída: ${data.message}`);
+                    
+                    finalResult.textContent = JSON.stringify(data.current_result, null, 2);
+                }
+            };
+            
+            socket.onclose = function(e) {
+                console.log("WebSocket desconectado", e);
+                addMessage(`WebSocket desconectado: ${e.reason || "Sem razão especificada"}`, true);
+            };
+            
+            socket.onerror = function(e) {
+                console.error("Erro no WebSocket:", e);
+                addMessage("Erro na conexão WebSocket", true);
+            };
+        });
+    </script>
+</body>
+</html>
