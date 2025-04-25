@@ -54,7 +54,6 @@ async def async_view(request: HttpRequest):
 
 
 def response_for_ws(num, type, status, task_id, result):
-    # message = ""
     if num:
         message = f"Passo {num} de {NUM_MAX_LOOP} concluído"
         progress = int(num * 100 / NUM_MAX_LOOP)
